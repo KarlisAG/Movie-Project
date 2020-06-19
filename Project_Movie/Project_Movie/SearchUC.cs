@@ -41,5 +41,15 @@ namespace Project_Movie
         {
 
         }
+
+        private void buttonAdvanced_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
