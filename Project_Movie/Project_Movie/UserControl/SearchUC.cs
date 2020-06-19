@@ -43,39 +43,47 @@ namespace Project_Movie
                 String searchEpisode = String.Empty;
                 String searchPlot = String.Empty;
                 String searchType = String.Empty;
+                char and = '&';
 
                 searchYear = textBoxYear.Text;
                 if (searchYear != String.Empty)
                 {
-                    searchYear = "&y=" + textBoxYear.Text;
+                    //String year = "&y=" + textBoxYear.Text;
+                    //searchYear = and + year;
+                    searchYear = and + "&y=" + textBoxYear.Text;
                 }
 
                 if (comboBoxType.Text == "Series")
                 {
-                    searchSeason = "&Season=" + textBoxSeason.Text;
-                    searchEpisode = "&Episode=" + textBoxEpisode.Text;
+                    searchSeason = and + "&Season=" + textBoxSeason.Text;
+                    searchEpisode = and + "&Episode=" + textBoxEpisode.Text;
                 }
 
                 if (comboBoxPlot.Text == "Full")
                 {
-                    searchPlot = "&" + "plot=full";
+                    searchPlot = and + "&plot=full";
                 }
 
                 if (labelTitle.Visible)
                 {
-                    String searchTitle = "&t=" + textBoxTitle.Text;
+                    String title = "&t=" + textBoxTitle.Text;
+                    String[] arrTitle = title.Split(' ');
+                    String newSearchTitle = String.Join("%20", arrTitle);
+                    
+                    String searchTitle = and + newSearchTitle;
+                    
+
                     String url = defaultLink + searchTitle + searchSeason + searchEpisode + searchYear + searchPlot;
                     linkLabel1.Text = url;
-                    labelSearchStatus.Visible = true;
-                    labelSearchStatus.Text = url;
+                    
+                    GetData(url);
                 }
                 else if (labelImdbID.Visible)
                 {
                     String searchID = "&i=" + textBoxTitle.Text;
+                    String url = defaultLink + searchID + searchSeason + searchEpisode + searchYear + searchPlot;
+                    GetData(url);
                 }
-                
-
-                
                 //labelSearchStatus.Text = "Search succesful! Check Movie Info section.";
                 
                 
@@ -89,16 +97,15 @@ namespace Project_Movie
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxTitle.Clear();
-            textBoxYear.Clear();
-            textBoxSeason.Clear();
-            textBoxEpisode.Clear();
             comboBoxPlot.Text = "";
-            comboBoxType.Text = "";
+
+            ClearAdvancedTextBoxes();
         }
 
         private void buttonAdvanced_Click(object sender, EventArgs e)
         {
             AdvancedVisibilityChange();
+            ClearAdvancedTextBoxes();
         }
 
         private void SearchUC_Load(object sender, EventArgs e)
@@ -138,12 +145,6 @@ namespace Project_Movie
             labelYear.Visible = !advancedVisible;
             textBoxYear.Visible = !advancedVisible;
 
-            labelSeason.Visible = !advancedVisible;
-            textBoxSeason.Visible = !advancedVisible;
-
-            labelEpisode.Visible = !advancedVisible;
-            textBoxEpisode.Visible = !advancedVisible;
-
             advancedVisible = !advancedVisible;
 
             if (advancedVisible == false)
@@ -154,14 +155,45 @@ namespace Project_Movie
             {
                 buttonAdvanced.Text = "Close Advanced Search";
             }
+
+            labelSeason.Visible = false;
+            textBoxSeason.Visible = false;
+
+            labelEpisode.Visible = false;
+            textBoxEpisode.Visible = false;
         }
 
         private void TypeChanged(object sender, EventArgs e)
         {
             if (comboBoxType.Text == "Series")
             {
+                labelSeason.Visible = true;
+                textBoxSeason.Visible = true;
 
+                labelEpisode.Visible = true;
+                textBoxEpisode.Visible = true;
             }
+            else
+            {
+                labelSeason.Visible = false;
+                textBoxSeason.Visible = false;
+
+                labelEpisode.Visible = false;
+                textBoxEpisode.Visible = false;
+            }
+        }
+
+        private void GetData(String url)
+        {
+
+        }
+
+        private void ClearAdvancedTextBoxes()
+        {
+            textBoxYear.Clear();
+            textBoxSeason.Clear();
+            textBoxEpisode.Clear();
+            comboBoxType.Text = "";
         }
     }
 }
