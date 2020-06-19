@@ -29,40 +29,73 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.Button();
+            this.labelJustProjectInfo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonWatchList = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonUser = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonWatchList = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonSlider = new System.Windows.Forms.Button();
+            this.searchUC1 = new Project_Movie.SearchUC();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.pictureBoxExit);
+            this.panel1.Controls.Add(this.buttonExit);
+            this.panel1.Controls.Add(this.labelJustProjectInfo);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(993, 46);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBoxExit
+            // buttonExit
             // 
-            this.pictureBoxExit.Location = new System.Drawing.Point(925, 6);
-            this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(56, 34);
-            this.pictureBoxExit.TabIndex = 3;
-            this.pictureBoxExit.TabStop = false;
-            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonExit.Location = new System.Drawing.Point(943, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(40, 40);
+            this.buttonExit.TabIndex = 0;
+            this.buttonExit.Text = "X";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // labelJustProjectInfo
+            // 
+            this.labelJustProjectInfo.AutoSize = true;
+            this.labelJustProjectInfo.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelJustProjectInfo.Location = new System.Drawing.Point(211, 9);
+            this.labelJustProjectInfo.Name = "labelJustProjectInfo";
+            this.labelJustProjectInfo.Size = new System.Drawing.Size(656, 34);
+            this.labelJustProjectInfo.TabIndex = 5;
+            this.labelJustProjectInfo.Text = "Your Personal Movie Watch List Application";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // imageList1
             // 
@@ -72,7 +105,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.ElipseRadius = 35;
             this.bunifuElipse1.TargetControl = this;
             // 
             // panel2
@@ -86,34 +119,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(127, 456);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(127, 67);
-            this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            // 
-            // buttonWatchList
-            // 
-            this.buttonWatchList.Location = new System.Drawing.Point(0, 100);
-            this.buttonWatchList.Name = "buttonWatchList";
-            this.buttonWatchList.Size = new System.Drawing.Size(127, 67);
-            this.buttonWatchList.TabIndex = 3;
-            this.buttonWatchList.Text = "My Watch List";
-            this.buttonWatchList.UseVisualStyleBackColor = true;
-            // 
-            // buttonInfo
-            // 
-            this.buttonInfo.Location = new System.Drawing.Point(0, 200);
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(127, 67);
-            this.buttonInfo.TabIndex = 4;
-            this.buttonInfo.Text = "Movie Info";
-            this.buttonInfo.UseVisualStyleBackColor = true;
             // 
             // buttonUser
             // 
@@ -123,28 +128,73 @@
             this.buttonUser.TabIndex = 3;
             this.buttonUser.Text = "User Info";
             this.buttonUser.UseVisualStyleBackColor = true;
+            this.buttonUser.Click += new System.EventHandler(this.buttonUser_Click);
+            // 
+            // buttonInfo
+            // 
+            this.buttonInfo.Location = new System.Drawing.Point(0, 200);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(127, 67);
+            this.buttonInfo.TabIndex = 4;
+            this.buttonInfo.Text = "Movie Info";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            // 
+            // buttonWatchList
+            // 
+            this.buttonWatchList.Location = new System.Drawing.Point(0, 100);
+            this.buttonWatchList.Name = "buttonWatchList";
+            this.buttonWatchList.Size = new System.Drawing.Size(127, 67);
+            this.buttonWatchList.TabIndex = 3;
+            this.buttonWatchList.Text = "My Watch List";
+            this.buttonWatchList.UseVisualStyleBackColor = true;
+            this.buttonWatchList.Click += new System.EventHandler(this.buttonWatchList_Click);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(127, 67);
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonSlider);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(127, 46);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(17, 456);
             this.panel3.TabIndex = 2;
             // 
-            // panel4
+            // buttonSlider
             // 
-            this.panel4.Location = new System.Drawing.Point(150, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(843, 456);
-            this.panel4.TabIndex = 3;
+            this.buttonSlider.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSlider.ForeColor = System.Drawing.Color.White;
+            this.buttonSlider.Location = new System.Drawing.Point(1, 0);
+            this.buttonSlider.Name = "buttonSlider";
+            this.buttonSlider.Size = new System.Drawing.Size(16, 67);
+            this.buttonSlider.TabIndex = 0;
+            this.buttonSlider.UseVisualStyleBackColor = false;
+            // 
+            // searchUC1
+            // 
+            this.searchUC1.Location = new System.Drawing.Point(150, 46);
+            this.searchUC1.Name = "searchUC1";
+            this.searchUC1.Size = new System.Drawing.Size(843, 456);
+            this.searchUC1.TabIndex = 3;
+            this.searchUC1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(993, 502);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.searchUC1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -152,8 +202,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -161,7 +213,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBoxExit;
         private System.Windows.Forms.ImageList imageList1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel2;
@@ -169,8 +220,12 @@
         private System.Windows.Forms.Button buttonInfo;
         private System.Windows.Forms.Button buttonWatchList;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonSlider;
+        private System.Windows.Forms.Label labelJustProjectInfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonExit;
+        private SearchUC searchUC1;
     }
 }
 

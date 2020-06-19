@@ -465,7 +465,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.Controls.Add(this.buttonSaveToWatchlist);
             this.Controls.Add(this.labelJustRated);
             this.Controls.Add(this.labelJustType);

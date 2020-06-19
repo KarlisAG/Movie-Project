@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project_Movie
@@ -16,35 +9,30 @@ namespace Project_Movie
         {
             InitializeComponent();
         }
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-
+            buttonSlider.Location = buttonSearch.Location;
+            searchUC1.Visible = true;
         }
 
         private void buttonWatchList_Click(object sender, EventArgs e)
         {
-
+            buttonSlider.Location = buttonWatchList.Location;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void buttonInfo_Click(object sender, EventArgs e)
         {
-
+            buttonSlider.Location = buttonInfo.Location;
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonUser_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            buttonSlider.Location = buttonUser.Location;
         }
     }
 }
