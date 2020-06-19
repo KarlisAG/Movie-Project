@@ -88,14 +88,17 @@ namespace Project_Movie
                 labelInfoImdbRating.Text = md.ImdbRating;
                 labelInfoImdbVotes.Text = md.ImdbVotes;
 
+                pictureBox1.Load(md.Poster);
+
+                listViewRatings.Items.Clear();
+                List<Ratings> rt = new List<Ratings>();
+                int y = 0;
                 foreach (Ratings r in md.Ratings)
                 {
-                    //Ratings ra = new Ratings(r.Source, r.Value);
-                    listViewRatings.Items.Add($"{r.Source} {r.Value}");
+                    listViewRatings.Items.Add(r.Source);
+                    listViewRatings.Items[y].SubItems.Add(r.Value);
+                    y++;
                 }
-                
-
-                pictureBox1.Load(md.Poster);
             }
             catch (Exception ex)
             {

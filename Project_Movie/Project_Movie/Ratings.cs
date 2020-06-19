@@ -8,8 +8,8 @@ namespace Project_Movie
 {
     class Ratings
     {
-        public String Source;
-        public String Value;
+        public String Source { get; set; }
+        public String Value { get; set; }
 
         public Ratings(String Source, String Value)
         {
