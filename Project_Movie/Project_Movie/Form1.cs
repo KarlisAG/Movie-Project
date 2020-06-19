@@ -18,6 +18,7 @@ namespace Project_Movie
         {
             buttonSlider.Location = buttonSearch.Location;
             searchUC1.Visible = true;
+            infoUC1.Visible = false;
         }
 
         private void buttonWatchList_Click(object sender, EventArgs e)
@@ -28,6 +29,8 @@ namespace Project_Movie
         private void buttonInfo_Click(object sender, EventArgs e)
         {
             buttonSlider.Location = buttonInfo.Location;
+            infoUC1.Visible = true;
+            searchUC1.Visible = false;
         }
 
         private void buttonUser_Click(object sender, EventArgs e)

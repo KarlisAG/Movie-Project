@@ -26,5 +26,20 @@ namespace Project_Movie
         {
 
         }
+
+        private void buttonExtraIMDBInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExtraRatings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSaveToWatchlist_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

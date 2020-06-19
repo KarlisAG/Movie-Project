@@ -44,6 +44,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonSlider = new System.Windows.Forms.Button();
             this.searchUC1 = new Project_Movie.SearchUC();
+            this.infoUC1 = new Project_Movie.InfoUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -183,17 +184,27 @@
             // 
             // searchUC1
             // 
-            this.searchUC1.Location = new System.Drawing.Point(150, 46);
+            this.searchUC1.Location = new System.Drawing.Point(147, 46);
             this.searchUC1.Name = "searchUC1";
             this.searchUC1.Size = new System.Drawing.Size(843, 456);
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
+            // 
+            // infoUC1
+            // 
+            this.infoUC1.BackColor = System.Drawing.Color.Cornsilk;
+            this.infoUC1.Location = new System.Drawing.Point(147, 46);
+            this.infoUC1.Name = "infoUC1";
+            this.infoUC1.Size = new System.Drawing.Size(843, 456);
+            this.infoUC1.TabIndex = 4;
+            this.infoUC1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(993, 502);
+            this.Controls.Add(this.infoUC1);
             this.Controls.Add(this.searchUC1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -226,6 +237,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonExit;
         private SearchUC searchUC1;
+        private InfoUC infoUC1;
     }
 }
 

@@ -50,6 +50,8 @@
             this.labelImdbID = new System.Windows.Forms.Label();
             this.labelOptional = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelErrorMessage = new System.Windows.Forms.Label();
+            this.labelNumberError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSearchByID
@@ -147,6 +149,7 @@
             this.textBoxYear.Size = new System.Drawing.Size(121, 20);
             this.textBoxYear.TabIndex = 18;
             this.textBoxYear.Visible = false;
+            this.textBoxYear.TextChanged += new System.EventHandler(this.CheckNumber);
             // 
             // labelYear
             // 
@@ -235,6 +238,7 @@
             this.textBoxSeason.Size = new System.Drawing.Size(121, 20);
             this.textBoxSeason.TabIndex = 26;
             this.textBoxSeason.Visible = false;
+            this.textBoxSeason.TextChanged += new System.EventHandler(this.CheckNumber);
             // 
             // textBoxEpisode
             // 
@@ -243,12 +247,13 @@
             this.textBoxEpisode.Size = new System.Drawing.Size(121, 20);
             this.textBoxEpisode.TabIndex = 27;
             this.textBoxEpisode.Visible = false;
+            this.textBoxEpisode.TextChanged += new System.EventHandler(this.CheckNumber);
             // 
             // labelSearchStatus
             // 
             this.labelSearchStatus.AutoSize = true;
             this.labelSearchStatus.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
-            this.labelSearchStatus.Location = new System.Drawing.Point(264, 24);
+            this.labelSearchStatus.Location = new System.Drawing.Point(288, 9);
             this.labelSearchStatus.Name = "labelSearchStatus";
             this.labelSearchStatus.Size = new System.Drawing.Size(59, 19);
             this.labelSearchStatus.TabIndex = 28;
@@ -275,6 +280,7 @@
             this.labelOptional.Size = new System.Drawing.Size(87, 13);
             this.labelOptional.TabIndex = 30;
             this.labelOptional.Text = "* = optional fields";
+            this.labelOptional.Visible = false;
             // 
             // linkLabel1
             // 
@@ -286,10 +292,30 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
             // 
+            // labelErrorMessage
+            // 
+            this.labelErrorMessage.AutoSize = true;
+            this.labelErrorMessage.Location = new System.Drawing.Point(291, 38);
+            this.labelErrorMessage.Name = "labelErrorMessage";
+            this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorMessage.TabIndex = 32;
+            this.labelErrorMessage.Visible = false;
+            // 
+            // labelNumberError
+            // 
+            this.labelNumberError.AutoSize = true;
+            this.labelNumberError.Location = new System.Drawing.Point(276, 243);
+            this.labelNumberError.Name = "labelNumberError";
+            this.labelNumberError.Size = new System.Drawing.Size(0, 13);
+            this.labelNumberError.TabIndex = 33;
+            this.labelNumberError.Visible = false;
+            // 
             // SearchUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelNumberError);
+            this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelOptional);
             this.Controls.Add(this.labelImdbID);
@@ -344,5 +370,7 @@
         private System.Windows.Forms.Label labelImdbID;
         private System.Windows.Forms.Label labelOptional;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label labelErrorMessage;
+        private System.Windows.Forms.Label labelNumberError;
     }
 }

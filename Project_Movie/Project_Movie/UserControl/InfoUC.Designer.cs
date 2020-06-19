@@ -263,10 +263,10 @@
             // labelJustPlot
             // 
             this.labelJustPlot.AutoSize = true;
-            this.labelJustPlot.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.labelJustPlot.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJustPlot.Location = new System.Drawing.Point(3, 287);
             this.labelJustPlot.Name = "labelJustPlot";
-            this.labelJustPlot.Size = new System.Drawing.Size(40, 21);
+            this.labelJustPlot.Size = new System.Drawing.Size(45, 21);
             this.labelJustPlot.TabIndex = 18;
             this.labelJustPlot.Text = "Plot:";
             // 
@@ -278,6 +278,7 @@
             this.buttonExtraIMDBInfo.TabIndex = 20;
             this.buttonExtraIMDBInfo.Text = "More imdb Info";
             this.buttonExtraIMDBInfo.UseVisualStyleBackColor = true;
+            this.buttonExtraIMDBInfo.Click += new System.EventHandler(this.buttonExtraIMDBInfo_Click);
             // 
             // buttonExtraRatings
             // 
@@ -287,6 +288,7 @@
             this.buttonExtraRatings.TabIndex = 21;
             this.buttonExtraRatings.Text = "More Ratings";
             this.buttonExtraRatings.UseVisualStyleBackColor = true;
+            this.buttonExtraRatings.Click += new System.EventHandler(this.buttonExtraRatings_Click);
             // 
             // labelJustIMDB_ID
             // 
@@ -460,6 +462,7 @@
             this.buttonSaveToWatchlist.TabIndex = 40;
             this.buttonSaveToWatchlist.Text = "Save To Watch List";
             this.buttonSaveToWatchlist.UseVisualStyleBackColor = true;
+            this.buttonSaveToWatchlist.Click += new System.EventHandler(this.buttonSaveToWatchlist_Click);
             // 
             // InfoUC
             // 
