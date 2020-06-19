@@ -191,6 +191,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieData.cs" />
+    <Compile Include="Ratings.cs" />
     <Compile Include="UserControl\InfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

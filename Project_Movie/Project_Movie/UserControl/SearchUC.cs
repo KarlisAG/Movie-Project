@@ -18,7 +18,6 @@ namespace Project_Movie
     {
         private bool basicVisible = false;
         private bool advancedVisible = false;
-
         public SearchUC()
         {
             InitializeComponent();
@@ -212,7 +211,7 @@ namespace Project_Movie
             String response = client.DownloadString(url);
 
             MovieData md = JsonConvert.DeserializeObject<MovieData>(response);
-                
+            //response = JsonConvert.SerializeObject(response, Formatting.Indented);
             if (md.Response == "True")
             {
                 labelErrorMessage.Visible = false;

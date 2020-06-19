@@ -59,7 +59,7 @@
             this.labelInfoImdbID = new System.Windows.Forms.Label();
             this.labelInfoWriter = new System.Windows.Forms.Label();
             this.labelJustWriter = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewRatings = new System.Windows.Forms.ListView();
             this.Source = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
@@ -70,6 +70,7 @@
             this.labelJustType = new System.Windows.Forms.Label();
             this.labelJustRated = new System.Windows.Forms.Label();
             this.buttonSaveToWatchlist = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -174,7 +175,7 @@
             // 
             this.labelInfoRuntime.AutoSize = true;
             this.labelInfoRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoRuntime.Location = new System.Drawing.Point(553, 61);
+            this.labelInfoRuntime.Location = new System.Drawing.Point(613, 61);
             this.labelInfoRuntime.Name = "labelInfoRuntime";
             this.labelInfoRuntime.Size = new System.Drawing.Size(71, 21);
             this.labelInfoRuntime.TabIndex = 11;
@@ -184,7 +185,7 @@
             // 
             this.labelJustRuntime.AutoSize = true;
             this.labelJustRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustRuntime.Location = new System.Drawing.Point(445, 61);
+            this.labelJustRuntime.Location = new System.Drawing.Point(505, 61);
             this.labelJustRuntime.Name = "labelJustRuntime";
             this.labelJustRuntime.Size = new System.Drawing.Size(79, 21);
             this.labelJustRuntime.TabIndex = 10;
@@ -204,7 +205,7 @@
             // 
             this.labelInfoRated.AutoSize = true;
             this.labelInfoRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.labelInfoRated.Location = new System.Drawing.Point(553, 237);
+            this.labelInfoRated.Location = new System.Drawing.Point(613, 237);
             this.labelInfoRated.Name = "labelInfoRated";
             this.labelInfoRated.Size = new System.Drawing.Size(52, 21);
             this.labelInfoRated.TabIndex = 13;
@@ -214,7 +215,7 @@
             // 
             this.labelInfoCountry.AutoSize = true;
             this.labelInfoCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoCountry.Location = new System.Drawing.Point(553, 105);
+            this.labelInfoCountry.Location = new System.Drawing.Point(613, 105);
             this.labelInfoCountry.Name = "labelInfoCountry";
             this.labelInfoCountry.Size = new System.Drawing.Size(69, 21);
             this.labelInfoCountry.TabIndex = 15;
@@ -224,7 +225,7 @@
             // 
             this.labelJustCountry.AutoSize = true;
             this.labelJustCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustCountry.Location = new System.Drawing.Point(445, 105);
+            this.labelJustCountry.Location = new System.Drawing.Point(505, 105);
             this.labelJustCountry.Name = "labelJustCountry";
             this.labelJustCountry.Size = new System.Drawing.Size(75, 21);
             this.labelJustCountry.TabIndex = 14;
@@ -234,7 +235,7 @@
             // 
             this.labelInfoProduction.AutoSize = true;
             this.labelInfoProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoProduction.Location = new System.Drawing.Point(553, 149);
+            this.labelInfoProduction.Location = new System.Drawing.Point(613, 149);
             this.labelInfoProduction.Name = "labelInfoProduction";
             this.labelInfoProduction.Size = new System.Drawing.Size(92, 21);
             this.labelInfoProduction.TabIndex = 17;
@@ -244,7 +245,7 @@
             // 
             this.labelJustProduction.AutoSize = true;
             this.labelJustProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustProduction.Location = new System.Drawing.Point(445, 149);
+            this.labelJustProduction.Location = new System.Drawing.Point(505, 149);
             this.labelJustProduction.Name = "labelJustProduction";
             this.labelJustProduction.Size = new System.Drawing.Size(99, 21);
             this.labelJustProduction.TabIndex = 16;
@@ -276,7 +277,7 @@
             this.buttonExtraIMDBInfo.Name = "buttonExtraIMDBInfo";
             this.buttonExtraIMDBInfo.Size = new System.Drawing.Size(106, 23);
             this.buttonExtraIMDBInfo.TabIndex = 20;
-            this.buttonExtraIMDBInfo.Text = "More imdb Info";
+            this.buttonExtraIMDBInfo.Text = "More Imdb Info";
             this.buttonExtraIMDBInfo.UseVisualStyleBackColor = true;
             this.buttonExtraIMDBInfo.Click += new System.EventHandler(this.buttonExtraIMDBInfo_Click);
             // 
@@ -293,32 +294,35 @@
             // labelJustIMDB_ID
             // 
             this.labelJustIMDB_ID.AutoSize = true;
-            this.labelJustIMDB_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelJustIMDB_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelJustIMDB_ID.Location = new System.Drawing.Point(333, 311);
             this.labelJustIMDB_ID.Name = "labelJustIMDB_ID";
-            this.labelJustIMDB_ID.Size = new System.Drawing.Size(64, 20);
+            this.labelJustIMDB_ID.Size = new System.Drawing.Size(73, 20);
             this.labelJustIMDB_ID.TabIndex = 22;
-            this.labelJustIMDB_ID.Text = "imdbID:";
+            this.labelJustIMDB_ID.Text = "ImdbID:";
+            this.labelJustIMDB_ID.Visible = false;
             // 
             // labelJustImdbRating
             // 
             this.labelJustImdbRating.AutoSize = true;
-            this.labelJustImdbRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelJustImdbRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelJustImdbRating.Location = new System.Drawing.Point(333, 339);
             this.labelJustImdbRating.Name = "labelJustImdbRating";
-            this.labelJustImdbRating.Size = new System.Drawing.Size(98, 20);
+            this.labelJustImdbRating.Size = new System.Drawing.Size(112, 20);
             this.labelJustImdbRating.TabIndex = 23;
-            this.labelJustImdbRating.Text = "imdb Rating:";
+            this.labelJustImdbRating.Text = "Imdb Rating:";
+            this.labelJustImdbRating.Visible = false;
             // 
             // labelJustImdbVotes
             // 
             this.labelJustImdbVotes.AutoSize = true;
-            this.labelJustImdbVotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelJustImdbVotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelJustImdbVotes.Location = new System.Drawing.Point(333, 367);
             this.labelJustImdbVotes.Name = "labelJustImdbVotes";
-            this.labelJustImdbVotes.Size = new System.Drawing.Size(93, 20);
+            this.labelJustImdbVotes.Size = new System.Drawing.Size(106, 20);
             this.labelJustImdbVotes.TabIndex = 24;
-            this.labelJustImdbVotes.Text = "imdb Votes:";
+            this.labelJustImdbVotes.Text = "Imdb Votes:";
+            this.labelJustImdbVotes.Visible = false;
             // 
             // labelInfoImdbVotes
             // 
@@ -329,6 +333,7 @@
             this.labelInfoImdbVotes.Size = new System.Drawing.Size(55, 20);
             this.labelInfoImdbVotes.TabIndex = 27;
             this.labelInfoImdbVotes.Text = "votes..";
+            this.labelInfoImdbVotes.Visible = false;
             // 
             // labelInfoImdbRating
             // 
@@ -339,6 +344,7 @@
             this.labelInfoImdbRating.Size = new System.Drawing.Size(95, 20);
             this.labelInfoImdbRating.TabIndex = 26;
             this.labelInfoImdbRating.Text = "imdb rating..";
+            this.labelInfoImdbRating.Visible = false;
             // 
             // labelInfoImdbID
             // 
@@ -349,12 +355,13 @@
             this.labelInfoImdbID.Size = new System.Drawing.Size(34, 20);
             this.labelInfoImdbID.TabIndex = 25;
             this.labelInfoImdbID.Text = "ID..";
+            this.labelInfoImdbID.Visible = false;
             // 
             // labelInfoWriter
             // 
             this.labelInfoWriter.AutoSize = true;
             this.labelInfoWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoWriter.Location = new System.Drawing.Point(553, 193);
+            this.labelInfoWriter.Location = new System.Drawing.Point(613, 193);
             this.labelInfoWriter.Name = "labelInfoWriter";
             this.labelInfoWriter.Size = new System.Drawing.Size(57, 21);
             this.labelInfoWriter.TabIndex = 32;
@@ -364,24 +371,25 @@
             // 
             this.labelJustWriter.AutoSize = true;
             this.labelJustWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustWriter.Location = new System.Drawing.Point(445, 193);
+            this.labelJustWriter.Location = new System.Drawing.Point(505, 193);
             this.labelJustWriter.Name = "labelJustWriter";
             this.labelJustWriter.Size = new System.Drawing.Size(62, 21);
             this.labelJustWriter.TabIndex = 31;
             this.labelJustWriter.Text = "Writer:";
             // 
-            // listView1
+            // listViewRatings
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewRatings.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Source,
             this.Value});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(546, 311);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(294, 141);
-            this.listView1.TabIndex = 33;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewRatings.HideSelection = false;
+            this.listViewRatings.Location = new System.Drawing.Point(546, 311);
+            this.listViewRatings.Name = "listViewRatings";
+            this.listViewRatings.Size = new System.Drawing.Size(294, 141);
+            this.listViewRatings.TabIndex = 33;
+            this.listViewRatings.UseCompatibleStateImageBehavior = false;
+            this.listViewRatings.View = System.Windows.Forms.View.Details;
+            this.listViewRatings.Visible = false;
             // 
             // Source
             // 
@@ -406,7 +414,7 @@
             this.linkLabelImdb.ActiveLinkColor = System.Drawing.Color.Red;
             this.linkLabelImdb.AutoSize = true;
             this.linkLabelImdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.linkLabelImdb.Location = new System.Drawing.Point(642, 31);
+            this.linkLabelImdb.Location = new System.Drawing.Point(594, 30);
             this.linkLabelImdb.Name = "linkLabelImdb";
             this.linkLabelImdb.Size = new System.Drawing.Size(63, 15);
             this.linkLabelImdb.TabIndex = 35;
@@ -418,7 +426,7 @@
             // 
             this.labelJustImdbLink.AutoSize = true;
             this.labelJustImdbLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelJustImdbLink.Location = new System.Drawing.Point(554, 31);
+            this.labelJustImdbLink.Location = new System.Drawing.Point(506, 30);
             this.labelJustImdbLink.Name = "labelJustImdbLink";
             this.labelJustImdbLink.Size = new System.Drawing.Size(82, 16);
             this.labelJustImdbLink.TabIndex = 36;
@@ -432,7 +440,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // labelJustType
             // 
@@ -448,7 +455,7 @@
             // 
             this.labelJustRated.AutoSize = true;
             this.labelJustRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
-            this.labelJustRated.Location = new System.Drawing.Point(445, 237);
+            this.labelJustRated.Location = new System.Drawing.Point(505, 237);
             this.labelJustRated.Name = "labelJustRated";
             this.labelJustRated.Size = new System.Drawing.Size(58, 21);
             this.labelJustRated.TabIndex = 39;
@@ -456,19 +463,30 @@
             // 
             // buttonSaveToWatchlist
             // 
-            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(750, 206);
+            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(734, 229);
             this.buttonSaveToWatchlist.Name = "buttonSaveToWatchlist";
-            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(90, 52);
+            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(106, 42);
             this.buttonSaveToWatchlist.TabIndex = 40;
             this.buttonSaveToWatchlist.Text = "Save To Watch List";
             this.buttonSaveToWatchlist.UseVisualStyleBackColor = true;
             this.buttonSaveToWatchlist.Click += new System.EventHandler(this.buttonSaveToWatchlist_Click);
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(765, 3);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 41;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // InfoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonSaveToWatchlist);
             this.Controls.Add(this.labelJustRated);
             this.Controls.Add(this.labelJustType);
@@ -476,7 +494,7 @@
             this.Controls.Add(this.labelJustImdbLink);
             this.Controls.Add(this.linkLabelImdb);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewRatings);
             this.Controls.Add(this.labelInfoWriter);
             this.Controls.Add(this.labelJustWriter);
             this.Controls.Add(this.labelInfoImdbVotes);
@@ -547,7 +565,7 @@
         private System.Windows.Forms.Label labelInfoImdbID;
         private System.Windows.Forms.Label labelInfoWriter;
         private System.Windows.Forms.Label labelJustWriter;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewRatings;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel linkLabelImdb;
         private System.Windows.Forms.Label labelJustImdbLink;
@@ -558,5 +576,6 @@
         private System.Windows.Forms.Label labelJustType;
         private System.Windows.Forms.Label labelJustRated;
         private System.Windows.Forms.Button buttonSaveToWatchlist;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }
