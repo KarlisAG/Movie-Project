@@ -259,7 +259,7 @@
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSearchMovie);
             this.Name = "SearchUC";
-            this.Size = new System.Drawing.Size(1002, 461);
+            this.Size = new System.Drawing.Size(843, 456);
             this.Load += new System.EventHandler(this.SearchUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

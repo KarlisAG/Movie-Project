@@ -16,5 +16,15 @@ namespace Project_Movie
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //pictureBox1.ImageLocation
+        }
+
+        private void linkLabelImdb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

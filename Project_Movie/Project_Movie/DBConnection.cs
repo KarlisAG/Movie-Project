@@ -4,7 +4,7 @@ using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
 
-namespace Day21_MD
+namespace Project_Movie
 {
 
     class DBConnection
