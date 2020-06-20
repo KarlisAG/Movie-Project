@@ -23,9 +23,9 @@ namespace Project_Movie
             server = "127.0.0.1";
             database = "movies";
             user = "root";
-            password = "admin123";
+            password = "Students!Programme";
             port = "3306";
-            sslM = "none";
+            sslM = "Required";
 
             connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; " +
                 "SslMode={5}", server, port, user, password, database, sslM);
@@ -33,7 +33,7 @@ namespace Project_Movie
             connection = new MySqlConnection(connectionString);
         }
 
-        public DataTable GetEmployees()
+        public DataTable GetMovies()
         {
             String stm = "SELECT * FROM watchList";
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -48,7 +48,7 @@ namespace Project_Movie
 
         public void AddMovie(String title, String type, String year, String length, String rating, String rated, String genre)
         {
-            MySqlConnection connection = null;
+            MySqlConnection connection = null;//nedrikst duplikatus pievienot!!!!
             try
             {
                 connection = new MySqlConnection(connectionString);
@@ -90,7 +90,8 @@ namespace Project_Movie
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
 
-                cmd.CommandText = $"DELETE FROM watchList WHERE ;";
+                cmd.CommandText = $"DELETE FROM watchList WHERE movieTitle = @movieTitle;";
+                cmd.Parameters.AddWithValue("@movieTitle", title);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -98,7 +99,18 @@ namespace Project_Movie
                 if (connection != null)
                     connection.Close();
             }
+        }
 
+        public DataTable FilterMovie(String parameter, String text)
+        {
+            String stm = $"SELECT * FROM watchList WHERE moviet{parameter} = '{text}';";
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+
+            dataAdapter.SelectCommand = new MySqlCommand(stm, connection);
+
+            DataTable table = new DataTable();
+            dataAdapter.Fill(table);//uztaisi ka pie delete
+            return table;
         }
     }
 }

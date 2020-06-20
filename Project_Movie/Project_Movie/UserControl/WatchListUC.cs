@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Project_Movie
 {
@@ -30,7 +31,7 @@ namespace Project_Movie
                 String deleteTitle = listView1.Items[i].Text;
                 db.DeleteMovie(deleteTitle);
             }
-            Update();
+            Update(sender, e);
         }
 
         private void buttonDefaultFilter_Click(object sender, EventArgs e)
@@ -52,9 +53,11 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
+            
+
             listView1.Items.Clear();
             int y = 0;
-            foreach (DataRow row in db.GetEmployees().Rows)
+            foreach (DataRow row in db.GetMovies().Rows)
             {
                 listView1.Items.Add(row.Field<String>(0));
                 listView1.Items[y].SubItems.Add(row.Field<String>(1));
@@ -63,12 +66,34 @@ namespace Project_Movie
                 listView1.Items[y].SubItems.Add(row.Field<String>(4));
                 listView1.Items[y].SubItems.Add(row.Field<String>(5));
                 listView1.Items[y].SubItems.Add(row.Field<String>(6));
+                y++;
             }
         }
 
         private void buttonFilterAction_Click(object sender, EventArgs e)
         {
+            if (comboBox1.Text == "")
+            {
+                richTextBoxError.Text = "You need to select a parameter in the drop down box!";
+            }
+            else 
+            { 
+                String filterParameter = comboBox1.Text;
+                String filter = textBoxFilter.Text;
 
+                int y = 0;
+                foreach(DataRow row in db.FilterMovie(filterParameter, filter).Rows)
+                {
+                    listView1.Items.Add(row.Field<String>(0));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(1));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(2));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(3));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(4));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(5));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(6));
+                    y++;
+                }
+            }
         }
     }
 }

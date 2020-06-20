@@ -43,6 +43,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.buttonFilterAction = new System.Windows.Forms.Button();
+            this.richTextBoxError = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // listView1
@@ -57,9 +58,9 @@
             this.Genre});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Location = new System.Drawing.Point(3, 30);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(756, 450);
+            this.listView1.Size = new System.Drawing.Size(756, 423);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -144,8 +145,8 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Type",
             "Year",
-            "Rated",
             "Rating",
+            "Rated",
             "Genre"});
             this.comboBox1.Location = new System.Drawing.Point(765, 126);
             this.comboBox1.Name = "comboBox1";
@@ -169,10 +170,21 @@
             this.buttonFilterAction.UseVisualStyleBackColor = true;
             this.buttonFilterAction.Click += new System.EventHandler(this.buttonFilterAction_Click);
             // 
+            // richTextBoxError
+            // 
+            this.richTextBoxError.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxError.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxError.Location = new System.Drawing.Point(3, 3);
+            this.richTextBoxError.Name = "richTextBoxError";
+            this.richTextBoxError.Size = new System.Drawing.Size(756, 21);
+            this.richTextBoxError.TabIndex = 8;
+            this.richTextBoxError.Text = "";
+            // 
             // WatchListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.richTextBoxError);
             this.Controls.Add(this.buttonFilterAction);
             this.Controls.Add(this.textBoxFilter);
             this.Controls.Add(this.comboBox1);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.Button buttonFilterAction;
+        private System.Windows.Forms.RichTextBox richTextBoxError;
     }
 }
