@@ -18,6 +18,8 @@ namespace Project_Movie
     {
         private bool basicVisible = false;
         private bool advancedVisible = false;
+        DBConnection db = new DBConnection();
+        MovieData md;
         public SearchUC()
         {
             InitializeComponent();
@@ -210,14 +212,16 @@ namespace Project_Movie
             WebClient client = new WebClient();
             String response = client.DownloadString(url);
 
-            MovieData md = JsonConvert.DeserializeObject<MovieData>(response);
-            //response = JsonConvert.SerializeObject(response, Formatting.Indented);
+            md = JsonConvert.DeserializeObject<MovieData>(response);
             if (md.Response == "True")
             {
                 labelErrorMessage.Visible = false;
                 labelSearchStatus.Visible = true;
 
                 labelSearchStatus.Text = "Search successful! You can view its information in Movie Info tab!";
+
+                buttonAddToWL.Visible = true;
+                
 
                 StreamWriter sw = new StreamWriter("CurrentMovie.json");
                 sw.Write(response);
@@ -238,7 +242,12 @@ namespace Project_Movie
             textBoxYear.Clear();
             textBoxSeason.Clear();
             textBoxEpisode.Clear();
-            comboBoxType.Text = "";
+            comboBoxType.Text = String.Empty;
+        }
+
+        private void buttonAddToWL_Click(object sender, EventArgs e)
+        {
+            db.AddMovie(md.Title, md.Type, md.Year, md.Runtime, md.Metascore, md.Rated, md.Genre);
         }
     }
 }

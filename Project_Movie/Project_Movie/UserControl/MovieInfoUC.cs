@@ -14,6 +14,7 @@ namespace Project_Movie
 {
     public partial class InfoUC : UserControl
     {
+        DBConnection db = new DBConnection();
         public InfoUC()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace Project_Movie
 
         private void buttonSaveToWatchlist_Click(object sender, EventArgs e)
         {
-            
+            db.AddMovie(labelInfoTitle.Text, richTextBoxInfoType.Text, richTextBoxInfoYear.Text, richTextBoxInfoRuntime.Text, richTextBoxInfoMetascore.Text, richTextBoxInfoRated.Text, richTextBoxInfoGenres.Text);
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)

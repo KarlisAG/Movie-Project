@@ -52,6 +52,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelErrorMessage = new System.Windows.Forms.Label();
             this.labelNumberError = new System.Windows.Forms.Label();
+            this.buttonAddToWL = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSearchByID
@@ -89,9 +90,9 @@
             // buttonClear
             // 
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
-            this.buttonClear.Location = new System.Drawing.Point(576, 108);
+            this.buttonClear.Location = new System.Drawing.Point(604, 109);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(111, 23);
+            this.buttonClear.Size = new System.Drawing.Size(139, 23);
             this.buttonClear.TabIndex = 11;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -103,7 +104,7 @@
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
             this.buttonSearch.Location = new System.Drawing.Point(459, 108);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(111, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(139, 23);
             this.buttonSearch.TabIndex = 10;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -310,10 +311,23 @@
             this.labelNumberError.TabIndex = 33;
             this.labelNumberError.Visible = false;
             // 
+            // buttonAddToWL
+            // 
+            this.buttonAddToWL.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonAddToWL.Location = new System.Drawing.Point(459, 137);
+            this.buttonAddToWL.Name = "buttonAddToWL";
+            this.buttonAddToWL.Size = new System.Drawing.Size(139, 23);
+            this.buttonAddToWL.TabIndex = 34;
+            this.buttonAddToWL.Text = "Add To Watch List";
+            this.buttonAddToWL.UseVisualStyleBackColor = true;
+            this.buttonAddToWL.Visible = false;
+            this.buttonAddToWL.Click += new System.EventHandler(this.buttonAddToWL_Click);
+            // 
             // SearchUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonAddToWL);
             this.Controls.Add(this.labelNumberError);
             this.Controls.Add(this.labelErrorMessage);
             this.Controls.Add(this.linkLabel1);
@@ -372,5 +386,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label labelErrorMessage;
         private System.Windows.Forms.Label labelNumberError;
+        private System.Windows.Forms.Button buttonAddToWL;
     }
 }

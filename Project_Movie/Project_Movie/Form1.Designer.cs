@@ -45,6 +45,7 @@
             this.buttonSlider = new System.Windows.Forms.Button();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
+            this.watchListUC1 = new Project_Movie.WatchListUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -181,6 +182,7 @@
             this.buttonSlider.Size = new System.Drawing.Size(6, 67);
             this.buttonSlider.TabIndex = 0;
             this.buttonSlider.UseVisualStyleBackColor = false;
+            this.buttonSlider.Visible = false;
             // 
             // infoUC1
             // 
@@ -200,11 +202,20 @@
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
+            // watchListUC1
+            // 
+            this.watchListUC1.Location = new System.Drawing.Point(133, 46);
+            this.watchListUC1.Name = "watchListUC1";
+            this.watchListUC1.Size = new System.Drawing.Size(857, 456);
+            this.watchListUC1.TabIndex = 5;
+            this.watchListUC1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(993, 502);
+            this.Controls.Add(this.watchListUC1);
             this.Controls.Add(this.infoUC1);
             this.Controls.Add(this.searchUC1);
             this.Controls.Add(this.panel3);
@@ -239,6 +250,7 @@
         private System.Windows.Forms.Button buttonExit;
         private SearchUC searchUC1;
         private InfoUC infoUC1;
+        private WatchListUC watchListUC1;
     }
 }
 

@@ -183,20 +183,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="DataBase\DBConnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieData.cs" />
-    <Compile Include="Ratings.cs" />
-    <Compile Include="UserControl\InfoUC.cs">
+    <Compile Include="DataBase\MovieData.cs" />
+    <Compile Include="DataBase\Ratings.cs" />
+    <Compile Include="UserControl\MovieInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\InfoUC.Designer.cs">
-      <DependentUpon>InfoUC.cs</DependentUpon>
+    <Compile Include="UserControl\MovieInfoUC.Designer.cs">
+      <DependentUpon>MovieInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,17 +206,17 @@
     <Compile Include="UserControl\SearchUC.Designer.cs">
       <DependentUpon>SearchUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="WatchList.cs">
+    <Compile Include="UserControl\WatchListUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WatchList.Designer.cs">
-      <DependentUpon>WatchList.cs</DependentUpon>
+    <Compile Include="UserControl\WatchListUC.Designer.cs">
+      <DependentUpon>WatchListUC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\InfoUC.resx">
-      <DependentUpon>InfoUC.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\MovieInfoUC.resx">
+      <DependentUpon>MovieInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="UserControl\SearchUC.resx">
       <DependentUpon>SearchUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WatchList.resx">
-      <DependentUpon>WatchList.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\WatchListUC.resx">
+      <DependentUpon>WatchListUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

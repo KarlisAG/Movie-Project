@@ -16,25 +16,34 @@ namespace Project_Movie
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            buttonSlider.Visible = true;
             buttonSlider.Location = buttonSearch.Location;
             searchUC1.Visible = true;
             infoUC1.Visible = false;
+            watchListUC1.Visible = false;
         }
 
         private void buttonWatchList_Click(object sender, EventArgs e)
         {
+            buttonSlider.Visible = true;
             buttonSlider.Location = buttonWatchList.Location;
+            watchListUC1.Visible = true;
+            searchUC1.Visible = false;
+            infoUC1.Visible = false;
         }
 
         private void buttonInfo_Click(object sender, EventArgs e)
         {
+            buttonSlider.Visible = true;
             buttonSlider.Location = buttonInfo.Location;
             infoUC1.Visible = true;
             searchUC1.Visible = false;
+            watchListUC1.Visible = false;
         }
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
+            buttonSlider.Visible = true;
             buttonSlider.Location = buttonUser.Location;
         }
     }
