@@ -43,8 +43,8 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonSlider = new System.Windows.Forms.Button();
-            this.searchUC1 = new Project_Movie.SearchUC();
             this.infoUC1 = new Project_Movie.InfoUC();
+            this.searchUC1 = new Project_Movie.SearchUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -167,7 +167,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(127, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(17, 456);
+            this.panel3.Size = new System.Drawing.Size(24, 456);
             this.panel3.TabIndex = 2;
             // 
             // buttonSlider
@@ -176,28 +176,29 @@
             this.buttonSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSlider.ForeColor = System.Drawing.Color.White;
-            this.buttonSlider.Location = new System.Drawing.Point(1, 0);
+            this.buttonSlider.Location = new System.Drawing.Point(0, 0);
             this.buttonSlider.Name = "buttonSlider";
-            this.buttonSlider.Size = new System.Drawing.Size(16, 67);
+            this.buttonSlider.Size = new System.Drawing.Size(6, 67);
             this.buttonSlider.TabIndex = 0;
             this.buttonSlider.UseVisualStyleBackColor = false;
             // 
-            // searchUC1
-            // 
-            this.searchUC1.Location = new System.Drawing.Point(147, 46);
-            this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(843, 456);
-            this.searchUC1.TabIndex = 3;
-            this.searchUC1.Visible = false;
-            // 
             // infoUC1
             // 
+            this.infoUC1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoUC1.BackColor = System.Drawing.Color.Cornsilk;
-            this.infoUC1.Location = new System.Drawing.Point(147, 46);
+            this.infoUC1.Location = new System.Drawing.Point(133, 46);
             this.infoUC1.Name = "infoUC1";
-            this.infoUC1.Size = new System.Drawing.Size(843, 456);
+            this.infoUC1.Size = new System.Drawing.Size(857, 456);
             this.infoUC1.TabIndex = 4;
             this.infoUC1.Visible = false;
+            // 
+            // searchUC1
+            // 
+            this.searchUC1.Location = new System.Drawing.Point(133, 46);
+            this.searchUC1.Name = "searchUC1";
+            this.searchUC1.Size = new System.Drawing.Size(857, 456);
+            this.searchUC1.TabIndex = 3;
+            this.searchUC1.Visible = false;
             // 
             // Form1
             // 

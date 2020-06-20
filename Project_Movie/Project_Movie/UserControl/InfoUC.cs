@@ -27,13 +27,13 @@ namespace Project_Movie
         private void buttonExtraIMDBInfo_Click(object sender, EventArgs e)
         {
             labelJustIMDB_ID.Visible = !labelJustIMDB_ID.Visible;
-            labelInfoImdbID.Visible = !labelInfoImdbID.Visible;
+            richTextBoxInfoImdbID.Visible = !richTextBoxInfoImdbID.Visible;
 
             labelJustImdbRating.Visible = !labelJustImdbRating.Visible;
-            labelInfoImdbRating.Visible = !labelInfoImdbRating.Visible;
+            richTextBoxInfoImdbRating.Visible = !richTextBoxInfoImdbRating.Visible;
 
             labelJustImdbVotes.Visible = !labelJustImdbVotes.Visible;
-            labelInfoImdbVotes.Visible = !labelInfoImdbVotes.Visible;
+            richTextBoxInfoImdbVotes.Visible = !richTextBoxInfoImdbVotes.Visible;
 
             if (labelJustIMDB_ID.Visible == true)
             {
@@ -67,26 +67,31 @@ namespace Project_Movie
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+            Update(sender, e);
+        }
+
+        private void Update(object sender, EventArgs e)
+        {
             try
             {
                 MovieData md = JsonConvert.DeserializeObject<MovieData>(File.ReadAllText("CurrentMovie.json"));
-                labelInfoTitle.Text = md.Title;
-                labelInfoYear.Text = md.Year;
-                labelInfoCountry.Text = md.Country;
-                labelInfoGenre.Text = md.Genre;
-                labelInfoRated.Text = md.Rated;
-                labelInforActors.Text = md.Actors;
-                labelInfoRuntime.Text = md.Runtime;
-                labelInfoType.Text = md.Type;
-                labelInfoWriter.Text = md.Writer;
-                labelInfoPlot.Text = md.Plot;
-                labelInfoProduction.Text = md.Production;
-                labelInfoMetascore.Text = md.Metascore;
+                labelInfoTitle.Text = md.Title;//izlabot āeuro uz -
+                richTextBoxInfoYear.Text = md.Year;
+                richTextBoxInfoCountry.Text = md.Country;
+                richTextBoxInfoGenres.Text = md.Genre;
+                richTextBoxInfoRated.Text = md.Rated;
+                richTextBoxInfoActors.Text = md.Actors;
+                richTextBoxInfoRuntime.Text = md.Runtime;
+                richTextBoxInfoType.Text = md.Type;
+                richTextBoxInfoWriter.Text = md.Writer;
+                richTextBoxInfoPlot.Text = md.Plot;
+                richTextBoxInfoProduction.Text = md.Production;
+                richTextBoxInfoMetascore.Text = md.Metascore;
                 linkLabelImdb.Text = "https://www.imdb.com/title/" + md.ImdbID;
 
-                labelInfoImdbID.Text = md.ImdbID;
-                labelInfoImdbRating.Text = md.ImdbRating;
-                labelInfoImdbVotes.Text = md.ImdbVotes;
+                richTextBoxInfoImdbID.Text = md.ImdbID;
+                richTextBoxInfoImdbRating.Text = md.ImdbRating;
+                richTextBoxInfoImdbVotes.Text = md.ImdbVotes;
 
                 pictureBox1.Load(md.Poster);
 
@@ -102,7 +107,7 @@ namespace Project_Movie
             }
             catch (Exception ex)
             {
-                labelInfoRuntime.Text = ex.Message;
+                labelInfoTitle.Text = ex.Message;
             }
         }
     }

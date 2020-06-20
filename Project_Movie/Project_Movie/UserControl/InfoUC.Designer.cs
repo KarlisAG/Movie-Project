@@ -32,46 +32,44 @@
             this.labelInfoTitle = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelJustYear = new System.Windows.Forms.Label();
-            this.labelInfoYear = new System.Windows.Forms.Label();
-            this.labelInfoMetascore = new System.Windows.Forms.Label();
             this.labelJustMetascore = new System.Windows.Forms.Label();
-            this.labelInfoGenre = new System.Windows.Forms.Label();
             this.labelJustGenre = new System.Windows.Forms.Label();
-            this.labelInforActors = new System.Windows.Forms.Label();
             this.labelJustActors = new System.Windows.Forms.Label();
-            this.labelInfoRuntime = new System.Windows.Forms.Label();
             this.labelJustRuntime = new System.Windows.Forms.Label();
-            this.labelInfoType = new System.Windows.Forms.Label();
-            this.labelInfoRated = new System.Windows.Forms.Label();
-            this.labelInfoCountry = new System.Windows.Forms.Label();
             this.labelJustCountry = new System.Windows.Forms.Label();
-            this.labelInfoProduction = new System.Windows.Forms.Label();
             this.labelJustProduction = new System.Windows.Forms.Label();
-            this.labelInfoPlot = new System.Windows.Forms.Label();
             this.labelJustPlot = new System.Windows.Forms.Label();
             this.buttonExtraIMDBInfo = new System.Windows.Forms.Button();
             this.buttonExtraRatings = new System.Windows.Forms.Button();
             this.labelJustIMDB_ID = new System.Windows.Forms.Label();
             this.labelJustImdbRating = new System.Windows.Forms.Label();
             this.labelJustImdbVotes = new System.Windows.Forms.Label();
-            this.labelInfoImdbVotes = new System.Windows.Forms.Label();
-            this.labelInfoImdbRating = new System.Windows.Forms.Label();
-            this.labelInfoImdbID = new System.Windows.Forms.Label();
-            this.labelInfoWriter = new System.Windows.Forms.Label();
             this.labelJustWriter = new System.Windows.Forms.Label();
             this.listViewRatings = new System.Windows.Forms.ListView();
             this.Source = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabelImdb = new System.Windows.Forms.LinkLabel();
-            this.labelJustImdbLink = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelJustType = new System.Windows.Forms.Label();
             this.labelJustRated = new System.Windows.Forms.Label();
             this.buttonSaveToWatchlist = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
+            this.richTextBoxInfoGenres = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoPlot = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoActors = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoType = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoMetascore = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoYear = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoRated = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoWriter = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoProduction = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoCountry = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoRuntime = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoImdbID = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoImdbRating = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxInfoImdbVotes = new System.Windows.Forms.RichTextBox();
+            this.labelJustLinkToImdb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +77,7 @@
             // 
             this.labelInfoTitle.AutoSize = true;
             this.labelInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelInfoTitle.Location = new System.Drawing.Point(219, 9);
+            this.labelInfoTitle.Location = new System.Drawing.Point(217, 1);
             this.labelInfoTitle.Name = "labelInfoTitle";
             this.labelInfoTitle.Size = new System.Drawing.Size(82, 37);
             this.labelInfoTitle.TabIndex = 0;
@@ -101,26 +99,6 @@
             this.labelJustYear.TabIndex = 1;
             this.labelJustYear.Text = "Year:";
             // 
-            // labelInfoYear
-            // 
-            this.labelInfoYear.AutoSize = true;
-            this.labelInfoYear.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoYear.Location = new System.Drawing.Point(328, 61);
-            this.labelInfoYear.Name = "labelInfoYear";
-            this.labelInfoYear.Size = new System.Drawing.Size(46, 21);
-            this.labelInfoYear.TabIndex = 3;
-            this.labelInfoYear.Text = "year..";
-            // 
-            // labelInfoMetascore
-            // 
-            this.labelInfoMetascore.AutoSize = true;
-            this.labelInfoMetascore.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoMetascore.Location = new System.Drawing.Point(328, 105);
-            this.labelInfoMetascore.Name = "labelInfoMetascore";
-            this.labelInfoMetascore.Size = new System.Drawing.Size(91, 21);
-            this.labelInfoMetascore.TabIndex = 5;
-            this.labelInfoMetascore.Text = "metascore...";
-            // 
             // labelJustMetascore
             // 
             this.labelJustMetascore.AutoSize = true;
@@ -130,16 +108,6 @@
             this.labelJustMetascore.Size = new System.Drawing.Size(93, 21);
             this.labelJustMetascore.TabIndex = 4;
             this.labelJustMetascore.Text = "Metascore:";
-            // 
-            // labelInfoGenre
-            // 
-            this.labelInfoGenre.AutoSize = true;
-            this.labelInfoGenre.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoGenre.Location = new System.Drawing.Point(328, 149);
-            this.labelInfoGenre.Name = "labelInfoGenre";
-            this.labelInfoGenre.Size = new System.Drawing.Size(56, 21);
-            this.labelInfoGenre.TabIndex = 7;
-            this.labelInfoGenre.Text = "genre..";
             // 
             // labelJustGenre
             // 
@@ -151,16 +119,6 @@
             this.labelJustGenre.TabIndex = 6;
             this.labelJustGenre.Text = "Genre:";
             // 
-            // labelInforActors
-            // 
-            this.labelInforActors.AutoSize = true;
-            this.labelInforActors.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInforActors.Location = new System.Drawing.Point(328, 193);
-            this.labelInforActors.Name = "labelInforActors";
-            this.labelInforActors.Size = new System.Drawing.Size(58, 21);
-            this.labelInforActors.TabIndex = 9;
-            this.labelInforActors.Text = "actors..";
-            // 
             // labelJustActors
             // 
             this.labelJustActors.AutoSize = true;
@@ -171,95 +129,35 @@
             this.labelJustActors.TabIndex = 8;
             this.labelJustActors.Text = "Actors:";
             // 
-            // labelInfoRuntime
-            // 
-            this.labelInfoRuntime.AutoSize = true;
-            this.labelInfoRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoRuntime.Location = new System.Drawing.Point(613, 61);
-            this.labelInfoRuntime.Name = "labelInfoRuntime";
-            this.labelInfoRuntime.Size = new System.Drawing.Size(71, 21);
-            this.labelInfoRuntime.TabIndex = 11;
-            this.labelInfoRuntime.Text = "runtime..";
-            // 
             // labelJustRuntime
             // 
             this.labelJustRuntime.AutoSize = true;
             this.labelJustRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustRuntime.Location = new System.Drawing.Point(505, 61);
+            this.labelJustRuntime.Location = new System.Drawing.Point(529, 61);
             this.labelJustRuntime.Name = "labelJustRuntime";
             this.labelJustRuntime.Size = new System.Drawing.Size(79, 21);
             this.labelJustRuntime.TabIndex = 10;
             this.labelJustRuntime.Text = "Runtime:";
             // 
-            // labelInfoType
-            // 
-            this.labelInfoType.AutoSize = true;
-            this.labelInfoType.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.labelInfoType.Location = new System.Drawing.Point(328, 237);
-            this.labelInfoType.Name = "labelInfoType";
-            this.labelInfoType.Size = new System.Drawing.Size(46, 21);
-            this.labelInfoType.TabIndex = 12;
-            this.labelInfoType.Text = "type..";
-            // 
-            // labelInfoRated
-            // 
-            this.labelInfoRated.AutoSize = true;
-            this.labelInfoRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.labelInfoRated.Location = new System.Drawing.Point(613, 237);
-            this.labelInfoRated.Name = "labelInfoRated";
-            this.labelInfoRated.Size = new System.Drawing.Size(52, 21);
-            this.labelInfoRated.TabIndex = 13;
-            this.labelInfoRated.Text = "rated..";
-            // 
-            // labelInfoCountry
-            // 
-            this.labelInfoCountry.AutoSize = true;
-            this.labelInfoCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoCountry.Location = new System.Drawing.Point(613, 105);
-            this.labelInfoCountry.Name = "labelInfoCountry";
-            this.labelInfoCountry.Size = new System.Drawing.Size(69, 21);
-            this.labelInfoCountry.TabIndex = 15;
-            this.labelInfoCountry.Text = "country..";
-            // 
             // labelJustCountry
             // 
             this.labelJustCountry.AutoSize = true;
             this.labelJustCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustCountry.Location = new System.Drawing.Point(505, 105);
+            this.labelJustCountry.Location = new System.Drawing.Point(529, 105);
             this.labelJustCountry.Name = "labelJustCountry";
             this.labelJustCountry.Size = new System.Drawing.Size(75, 21);
             this.labelJustCountry.TabIndex = 14;
             this.labelJustCountry.Text = "Country:";
             // 
-            // labelInfoProduction
-            // 
-            this.labelInfoProduction.AutoSize = true;
-            this.labelInfoProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoProduction.Location = new System.Drawing.Point(613, 149);
-            this.labelInfoProduction.Name = "labelInfoProduction";
-            this.labelInfoProduction.Size = new System.Drawing.Size(92, 21);
-            this.labelInfoProduction.TabIndex = 17;
-            this.labelInfoProduction.Text = "production..";
-            // 
             // labelJustProduction
             // 
             this.labelJustProduction.AutoSize = true;
             this.labelJustProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustProduction.Location = new System.Drawing.Point(505, 149);
+            this.labelJustProduction.Location = new System.Drawing.Point(529, 149);
             this.labelJustProduction.Name = "labelJustProduction";
             this.labelJustProduction.Size = new System.Drawing.Size(99, 21);
             this.labelJustProduction.TabIndex = 16;
             this.labelJustProduction.Text = "Production:";
-            // 
-            // labelInfoPlot
-            // 
-            this.labelInfoPlot.AutoSize = true;
-            this.labelInfoPlot.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.labelInfoPlot.Location = new System.Drawing.Point(3, 1);
-            this.labelInfoPlot.Name = "labelInfoPlot";
-            this.labelInfoPlot.Size = new System.Drawing.Size(40, 21);
-            this.labelInfoPlot.TabIndex = 19;
-            this.labelInfoPlot.Text = "plot:";
             // 
             // labelJustPlot
             // 
@@ -324,54 +222,11 @@
             this.labelJustImdbVotes.Text = "Imdb Votes:";
             this.labelJustImdbVotes.Visible = false;
             // 
-            // labelInfoImdbVotes
-            // 
-            this.labelInfoImdbVotes.AutoSize = true;
-            this.labelInfoImdbVotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelInfoImdbVotes.Location = new System.Drawing.Point(445, 367);
-            this.labelInfoImdbVotes.Name = "labelInfoImdbVotes";
-            this.labelInfoImdbVotes.Size = new System.Drawing.Size(55, 20);
-            this.labelInfoImdbVotes.TabIndex = 27;
-            this.labelInfoImdbVotes.Text = "votes..";
-            this.labelInfoImdbVotes.Visible = false;
-            // 
-            // labelInfoImdbRating
-            // 
-            this.labelInfoImdbRating.AutoSize = true;
-            this.labelInfoImdbRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelInfoImdbRating.Location = new System.Drawing.Point(445, 339);
-            this.labelInfoImdbRating.Name = "labelInfoImdbRating";
-            this.labelInfoImdbRating.Size = new System.Drawing.Size(95, 20);
-            this.labelInfoImdbRating.TabIndex = 26;
-            this.labelInfoImdbRating.Text = "imdb rating..";
-            this.labelInfoImdbRating.Visible = false;
-            // 
-            // labelInfoImdbID
-            // 
-            this.labelInfoImdbID.AutoSize = true;
-            this.labelInfoImdbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelInfoImdbID.Location = new System.Drawing.Point(445, 311);
-            this.labelInfoImdbID.Name = "labelInfoImdbID";
-            this.labelInfoImdbID.Size = new System.Drawing.Size(34, 20);
-            this.labelInfoImdbID.TabIndex = 25;
-            this.labelInfoImdbID.Text = "ID..";
-            this.labelInfoImdbID.Visible = false;
-            // 
-            // labelInfoWriter
-            // 
-            this.labelInfoWriter.AutoSize = true;
-            this.labelInfoWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoWriter.Location = new System.Drawing.Point(613, 193);
-            this.labelInfoWriter.Name = "labelInfoWriter";
-            this.labelInfoWriter.Size = new System.Drawing.Size(57, 21);
-            this.labelInfoWriter.TabIndex = 32;
-            this.labelInfoWriter.Text = "writer..";
-            // 
             // labelJustWriter
             // 
             this.labelJustWriter.AutoSize = true;
             this.labelJustWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJustWriter.Location = new System.Drawing.Point(505, 193);
+            this.labelJustWriter.Location = new System.Drawing.Point(529, 193);
             this.labelJustWriter.Name = "labelJustWriter";
             this.labelJustWriter.Size = new System.Drawing.Size(62, 21);
             this.labelJustWriter.TabIndex = 31;
@@ -379,11 +234,13 @@
             // 
             // listViewRatings
             // 
+            this.listViewRatings.BackColor = System.Drawing.Color.Cornsilk;
+            this.listViewRatings.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewRatings.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Source,
             this.Value});
             this.listViewRatings.HideSelection = false;
-            this.listViewRatings.Location = new System.Drawing.Point(546, 311);
+            this.listViewRatings.Location = new System.Drawing.Point(549, 314);
             this.listViewRatings.Name = "listViewRatings";
             this.listViewRatings.Size = new System.Drawing.Size(294, 141);
             this.listViewRatings.TabIndex = 33;
@@ -394,43 +251,25 @@
             // Source
             // 
             this.Source.Text = "Source";
-            this.Source.Width = 190;
+            this.Source.Width = 197;
             // 
             // Value
             // 
             this.Value.Text = "Value";
             this.Value.Width = 95;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.labelInfoPlot);
-            this.panel2.Location = new System.Drawing.Point(49, 287);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(263, 165);
-            this.panel2.TabIndex = 34;
-            // 
             // linkLabelImdb
             // 
             this.linkLabelImdb.ActiveLinkColor = System.Drawing.Color.Red;
             this.linkLabelImdb.AutoSize = true;
             this.linkLabelImdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.linkLabelImdb.Location = new System.Drawing.Point(594, 30);
+            this.linkLabelImdb.Location = new System.Drawing.Point(617, 263);
             this.linkLabelImdb.Name = "linkLabelImdb";
-            this.linkLabelImdb.Size = new System.Drawing.Size(63, 15);
+            this.linkLabelImdb.Size = new System.Drawing.Size(74, 15);
             this.linkLabelImdb.TabIndex = 35;
             this.linkLabelImdb.TabStop = true;
-            this.linkLabelImdb.Text = "imdb link..";
+            this.linkLabelImdb.Text = "Link to Imdb";
             this.linkLabelImdb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelImdb_LinkClicked);
-            // 
-            // labelJustImdbLink
-            // 
-            this.labelJustImdbLink.AutoSize = true;
-            this.labelJustImdbLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelJustImdbLink.Location = new System.Drawing.Point(506, 30);
-            this.labelJustImdbLink.Name = "labelJustImdbLink";
-            this.labelJustImdbLink.Size = new System.Drawing.Size(82, 16);
-            this.labelJustImdbLink.TabIndex = 36;
-            this.labelJustImdbLink.Text = "Link to imdb:";
             // 
             // pictureBox1
             // 
@@ -455,7 +294,7 @@
             // 
             this.labelJustRated.AutoSize = true;
             this.labelJustRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
-            this.labelJustRated.Location = new System.Drawing.Point(505, 237);
+            this.labelJustRated.Location = new System.Drawing.Point(529, 237);
             this.labelJustRated.Name = "labelJustRated";
             this.labelJustRated.Size = new System.Drawing.Size(58, 21);
             this.labelJustRated.TabIndex = 39;
@@ -463,9 +302,9 @@
             // 
             // buttonSaveToWatchlist
             // 
-            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(734, 229);
+            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(607, 285);
             this.buttonSaveToWatchlist.Name = "buttonSaveToWatchlist";
-            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(106, 42);
+            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(121, 23);
             this.buttonSaveToWatchlist.TabIndex = 40;
             this.buttonSaveToWatchlist.Text = "Save To Watch List";
             this.buttonSaveToWatchlist.UseVisualStyleBackColor = true;
@@ -473,7 +312,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(765, 3);
+            this.buttonUpdate.Location = new System.Drawing.Point(526, 285);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdate.TabIndex = 41;
@@ -481,52 +320,246 @@
             this.buttonUpdate.UseVisualStyleBackColor = true;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
+            // richTextBoxInfoGenres
+            // 
+            this.richTextBoxInfoGenres.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoGenres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoGenres.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoGenres.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoGenres.Location = new System.Drawing.Point(329, 149);
+            this.richTextBoxInfoGenres.Name = "richTextBoxInfoGenres";
+            this.richTextBoxInfoGenres.ReadOnly = true;
+            this.richTextBoxInfoGenres.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoGenres.TabIndex = 46;
+            this.richTextBoxInfoGenres.Text = "";
+            // 
+            // richTextBoxInfoPlot
+            // 
+            this.richTextBoxInfoPlot.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoPlot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoPlot.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoPlot.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoPlot.Location = new System.Drawing.Point(54, 285);
+            this.richTextBoxInfoPlot.Name = "richTextBoxInfoPlot";
+            this.richTextBoxInfoPlot.ReadOnly = true;
+            this.richTextBoxInfoPlot.Size = new System.Drawing.Size(272, 165);
+            this.richTextBoxInfoPlot.TabIndex = 47;
+            this.richTextBoxInfoPlot.Text = "";
+            // 
+            // richTextBoxInfoActors
+            // 
+            this.richTextBoxInfoActors.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoActors.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoActors.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoActors.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoActors.Location = new System.Drawing.Point(329, 193);
+            this.richTextBoxInfoActors.Name = "richTextBoxInfoActors";
+            this.richTextBoxInfoActors.ReadOnly = true;
+            this.richTextBoxInfoActors.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoActors.TabIndex = 48;
+            this.richTextBoxInfoActors.Text = "";
+            // 
+            // richTextBoxInfoType
+            // 
+            this.richTextBoxInfoType.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoType.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoType.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoType.Location = new System.Drawing.Point(329, 237);
+            this.richTextBoxInfoType.Name = "richTextBoxInfoType";
+            this.richTextBoxInfoType.ReadOnly = true;
+            this.richTextBoxInfoType.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoType.TabIndex = 49;
+            this.richTextBoxInfoType.Text = "";
+            // 
+            // richTextBoxInfoMetascore
+            // 
+            this.richTextBoxInfoMetascore.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoMetascore.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoMetascore.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoMetascore.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoMetascore.Location = new System.Drawing.Point(329, 105);
+            this.richTextBoxInfoMetascore.Name = "richTextBoxInfoMetascore";
+            this.richTextBoxInfoMetascore.ReadOnly = true;
+            this.richTextBoxInfoMetascore.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoMetascore.TabIndex = 50;
+            this.richTextBoxInfoMetascore.Text = "";
+            // 
+            // richTextBoxInfoYear
+            // 
+            this.richTextBoxInfoYear.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoYear.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoYear.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoYear.Location = new System.Drawing.Point(329, 61);
+            this.richTextBoxInfoYear.Name = "richTextBoxInfoYear";
+            this.richTextBoxInfoYear.ReadOnly = true;
+            this.richTextBoxInfoYear.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoYear.TabIndex = 51;
+            this.richTextBoxInfoYear.Text = "";
+            // 
+            // richTextBoxInfoRated
+            // 
+            this.richTextBoxInfoRated.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoRated.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoRated.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoRated.Location = new System.Drawing.Point(641, 237);
+            this.richTextBoxInfoRated.Name = "richTextBoxInfoRated";
+            this.richTextBoxInfoRated.ReadOnly = true;
+            this.richTextBoxInfoRated.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoRated.TabIndex = 52;
+            this.richTextBoxInfoRated.Text = "";
+            // 
+            // richTextBoxInfoWriter
+            // 
+            this.richTextBoxInfoWriter.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoWriter.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoWriter.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoWriter.Location = new System.Drawing.Point(641, 193);
+            this.richTextBoxInfoWriter.Name = "richTextBoxInfoWriter";
+            this.richTextBoxInfoWriter.ReadOnly = true;
+            this.richTextBoxInfoWriter.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoWriter.TabIndex = 53;
+            this.richTextBoxInfoWriter.Text = "";
+            // 
+            // richTextBoxInfoProduction
+            // 
+            this.richTextBoxInfoProduction.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoProduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoProduction.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoProduction.Location = new System.Drawing.Point(641, 149);
+            this.richTextBoxInfoProduction.Name = "richTextBoxInfoProduction";
+            this.richTextBoxInfoProduction.ReadOnly = true;
+            this.richTextBoxInfoProduction.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoProduction.TabIndex = 54;
+            this.richTextBoxInfoProduction.Text = "";
+            // 
+            // richTextBoxInfoCountry
+            // 
+            this.richTextBoxInfoCountry.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoCountry.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoCountry.Location = new System.Drawing.Point(641, 105);
+            this.richTextBoxInfoCountry.Name = "richTextBoxInfoCountry";
+            this.richTextBoxInfoCountry.ReadOnly = true;
+            this.richTextBoxInfoCountry.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoCountry.TabIndex = 55;
+            this.richTextBoxInfoCountry.Text = "";
+            // 
+            // richTextBoxInfoRuntime
+            // 
+            this.richTextBoxInfoRuntime.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoRuntime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoRuntime.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoRuntime.Location = new System.Drawing.Point(641, 61);
+            this.richTextBoxInfoRuntime.Name = "richTextBoxInfoRuntime";
+            this.richTextBoxInfoRuntime.ReadOnly = true;
+            this.richTextBoxInfoRuntime.Size = new System.Drawing.Size(195, 21);
+            this.richTextBoxInfoRuntime.TabIndex = 56;
+            this.richTextBoxInfoRuntime.Text = "";
+            // 
+            // richTextBoxInfoImdbID
+            // 
+            this.richTextBoxInfoImdbID.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoImdbID.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoImdbID.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbID.Location = new System.Drawing.Point(449, 310);
+            this.richTextBoxInfoImdbID.Name = "richTextBoxInfoImdbID";
+            this.richTextBoxInfoImdbID.ReadOnly = true;
+            this.richTextBoxInfoImdbID.Size = new System.Drawing.Size(91, 21);
+            this.richTextBoxInfoImdbID.TabIndex = 57;
+            this.richTextBoxInfoImdbID.Text = "";
+            this.richTextBoxInfoImdbID.Visible = false;
+            // 
+            // richTextBoxInfoImdbRating
+            // 
+            this.richTextBoxInfoImdbRating.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbRating.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoImdbRating.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoImdbRating.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbRating.Location = new System.Drawing.Point(449, 337);
+            this.richTextBoxInfoImdbRating.Name = "richTextBoxInfoImdbRating";
+            this.richTextBoxInfoImdbRating.ReadOnly = true;
+            this.richTextBoxInfoImdbRating.Size = new System.Drawing.Size(91, 21);
+            this.richTextBoxInfoImdbRating.TabIndex = 58;
+            this.richTextBoxInfoImdbRating.Text = "";
+            this.richTextBoxInfoImdbRating.Visible = false;
+            // 
+            // richTextBoxInfoImdbVotes
+            // 
+            this.richTextBoxInfoImdbVotes.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbVotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfoImdbVotes.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfoImdbVotes.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbVotes.Location = new System.Drawing.Point(449, 368);
+            this.richTextBoxInfoImdbVotes.Name = "richTextBoxInfoImdbVotes";
+            this.richTextBoxInfoImdbVotes.ReadOnly = true;
+            this.richTextBoxInfoImdbVotes.Size = new System.Drawing.Size(91, 21);
+            this.richTextBoxInfoImdbVotes.TabIndex = 59;
+            this.richTextBoxInfoImdbVotes.Text = "";
+            this.richTextBoxInfoImdbVotes.Visible = false;
+            // 
+            // labelJustLinkToImdb
+            // 
+            this.labelJustLinkToImdb.AutoSize = true;
+            this.labelJustLinkToImdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.labelJustLinkToImdb.Location = new System.Drawing.Point(530, 263);
+            this.labelJustLinkToImdb.Name = "labelJustLinkToImdb";
+            this.labelJustLinkToImdb.Size = new System.Drawing.Size(81, 15);
+            this.labelJustLinkToImdb.TabIndex = 60;
+            this.labelJustLinkToImdb.Text = "Link To Imdb:";
+            // 
             // InfoUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
+            this.Controls.Add(this.labelJustLinkToImdb);
+            this.Controls.Add(this.richTextBoxInfoImdbVotes);
+            this.Controls.Add(this.richTextBoxInfoImdbRating);
+            this.Controls.Add(this.richTextBoxInfoImdbID);
+            this.Controls.Add(this.richTextBoxInfoRuntime);
+            this.Controls.Add(this.richTextBoxInfoCountry);
+            this.Controls.Add(this.richTextBoxInfoProduction);
+            this.Controls.Add(this.richTextBoxInfoWriter);
+            this.Controls.Add(this.richTextBoxInfoRated);
+            this.Controls.Add(this.richTextBoxInfoYear);
+            this.Controls.Add(this.richTextBoxInfoMetascore);
+            this.Controls.Add(this.richTextBoxInfoType);
+            this.Controls.Add(this.richTextBoxInfoActors);
+            this.Controls.Add(this.richTextBoxInfoPlot);
+            this.Controls.Add(this.richTextBoxInfoGenres);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonSaveToWatchlist);
             this.Controls.Add(this.labelJustRated);
             this.Controls.Add(this.labelJustType);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelJustImdbLink);
             this.Controls.Add(this.linkLabelImdb);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.listViewRatings);
-            this.Controls.Add(this.labelInfoWriter);
             this.Controls.Add(this.labelJustWriter);
-            this.Controls.Add(this.labelInfoImdbVotes);
-            this.Controls.Add(this.labelInfoImdbRating);
-            this.Controls.Add(this.labelInfoImdbID);
             this.Controls.Add(this.labelJustImdbVotes);
             this.Controls.Add(this.labelJustImdbRating);
             this.Controls.Add(this.labelJustIMDB_ID);
             this.Controls.Add(this.buttonExtraRatings);
             this.Controls.Add(this.buttonExtraIMDBInfo);
             this.Controls.Add(this.labelJustPlot);
-            this.Controls.Add(this.labelInfoProduction);
             this.Controls.Add(this.labelJustProduction);
-            this.Controls.Add(this.labelInfoCountry);
             this.Controls.Add(this.labelJustCountry);
-            this.Controls.Add(this.labelInfoRated);
-            this.Controls.Add(this.labelInfoType);
-            this.Controls.Add(this.labelInfoRuntime);
             this.Controls.Add(this.labelJustRuntime);
-            this.Controls.Add(this.labelInforActors);
             this.Controls.Add(this.labelJustActors);
-            this.Controls.Add(this.labelInfoGenre);
             this.Controls.Add(this.labelJustGenre);
-            this.Controls.Add(this.labelInfoMetascore);
             this.Controls.Add(this.labelJustMetascore);
-            this.Controls.Add(this.labelInfoYear);
             this.Controls.Add(this.labelJustYear);
             this.Controls.Add(this.labelInfoTitle);
             this.Name = "InfoUC";
             this.Size = new System.Drawing.Size(843, 456);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.VisibleChanged += new System.EventHandler(this.Update);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -538,37 +571,21 @@
         private System.Windows.Forms.Label labelInfoTitle;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelJustYear;
-        private System.Windows.Forms.Label labelInfoYear;
-        private System.Windows.Forms.Label labelInfoMetascore;
         private System.Windows.Forms.Label labelJustMetascore;
-        private System.Windows.Forms.Label labelInfoGenre;
         private System.Windows.Forms.Label labelJustGenre;
-        private System.Windows.Forms.Label labelInforActors;
         private System.Windows.Forms.Label labelJustActors;
-        private System.Windows.Forms.Label labelInfoRuntime;
         private System.Windows.Forms.Label labelJustRuntime;
-        private System.Windows.Forms.Label labelInfoType;
-        private System.Windows.Forms.Label labelInfoRated;
-        private System.Windows.Forms.Label labelInfoCountry;
         private System.Windows.Forms.Label labelJustCountry;
-        private System.Windows.Forms.Label labelInfoProduction;
         private System.Windows.Forms.Label labelJustProduction;
-        private System.Windows.Forms.Label labelInfoPlot;
         private System.Windows.Forms.Label labelJustPlot;
         private System.Windows.Forms.Button buttonExtraIMDBInfo;
         private System.Windows.Forms.Button buttonExtraRatings;
         private System.Windows.Forms.Label labelJustIMDB_ID;
         private System.Windows.Forms.Label labelJustImdbRating;
         private System.Windows.Forms.Label labelJustImdbVotes;
-        private System.Windows.Forms.Label labelInfoImdbVotes;
-        private System.Windows.Forms.Label labelInfoImdbRating;
-        private System.Windows.Forms.Label labelInfoImdbID;
-        private System.Windows.Forms.Label labelInfoWriter;
         private System.Windows.Forms.Label labelJustWriter;
         private System.Windows.Forms.ListView listViewRatings;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel linkLabelImdb;
-        private System.Windows.Forms.Label labelJustImdbLink;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ColumnHeader Source;
@@ -577,5 +594,20 @@
         private System.Windows.Forms.Label labelJustRated;
         private System.Windows.Forms.Button buttonSaveToWatchlist;
         private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoGenres;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoPlot;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoActors;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoType;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoMetascore;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoYear;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoRated;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoWriter;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoProduction;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoCountry;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoRuntime;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoImdbID;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoImdbRating;
+        private System.Windows.Forms.RichTextBox richTextBoxInfoImdbVotes;
+        private System.Windows.Forms.Label labelJustLinkToImdb;
     }
 }
