@@ -103,10 +103,6 @@ namespace Project_Movie
             ClearAdvancedTextBoxes();
         }
 
-        private void SearchUC_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void BasicVisibilityChange(String type)
         {

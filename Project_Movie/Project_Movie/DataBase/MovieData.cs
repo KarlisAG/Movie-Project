@@ -30,7 +30,7 @@ namespace Project_Movie
 
         public List<Ratings> Ratings;
 
-        public MovieData(String Response, String error, String Title, String Year, String Metascore, String Genre, String Actors, String Type, String Country, String Production, String Rated, String Runtime, String Writer, String Plot, String ImdbID, String ImdbRating, String ImdbVotes, String Poster)
+        public MovieData(String Response, String error, String Title, String Year, String Metascore, String Genre, String Actors, String Type, String Country, String Production, String Rated, String Runtime, String Writer, String Plot, String ImdbID, String ImdbRating, String ImdbVotes, String Poster, List<Ratings> Ratings)
         {
             this.Response = Response;
             this.error = error;
@@ -50,6 +50,7 @@ namespace Project_Movie
             this.ImdbRating = ImdbRating;
             this.ImdbVotes = ImdbVotes;
             this.Poster = Poster;
+            this.Ratings = Ratings;
         }
 
     }

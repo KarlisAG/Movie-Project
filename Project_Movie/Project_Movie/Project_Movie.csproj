@@ -204,6 +204,7 @@
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic.cs" />
     <Compile Include="UserControl\MovieInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

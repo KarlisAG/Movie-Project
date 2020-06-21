@@ -18,6 +18,7 @@ namespace Project_Movie
         private string port;
         private string connectionString;
         private string sslM;
+        Logic l = new Logic();
 
         public DBConnection()
         {
@@ -36,7 +37,7 @@ namespace Project_Movie
 
         public DataTable GetMovies()
         {
-            String stm = "SELECT * FROM watchList";
+            String stm = "SELECT * FROM watchList WHERE userID = " + 4 + ";";
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
             dataAdapter.SelectCommand = new MySqlCommand(stm, connection);
@@ -76,7 +77,10 @@ namespace Project_Movie
                     cmd.Parameters.AddWithValue("@movieGenre", genre);
 
                     cmd.Parameters.AddWithValue("@movieImdbID", ImdbID);
-                    cmd.Parameters.AddWithValue("@userID", 1);
+
+                    Logic l = new Logic();
+                    
+                    cmd.Parameters.AddWithValue("@userID", 4);
                     cmd.ExecuteNonQuery();
 
                     return false;
@@ -143,7 +147,6 @@ namespace Project_Movie
                 if (connection != null)
                     connection.Close();
             }
-            
         }
 
         public DataTable FilterMovie(String parameter, String text)
@@ -159,7 +162,6 @@ namespace Project_Movie
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
                 myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam;";
-                //myCommand.Parameters.AddWithValue("@movieParameter", $"movie{parameter}");
                 myCommand.Parameters.AddWithValue("@movieParam", "%" + text + "%");
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
@@ -175,7 +177,131 @@ namespace Project_Movie
 
         public void RegisterUser(String login, String password, String userName, String userSurname, String userAge, String userSex, String userCountry)
         {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
 
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO users (login, password, userName, userSurname, userAge, userSex, userCountry) " +
+                                  "VALUES(@login, @password, @userName, @userSurname, @userAge, @userSex, @userCountry)";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@login", login);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@userName", userName);
+                cmd.Parameters.AddWithValue("@userSurname", userSurname);
+                cmd.Parameters.AddWithValue("@userAge", userAge);
+                cmd.Parameters.AddWithValue("@userSex", userSex);
+                cmd.Parameters.AddWithValue("@userCountry", userCountry);
+
+                cmd.ExecuteNonQuery();
+
+
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public bool Login(String login, String password)
+        {
+            MySqlConnection connection = null;
+            MySqlDataReader myReader;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand myCommand = new MySqlCommand();
+                myCommand.Connection = connection;
+                DataTable table = new DataTable();
+                myCommand.CommandText = $"SELECT * FROM users WHERE login = @login AND password = @password;";
+                myCommand.Parameters.AddWithValue("@login", login);
+                myCommand.Parameters.AddWithValue("@password", password);
+                myReader = myCommand.ExecuteReader();
+                table.Load(myReader);
+
+                if (table.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void setUserID()
+        {
+            MySqlConnection connection = null;
+            MySqlDataReader myReader;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand myCommand = new MySqlCommand();
+                myCommand.Connection = connection;
+                DataTable table = new DataTable();
+                myCommand.CommandText = $"SELECT * FROM users WHERE login = @login;";
+                myCommand.Parameters.AddWithValue("@login", l.getUsername());
+                myReader = myCommand.ExecuteReader();
+                table.Load(myReader);
+                foreach (DataRow row in table.Rows)
+                {
+                    l.setuserID(row.Field<int>(0));
+                }
+                
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public bool CheckUsernameDuplicate(String username)
+        {
+            MySqlConnection connection = null;
+            MySqlDataReader myReader;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand myCommand = new MySqlCommand();
+                myCommand.Connection = connection;
+                DataTable table = new DataTable();
+                myCommand.CommandText = $"SELECT * FROM users WHERE login = @login;";
+                myCommand.Parameters.AddWithValue("@login", username);
+                myReader = myCommand.ExecuteReader();
+                table.Load(myReader);
+
+                if (table.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
         }
     }
 }

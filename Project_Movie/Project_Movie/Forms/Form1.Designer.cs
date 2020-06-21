@@ -61,21 +61,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 50);
+            this.panel1.Size = new System.Drawing.Size(993, 36);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             // 
             // buttonExit
             // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExit.Location = new System.Drawing.Point(943, 3);
+            this.buttonExit.Location = new System.Drawing.Point(941, 0);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(40, 40);
+            this.buttonExit.Size = new System.Drawing.Size(40, 34);
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "X";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -85,11 +87,13 @@
             // 
             this.labelJustProjectInfo.AutoSize = true;
             this.labelJustProjectInfo.Font = new System.Drawing.Font("Century", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.labelJustProjectInfo.Location = new System.Drawing.Point(211, 9);
+            this.labelJustProjectInfo.Location = new System.Drawing.Point(199, 0);
             this.labelJustProjectInfo.Name = "labelJustProjectInfo";
             this.labelJustProjectInfo.Size = new System.Drawing.Size(656, 34);
             this.labelJustProjectInfo.TabIndex = 5;
             this.labelJustProjectInfo.Text = "Your Personal Movie Watch List Application";
+            this.labelJustProjectInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
+            this.labelJustProjectInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             // 
             // pictureBox1
             // 
@@ -100,6 +104,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             // 
             // imageList1
             // 
@@ -119,9 +125,9 @@
             this.panel2.Controls.Add(this.buttonWatchList);
             this.panel2.Controls.Add(this.buttonSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(127, 452);
+            this.panel2.Size = new System.Drawing.Size(127, 466);
             this.panel2.TabIndex = 1;
             // 
             // buttonUser
@@ -168,9 +174,9 @@
             // 
             this.panel3.Controls.Add(this.buttonSlider);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(127, 50);
+            this.panel3.Location = new System.Drawing.Point(127, 36);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 452);
+            this.panel3.Size = new System.Drawing.Size(10, 466);
             this.panel3.TabIndex = 2;
             // 
             // buttonSlider
@@ -189,9 +195,9 @@
             // watchListUC1
             // 
             this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.watchListUC1.Location = new System.Drawing.Point(1851, 50);
+            this.watchListUC1.Location = new System.Drawing.Point(1851, 36);
             this.watchListUC1.Name = "watchListUC1";
-            this.watchListUC1.Size = new System.Drawing.Size(857, 452);
+            this.watchListUC1.Size = new System.Drawing.Size(857, 466);
             this.watchListUC1.TabIndex = 5;
             this.watchListUC1.Visible = false;
             // 
@@ -199,18 +205,18 @@
             // 
             this.infoUC1.BackColor = System.Drawing.Color.Cornsilk;
             this.infoUC1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.infoUC1.Location = new System.Drawing.Point(994, 50);
+            this.infoUC1.Location = new System.Drawing.Point(994, 36);
             this.infoUC1.Name = "infoUC1";
-            this.infoUC1.Size = new System.Drawing.Size(857, 452);
+            this.infoUC1.Size = new System.Drawing.Size(857, 466);
             this.infoUC1.TabIndex = 4;
             this.infoUC1.Visible = false;
             // 
             // searchUC1
             // 
             this.searchUC1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.searchUC1.Location = new System.Drawing.Point(137, 50);
+            this.searchUC1.Location = new System.Drawing.Point(137, 36);
             this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(857, 452);
+            this.searchUC1.Size = new System.Drawing.Size(857, 466);
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
@@ -229,6 +235,7 @@
             this.Name = "FormApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormApp_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);

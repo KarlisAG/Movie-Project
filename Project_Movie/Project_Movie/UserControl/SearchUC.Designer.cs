@@ -344,7 +344,7 @@
             this.Controls.Add(this.buttonSearch);
             this.Name = "SearchUC";
             this.Size = new System.Drawing.Size(843, 456);
-            this.Load += new System.EventHandler(this.SearchUC_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

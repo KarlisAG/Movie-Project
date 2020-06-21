@@ -215,7 +215,7 @@
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(59, 9);
+            this.labelError.Location = new System.Drawing.Point(11, 9);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(49, 20);
             this.labelError.TabIndex = 19;

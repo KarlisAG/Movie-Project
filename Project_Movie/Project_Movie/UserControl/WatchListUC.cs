@@ -15,6 +15,7 @@ namespace Project_Movie
     {
         DBConnection db = new DBConnection();
         bool asc = true;
+        Logic l = new Logic();
         public WatchListUC()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Project_Movie
 
         private void buttonAddMoreToWL_Click(object sender, EventArgs e)
         {
-            var formPupUp = new Form();
+            var formPupUp = new Form();//uztaisi, lai var pievienot
             formPupUp.ShowDialog();
         }
 
@@ -55,6 +56,7 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
+            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.username;
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_Movie.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Project_Movie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormApp());
+            Application.Run(new loginForm());
         }
     }
 }

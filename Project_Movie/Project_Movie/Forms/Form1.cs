@@ -7,6 +7,7 @@ namespace Project_Movie
     public partial class FormApp : Form
     {
         Point lastPoint;
+        DBConnection db = new DBConnection();
         public FormApp()
         {
             InitializeComponent();
@@ -57,9 +58,19 @@ namespace Project_Movie
         {
             if (e.Button == MouseButtons.Left)
             {
-                this.Left += e.X - lastPoint.X;
+                this.Left += e.X - lastPoint.X;//ka strada???
                 this.Top += e.Y - lastPoint.Y;
             }
+        }
+
+        private void searchUC1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormApp_Load(object sender, EventArgs e)
+        {
+            db.setUserID();
         }
     }
 }
