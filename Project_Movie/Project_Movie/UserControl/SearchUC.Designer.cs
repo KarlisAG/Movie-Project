@@ -49,7 +49,6 @@
             this.labelSearchStatus = new System.Windows.Forms.Label();
             this.labelImdbID = new System.Windows.Forms.Label();
             this.labelOptional = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelErrorMessage = new System.Windows.Forms.Label();
             this.labelNumberError = new System.Windows.Forms.Label();
             this.buttonAddToWL = new System.Windows.Forms.Button();
@@ -283,22 +282,14 @@
             this.labelOptional.Text = "* = optional fields";
             this.labelOptional.Visible = false;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(126, 343);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 31;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // labelErrorMessage
             // 
             this.labelErrorMessage.AutoSize = true;
+            this.labelErrorMessage.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorMessage.ForeColor = System.Drawing.Color.Red;
             this.labelErrorMessage.Location = new System.Drawing.Point(291, 38);
             this.labelErrorMessage.Name = "labelErrorMessage";
-            this.labelErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.labelErrorMessage.Size = new System.Drawing.Size(0, 19);
             this.labelErrorMessage.TabIndex = 32;
             this.labelErrorMessage.Visible = false;
             // 
@@ -330,7 +321,6 @@
             this.Controls.Add(this.buttonAddToWL);
             this.Controls.Add(this.labelNumberError);
             this.Controls.Add(this.labelErrorMessage);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelOptional);
             this.Controls.Add(this.labelImdbID);
             this.Controls.Add(this.labelSearchStatus);
@@ -383,7 +373,6 @@
         private System.Windows.Forms.Label labelSearchStatus;
         private System.Windows.Forms.Label labelImdbID;
         private System.Windows.Forms.Label labelOptional;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label labelErrorMessage;
         private System.Windows.Forms.Label labelNumberError;
         private System.Windows.Forms.Button buttonAddToWL;

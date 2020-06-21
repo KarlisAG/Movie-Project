@@ -70,6 +70,7 @@
             this.richTextBoxInfoImdbRating = new System.Windows.Forms.RichTextBox();
             this.richTextBoxInfoImdbVotes = new System.Windows.Forms.RichTextBox();
             this.labelJustLinkToImdb = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -515,10 +516,22 @@
             this.labelJustLinkToImdb.TabIndex = 60;
             this.labelJustLinkToImdb.Text = "Link To Imdb:";
             // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(222, 40);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 21);
+            this.labelError.TabIndex = 61;
+            this.labelError.Visible = false;
+            // 
             // InfoUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelJustLinkToImdb);
             this.Controls.Add(this.richTextBoxInfoImdbVotes);
             this.Controls.Add(this.richTextBoxInfoImdbRating);
@@ -608,5 +621,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxInfoImdbRating;
         private System.Windows.Forms.RichTextBox richTextBoxInfoImdbVotes;
         private System.Windows.Forms.Label labelJustLinkToImdb;
+        private System.Windows.Forms.Label labelError;
     }
 }

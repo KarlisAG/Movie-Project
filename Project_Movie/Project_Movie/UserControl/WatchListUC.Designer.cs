@@ -36,7 +36,7 @@
             this.Rating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Rated = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Genre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonAddToWL = new System.Windows.Forms.Button();
+            this.buttonAddMoreToWL = new System.Windows.Forms.Button();
             this.buttonDeleteFromWL = new System.Windows.Forms.Button();
             this.buttonDefaultFilter = new System.Windows.Forms.Button();
             this.labelJustParamater = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.buttonFilterAction = new System.Windows.Forms.Button();
             this.richTextBoxError = new System.Windows.Forms.RichTextBox();
+            this.ImdbID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -55,12 +56,13 @@
             this.Length,
             this.Rating,
             this.Rated,
-            this.Genre});
+            this.Genre,
+            this.ImdbID});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 30);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(756, 423);
+            this.listView1.Size = new System.Drawing.Size(837, 383);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -68,12 +70,12 @@
             // Title
             // 
             this.Title.Text = "Title";
-            this.Title.Width = 289;
+            this.Title.Width = 274;
             // 
             // Type
             // 
             this.Type.Text = "Type";
-            this.Type.Width = 70;
+            this.Type.Width = 85;
             // 
             // Year
             // 
@@ -83,36 +85,36 @@
             // Length
             // 
             this.Length.Text = "Length";
-            this.Length.Width = 72;
+            this.Length.Width = 63;
             // 
             // Rating
             // 
             this.Rating.Text = "Rating";
-            this.Rating.Width = 83;
+            this.Rating.Width = 67;
             // 
             // Rated
             // 
             this.Rated.Text = "Rated";
-            this.Rated.Width = 59;
+            this.Rated.Width = 57;
             // 
             // Genre
             // 
             this.Genre.Text = "Genre";
-            this.Genre.Width = 106;
+            this.Genre.Width = 126;
             // 
-            // buttonAddToWL
+            // buttonAddMoreToWL
             // 
-            this.buttonAddToWL.Location = new System.Drawing.Point(765, 15);
-            this.buttonAddToWL.Name = "buttonAddToWL";
-            this.buttonAddToWL.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddToWL.TabIndex = 1;
-            this.buttonAddToWL.Text = "Add More To Watch List";
-            this.buttonAddToWL.UseVisualStyleBackColor = true;
-            this.buttonAddToWL.Click += new System.EventHandler(this.buttonAddToWL_Click);
+            this.buttonAddMoreToWL.Location = new System.Drawing.Point(3, 419);
+            this.buttonAddMoreToWL.Name = "buttonAddMoreToWL";
+            this.buttonAddMoreToWL.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddMoreToWL.TabIndex = 1;
+            this.buttonAddMoreToWL.Text = "Add More To Watch List";
+            this.buttonAddMoreToWL.UseVisualStyleBackColor = true;
+            this.buttonAddMoreToWL.Click += new System.EventHandler(this.buttonAddMoreToWL_Click);
             // 
             // buttonDeleteFromWL
             // 
-            this.buttonDeleteFromWL.Location = new System.Drawing.Point(765, 44);
+            this.buttonDeleteFromWL.Location = new System.Drawing.Point(84, 419);
             this.buttonDeleteFromWL.Name = "buttonDeleteFromWL";
             this.buttonDeleteFromWL.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteFromWL.TabIndex = 2;
@@ -122,7 +124,7 @@
             // 
             // buttonDefaultFilter
             // 
-            this.buttonDefaultFilter.Location = new System.Drawing.Point(765, 73);
+            this.buttonDefaultFilter.Location = new System.Drawing.Point(165, 419);
             this.buttonDefaultFilter.Name = "buttonDefaultFilter";
             this.buttonDefaultFilter.Size = new System.Drawing.Size(75, 23);
             this.buttonDefaultFilter.TabIndex = 3;
@@ -133,11 +135,12 @@
             // labelJustParamater
             // 
             this.labelJustParamater.AutoSize = true;
-            this.labelJustParamater.Location = new System.Drawing.Point(765, 99);
+            this.labelJustParamater.Location = new System.Drawing.Point(246, 419);
             this.labelJustParamater.Name = "labelJustParamater";
             this.labelJustParamater.Size = new System.Drawing.Size(58, 13);
             this.labelJustParamater.TabIndex = 4;
             this.labelJustParamater.Text = "Paramater:";
+            this.labelJustParamater.Visible = false;
             // 
             // comboBox1
             // 
@@ -148,26 +151,29 @@
             "Rating",
             "Rated",
             "Genre"});
-            this.comboBox1.Location = new System.Drawing.Point(765, 126);
+            this.comboBox1.Location = new System.Drawing.Point(309, 419);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.Visible = false;
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(765, 153);
+            this.textBoxFilter.Location = new System.Drawing.Point(390, 419);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(75, 20);
             this.textBoxFilter.TabIndex = 6;
+            this.textBoxFilter.Visible = false;
             // 
             // buttonFilterAction
             // 
-            this.buttonFilterAction.Location = new System.Drawing.Point(765, 179);
+            this.buttonFilterAction.Location = new System.Drawing.Point(471, 419);
             this.buttonFilterAction.Name = "buttonFilterAction";
             this.buttonFilterAction.Size = new System.Drawing.Size(75, 23);
             this.buttonFilterAction.TabIndex = 7;
             this.buttonFilterAction.Text = "Filter";
             this.buttonFilterAction.UseVisualStyleBackColor = true;
+            this.buttonFilterAction.Visible = false;
             this.buttonFilterAction.Click += new System.EventHandler(this.buttonFilterAction_Click);
             // 
             // richTextBoxError
@@ -180,6 +186,11 @@
             this.richTextBoxError.TabIndex = 8;
             this.richTextBoxError.Text = "";
             // 
+            // ImdbID
+            // 
+            this.ImdbID.Text = "Imdb ID";
+            this.ImdbID.Width = 86;
+            // 
             // WatchListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,10 +202,10 @@
             this.Controls.Add(this.labelJustParamater);
             this.Controls.Add(this.buttonDefaultFilter);
             this.Controls.Add(this.buttonDeleteFromWL);
-            this.Controls.Add(this.buttonAddToWL);
+            this.Controls.Add(this.buttonAddMoreToWL);
             this.Controls.Add(this.listView1);
             this.Name = "WatchListUC";
-            this.Size = new System.Drawing.Size(857, 456);
+            this.Size = new System.Drawing.Size(843, 456);
             this.VisibleChanged += new System.EventHandler(this.Update);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +215,7 @@
         #endregion
 
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button buttonAddToWL;
+        private System.Windows.Forms.Button buttonAddMoreToWL;
         private System.Windows.Forms.Button buttonDeleteFromWL;
         private System.Windows.Forms.ColumnHeader Title;
         private System.Windows.Forms.ColumnHeader Type;
@@ -219,5 +230,6 @@
         private System.Windows.Forms.TextBox textBoxFilter;
         private System.Windows.Forms.Button buttonFilterAction;
         private System.Windows.Forms.RichTextBox richTextBoxError;
+        private System.Windows.Forms.ColumnHeader ImdbID;
     }
 }

@@ -247,7 +247,16 @@ namespace Project_Movie
 
         private void buttonAddToWL_Click(object sender, EventArgs e)
         {
-            db.AddMovie(md.Title, md.Type, md.Year, md.Runtime, md.Metascore, md.Rated, md.Genre);
+            if(db.AddMovie(md.Title, md.Type, md.Year, md.Runtime, md.Metascore, md.Rated, md.Genre, md.ImdbID))
+            {
+                labelErrorMessage.Visible = true;
+                labelErrorMessage.Text = "This movie/series is already saved in your watch list!";
+            }
+            else
+            {
+                labelErrorMessage.Text = String.Empty;
+                labelErrorMessage.Visible = false;
+            }
         }
     }
 }

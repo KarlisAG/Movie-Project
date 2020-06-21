@@ -19,9 +19,9 @@ namespace Project_Movie
             InitializeComponent();
         }
 
-        private void buttonAddToWL_Click(object sender, EventArgs e)
+        private void buttonAddMoreToWL_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonDeleteFromWL_Click(object sender, EventArgs e)
@@ -66,6 +66,7 @@ namespace Project_Movie
                 listView1.Items[y].SubItems.Add(row.Field<String>(4));
                 listView1.Items[y].SubItems.Add(row.Field<String>(5));
                 listView1.Items[y].SubItems.Add(row.Field<String>(6));
+                listView1.Items[y].SubItems.Add(row.Field<String>(7));
                 y++;
             }
         }
@@ -80,7 +81,7 @@ namespace Project_Movie
             { 
                 String filterParameter = comboBox1.Text;
                 String filter = textBoxFilter.Text;
-
+                listView1.Items.Clear();
                 int y = 0;
                 foreach(DataRow row in db.FilterMovie(filterParameter, filter).Rows)
                 {
@@ -91,9 +92,11 @@ namespace Project_Movie
                     listView1.Items[y].SubItems.Add(row.Field<String>(4));
                     listView1.Items[y].SubItems.Add(row.Field<String>(5));
                     listView1.Items[y].SubItems.Add(row.Field<String>(6));
+                    listView1.Items[y].SubItems.Add(row.Field<String>(7));
                     y++;
                 }
             }
         }
+
     }
 }

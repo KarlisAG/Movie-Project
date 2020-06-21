@@ -63,7 +63,15 @@ namespace Project_Movie
 
         private void buttonSaveToWatchlist_Click(object sender, EventArgs e)
         {
-            db.AddMovie(labelInfoTitle.Text, richTextBoxInfoType.Text, richTextBoxInfoYear.Text, richTextBoxInfoRuntime.Text, richTextBoxInfoMetascore.Text, richTextBoxInfoRated.Text, richTextBoxInfoGenres.Text);
+            if(db.AddMovie(labelInfoTitle.Text, richTextBoxInfoType.Text, richTextBoxInfoYear.Text, richTextBoxInfoRuntime.Text, richTextBoxInfoMetascore.Text, richTextBoxInfoRated.Text, richTextBoxInfoGenres.Text, richTextBoxInfoImdbID.Text))
+            {
+                labelError.Visible = true;
+                labelError.Text = "This movie/series is already saved in your watch list!";
+            }
+            else
+            {
+                labelError.Visible = false;
+            }
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
