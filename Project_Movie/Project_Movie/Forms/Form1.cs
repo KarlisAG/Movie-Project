@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Project_Movie
 {
-    public partial class Form1 : Form
+    public partial class FormApp : Form
     {
-        public Form1()
+        Point lastPoint;
+        public FormApp()
         {
             InitializeComponent();
         }
@@ -45,6 +47,19 @@ namespace Project_Movie
         {
             buttonSlider.Visible = true;
             buttonSlider.Location = buttonUser.Location;
+        }
+        private void FormApp_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void FormApp_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
         }
     }
 }

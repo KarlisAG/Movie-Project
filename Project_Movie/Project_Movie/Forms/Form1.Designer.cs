@@ -1,6 +1,6 @@
 ﻿namespace Project_Movie
 {
-    partial class Form1
+    partial class FormApp
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelJustProjectInfo = new System.Windows.Forms.Label();
@@ -43,9 +43,9 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonSlider = new System.Windows.Forms.Button();
+            this.watchListUC1 = new Project_Movie.WatchListUC();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
-            this.watchListUC1 = new Project_Movie.WatchListUC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,8 +61,10 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 46);
+            this.panel1.Size = new System.Drawing.Size(993, 50);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             // 
             // buttonExit
             // 
@@ -117,9 +119,9 @@
             this.panel2.Controls.Add(this.buttonWatchList);
             this.panel2.Controls.Add(this.buttonSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(127, 456);
+            this.panel2.Size = new System.Drawing.Size(127, 452);
             this.panel2.TabIndex = 1;
             // 
             // buttonUser
@@ -166,9 +168,9 @@
             // 
             this.panel3.Controls.Add(this.buttonSlider);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(127, 46);
+            this.panel3.Location = new System.Drawing.Point(127, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(24, 456);
+            this.panel3.Size = new System.Drawing.Size(10, 452);
             this.panel3.TabIndex = 2;
             // 
             // buttonSlider
@@ -179,38 +181,40 @@
             this.buttonSlider.ForeColor = System.Drawing.Color.White;
             this.buttonSlider.Location = new System.Drawing.Point(0, 0);
             this.buttonSlider.Name = "buttonSlider";
-            this.buttonSlider.Size = new System.Drawing.Size(6, 67);
+            this.buttonSlider.Size = new System.Drawing.Size(10, 67);
             this.buttonSlider.TabIndex = 0;
             this.buttonSlider.UseVisualStyleBackColor = false;
             this.buttonSlider.Visible = false;
             // 
+            // watchListUC1
+            // 
+            this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.watchListUC1.Location = new System.Drawing.Point(1851, 50);
+            this.watchListUC1.Name = "watchListUC1";
+            this.watchListUC1.Size = new System.Drawing.Size(857, 452);
+            this.watchListUC1.TabIndex = 5;
+            this.watchListUC1.Visible = false;
+            // 
             // infoUC1
             // 
-            this.infoUC1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.infoUC1.BackColor = System.Drawing.Color.Cornsilk;
-            this.infoUC1.Location = new System.Drawing.Point(133, 46);
+            this.infoUC1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.infoUC1.Location = new System.Drawing.Point(994, 50);
             this.infoUC1.Name = "infoUC1";
-            this.infoUC1.Size = new System.Drawing.Size(857, 456);
+            this.infoUC1.Size = new System.Drawing.Size(857, 452);
             this.infoUC1.TabIndex = 4;
             this.infoUC1.Visible = false;
             // 
             // searchUC1
             // 
-            this.searchUC1.Location = new System.Drawing.Point(133, 46);
+            this.searchUC1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.searchUC1.Location = new System.Drawing.Point(137, 50);
             this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(857, 456);
+            this.searchUC1.Size = new System.Drawing.Size(857, 452);
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
-            // watchListUC1
-            // 
-            this.watchListUC1.Location = new System.Drawing.Point(133, 46);
-            this.watchListUC1.Name = "watchListUC1";
-            this.watchListUC1.Size = new System.Drawing.Size(857, 456);
-            this.watchListUC1.TabIndex = 5;
-            this.watchListUC1.Visible = false;
-            // 
-            // Form1
+            // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
@@ -222,8 +226,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FormApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

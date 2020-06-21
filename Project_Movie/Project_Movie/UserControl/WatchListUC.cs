@@ -14,14 +14,16 @@ namespace Project_Movie
     public partial class WatchListUC : UserControl
     {
         DBConnection db = new DBConnection();
+        bool asc = true;
         public WatchListUC()
         {
-            InitializeComponent();//pievienot refresh pogu
+            InitializeComponent();
         }
 
         private void buttonAddMoreToWL_Click(object sender, EventArgs e)
         {
-
+            var formPupUp = new Form();
+            formPupUp.ShowDialog();
         }
 
         private void buttonDeleteFromWL_Click(object sender, EventArgs e)
@@ -53,8 +55,6 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            
-
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)
@@ -98,5 +98,30 @@ namespace Project_Movie
             }
         }
 
+        private void SortColumn(object sender, ColumnClickEventArgs e)
+        {
+            
+            if (asc)
+            {
+                listView1.Sorting = SortOrder.Descending;//sataisit sorting norm
+                asc = !asc;
+            }
+            else
+            {
+                listView1.Sorting = SortOrder.Ascending;
+                asc = !asc;
+            }
+            
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            Update(sender, e);
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            //aiziet uz movie infu
+        }
     }
 }

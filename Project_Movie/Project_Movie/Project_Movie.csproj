@@ -184,14 +184,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\DBConnection.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\MovieData.cs" />
     <Compile Include="DataBase\Ratings.cs" />
+    <Compile Include="Forms\loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\MovieInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,8 +224,14 @@
     <Compile Include="UserControl\WatchListUC.Designer.cs">
       <DependentUpon>WatchListUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\MovieInfoUC.resx">
       <DependentUpon>MovieInfoUC.cs</DependentUpon>

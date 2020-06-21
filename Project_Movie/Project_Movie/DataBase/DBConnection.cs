@@ -158,9 +158,9 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} = @movieParam;";
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam;";
                 //myCommand.Parameters.AddWithValue("@movieParameter", $"movie{parameter}");
-                myCommand.Parameters.AddWithValue("@movieParam", text);
+                myCommand.Parameters.AddWithValue("@movieParam", "%" + text + "%");
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
 
@@ -171,6 +171,11 @@ namespace Project_Movie
                 if (connection != null)
                     connection.Close();
             }
+        }
+
+        public void RegisterUser(String login, String password, String userName, String userSurname, String userAge, String userSex, String userCountry)
+        {
+
         }
     }
 }
