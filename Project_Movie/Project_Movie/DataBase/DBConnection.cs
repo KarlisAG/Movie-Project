@@ -55,7 +55,7 @@ namespace Project_Movie
             }
             else
             {
-                MySqlConnection connection = null;//nedrikst duplikatus pievienot!!!!
+                MySqlConnection connection = null;
                 try
                 {
                     connection = new MySqlConnection(connectionString);

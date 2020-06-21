@@ -84,9 +84,13 @@ namespace Project_Movie
             try
             {
                 MovieData md = JsonConvert.DeserializeObject<MovieData>(File.ReadAllText("CurrentMovie.json"));
-                labelInfoTitle.Text = md.Title;//izlabot āeuro uz -
-                richTextBoxInfoYear.Text = md.Year;
+                labelInfoTitle.Text = md.Title;
+                
+                char[] seperators = { 'ā', '€', '“' };
+                string[] temp = md.Year.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+                richTextBoxInfoYear.Text = String.Join("-", temp);
                 richTextBoxInfoCountry.Text = md.Country;
+
                 richTextBoxInfoGenres.Text = md.Genre;
                 richTextBoxInfoRated.Text = md.Rated;
                 richTextBoxInfoActors.Text = md.Actors;

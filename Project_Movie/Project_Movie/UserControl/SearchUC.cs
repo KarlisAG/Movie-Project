@@ -74,7 +74,6 @@ namespace Project_Movie
                 String searchTitle = and + newSearchTitle;
 
                 String url = defaultLink + searchTitle + searchSeason + searchEpisode + searchYear + searchPlot;
-                linkLabel1.Text = url;
                     
                 GetData(url);
             }
@@ -82,7 +81,6 @@ namespace Project_Movie
             {
                 String searchID = and + "&i=" + textBoxTitle.Text;
                 String url = defaultLink + searchID + searchPlot;
-                linkLabel1.Text = url;
 
                 GetData(url);
             }
@@ -247,7 +245,10 @@ namespace Project_Movie
 
         private void buttonAddToWL_Click(object sender, EventArgs e)
         {
-            if(db.AddMovie(md.Title, md.Type, md.Year, md.Runtime, md.Metascore, md.Rated, md.Genre, md.ImdbID))
+            char[] seperators = { 'ā', '€', '“' };
+            string[] temp = md.Year.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
+            String movieYear = String.Join("-", temp);
+            if (db.AddMovie(md.Title, md.Type, movieYear, md.Runtime, md.Metascore, md.Rated, md.Genre, md.ImdbID))
             {
                 labelErrorMessage.Visible = true;
                 labelErrorMessage.Text = "This movie/series is already saved in your watch list!";

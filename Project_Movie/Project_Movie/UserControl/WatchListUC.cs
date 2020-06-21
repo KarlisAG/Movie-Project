@@ -16,7 +16,7 @@ namespace Project_Movie
         DBConnection db = new DBConnection();
         public WatchListUC()
         {
-            InitializeComponent();
+            InitializeComponent();//pievienot refresh pogu
         }
 
         private void buttonAddMoreToWL_Click(object sender, EventArgs e)
