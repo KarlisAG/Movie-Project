@@ -77,6 +77,7 @@ namespace Project_Movie
         private void Update(object sender, EventArgs e)
         {
             labelError.Visible = false;
+            //labelError.Text = 
             try
             {
                 MovieData md = JsonConvert.DeserializeObject<MovieData>(File.ReadAllText("CurrentMovie.json"));

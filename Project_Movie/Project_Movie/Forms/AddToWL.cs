@@ -29,8 +29,9 @@ namespace Project_Movie.Forms
             else
             {
                 AddAnyway();
-                AddToWL add = new AddToWL();
-                add.Hide();
+                //AddToWL add = new AddToWL();
+                //add.Hide();
+                this.Hide();
             }
         }
 

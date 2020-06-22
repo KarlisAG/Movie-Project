@@ -65,6 +65,7 @@ namespace Project_Movie.Forms
                     FormApp main = new FormApp();
                     //l.setUsername(/*textBoxUsername.Text*/"AAA");
                     //l.username = /*textBoxUsername.Text*/"AAA";
+                    l.Username = textBoxUsername.Text;
                     main.Show();
                     this.Hide();
                     labelError.Visible = false;

@@ -57,7 +57,7 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            //richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.username;
+            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.Username;
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)
@@ -119,6 +119,8 @@ namespace Project_Movie
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
+            comboBox1.Text = "";
+            textBoxFilter.Clear();
             Update(sender, e);
         }
 
@@ -131,9 +133,10 @@ namespace Project_Movie
             SearchUC search = new SearchUC();
             search.GetData(url);
 
-            FormApp form = new FormApp();
+            
+            //form.ToMovieInfo();
             //aiziet uz movie infu
-
+            //form.buttonInfo_Click(sender, e);
 
             //addtoWL strada
             //fix get-set

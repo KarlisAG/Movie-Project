@@ -46,15 +46,18 @@
             this.watchListUC1 = new Project_Movie.WatchListUC();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
+            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.pictureBoxLogout);
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.labelJustProjectInfo);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -220,6 +223,17 @@
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
+            // pictureBoxLogout
+            // 
+            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
+            this.pictureBoxLogout.Location = new System.Drawing.Point(887, 3);
+            this.pictureBoxLogout.Name = "pictureBoxLogout";
+            this.pictureBoxLogout.Size = new System.Drawing.Size(48, 33);
+            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogout.TabIndex = 6;
+            this.pictureBoxLogout.TabStop = false;
+            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
+            // 
             // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -243,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,6 +280,7 @@
         private SearchUC searchUC1;
         private InfoUC infoUC1;
         private WatchListUC watchListUC1;
+        private System.Windows.Forms.PictureBox pictureBoxLogout;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Project_Movie.Forms;
 
 namespace Project_Movie
 {
@@ -35,7 +36,7 @@ namespace Project_Movie
             infoUC1.Visible = false;
         }
 
-        private void buttonInfo_Click(object sender, EventArgs e)
+        public void buttonInfo_Click(object sender, EventArgs e)
         {
             buttonSlider.Visible = true;
             buttonSlider.Location = buttonInfo.Location;
@@ -71,6 +72,19 @@ namespace Project_Movie
         private void FormApp_Load(object sender, EventArgs e)
         {
             db.setUserID();
+        }
+
+        private void pictureBoxLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            loginForm login = new loginForm();
+            login.Show();
+        }
+
+        public void ToMovieInfo()
+        {
+            watchListUC1.Visible = false;
+            infoUC1.Visible = true;
         }
     }
 }

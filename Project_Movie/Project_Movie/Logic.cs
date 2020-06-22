@@ -15,6 +15,13 @@ namespace Project_Movie
         {
 
         }
+
+        public String Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
         public void setuserID(int userID)
         {
             this.userID = userID;

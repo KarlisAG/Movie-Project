@@ -37,7 +37,7 @@ namespace Project_Movie
 
         public DataTable GetMovies()
         {
-            String stm = "SELECT * FROM watchList WHERE userID = " + 4 + ";";//userID!!!
+            String stm = "SELECT * FROM watchList WHERE userID = " + 1 + ";";//userID!!!
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
             dataAdapter.SelectCommand = new MySqlCommand(stm, connection);
@@ -161,7 +161,7 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam AND userID = " + 4 + ";";//userID!!!
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam AND userID = " + 1 + ";";//userID!!!
                 myCommand.Parameters.AddWithValue("@movieParam", "%" + text + "%");
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
@@ -255,7 +255,7 @@ namespace Project_Movie
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
                 myCommand.CommandText = $"SELECT * FROM users WHERE login = @login;";
-                myCommand.Parameters.AddWithValue("@login", l.getUsername());
+                myCommand.Parameters.AddWithValue("@login", l.Username);
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
                 foreach (DataRow row in table.Rows)
