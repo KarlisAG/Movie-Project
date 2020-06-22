@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace Project_Movie
 {
-    class Logic
+    public class Logic
     {
         private int userID;
         public String username;
 
-        public void setuserID(int a)
+        public Logic()
         {
-            userID = a;
+
+        }
+        public void setuserID(int userID)
+        {
+            this.userID = userID;
         }
 
         public int getuserID()
@@ -21,9 +25,9 @@ namespace Project_Movie
             return userID;
         }
 
-        public void setUsername(String a)
+        public void setUsername(String username)
         {
-            username = a;
+            this.username = username;
         }
 
         public String getUsername()

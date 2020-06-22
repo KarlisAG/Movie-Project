@@ -74,13 +74,9 @@ namespace Project_Movie
             }
         }
 
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            Update(sender, e);
-        }
-
         private void Update(object sender, EventArgs e)
         {
+            labelError.Visible = false;
             try
             {
                 MovieData md = JsonConvert.DeserializeObject<MovieData>(File.ReadAllText("CurrentMovie.json"));

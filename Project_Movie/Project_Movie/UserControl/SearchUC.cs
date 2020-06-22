@@ -201,7 +201,7 @@ namespace Project_Movie
             }
         }
 
-        private void GetData(String url)
+        public void GetData(String url)
         {
             WebClient client = new WebClient();
             String response = client.DownloadString(url);

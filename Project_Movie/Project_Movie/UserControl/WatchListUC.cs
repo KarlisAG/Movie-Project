@@ -1,4 +1,5 @@
 ﻿using System;
+using Project_Movie.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -23,8 +24,8 @@ namespace Project_Movie
 
         private void buttonAddMoreToWL_Click(object sender, EventArgs e)
         {
-            var formPupUp = new Form();//uztaisi, lai var pievienot
-            formPupUp.ShowDialog();
+            AddToWL addToWL = new AddToWL();
+            addToWL.ShowDialog();
         }
 
         private void buttonDeleteFromWL_Click(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.username;
+            //richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.username;
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)
@@ -123,7 +124,21 @@ namespace Project_Movie
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
+            //String selectedImdbID = listView1.Items[Convert.ToInt32(listView1.SelectedIndices(0))].SubItems[7].Text;
+            String defaultLink = "http://www.omdbapi.com/?apikey=9401f56d";
+            String searchID = "&" + "&i=" + listView1.FocusedItem.SubItems[7].Text;
+            String url = defaultLink + searchID;
+            SearchUC search = new SearchUC();
+            search.GetData(url);
+
+            FormApp form = new FormApp();
             //aiziet uz movie infu
+
+
+            //addtoWL strada
+            //fix get-set
+            //userinfoUC uztaisit
+
         }
     }
 }

@@ -184,6 +184,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\DBConnection.cs" />
+    <Compile Include="Forms\AddToWL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddToWL.Designer.cs">
+      <DependentUpon>AddToWL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddToWLError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddToWLError.Designer.cs">
+      <DependentUpon>AddToWLError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +237,12 @@
     <Compile Include="UserControl\WatchListUC.Designer.cs">
       <DependentUpon>WatchListUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddToWL.resx">
+      <DependentUpon>AddToWL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddToWLError.resx">
+      <DependentUpon>AddToWLError.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

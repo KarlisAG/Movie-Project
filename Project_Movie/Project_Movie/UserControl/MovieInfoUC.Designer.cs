@@ -50,11 +50,9 @@
             this.Value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.linkLabelImdb = new System.Windows.Forms.LinkLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelJustType = new System.Windows.Forms.Label();
             this.labelJustRated = new System.Windows.Forms.Label();
             this.buttonSaveToWatchlist = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.richTextBoxInfoGenres = new System.Windows.Forms.RichTextBox();
             this.richTextBoxInfoPlot = new System.Windows.Forms.RichTextBox();
             this.richTextBoxInfoActors = new System.Windows.Forms.RichTextBox();
@@ -71,6 +69,7 @@
             this.richTextBoxInfoImdbVotes = new System.Windows.Forms.RichTextBox();
             this.labelJustLinkToImdb = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -272,15 +271,6 @@
             this.linkLabelImdb.Text = "Link to Imdb";
             this.linkLabelImdb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelImdb_LinkClicked);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 284);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelJustType
             // 
             this.labelJustType.AutoSize = true;
@@ -310,16 +300,6 @@
             this.buttonSaveToWatchlist.Text = "Save To Watch List";
             this.buttonSaveToWatchlist.UseVisualStyleBackColor = true;
             this.buttonSaveToWatchlist.Click += new System.EventHandler(this.buttonSaveToWatchlist_Click);
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.Location = new System.Drawing.Point(526, 285);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 41;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // richTextBoxInfoGenres
             // 
@@ -527,6 +507,15 @@
             this.labelError.TabIndex = 61;
             this.labelError.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 284);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // InfoUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -547,7 +536,6 @@
             this.Controls.Add(this.richTextBoxInfoActors);
             this.Controls.Add(this.richTextBoxInfoPlot);
             this.Controls.Add(this.richTextBoxInfoGenres);
-            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonSaveToWatchlist);
             this.Controls.Add(this.labelJustRated);
             this.Controls.Add(this.labelJustType);
@@ -605,7 +593,6 @@
         private System.Windows.Forms.Label labelJustType;
         private System.Windows.Forms.Label labelJustRated;
         private System.Windows.Forms.Button buttonSaveToWatchlist;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.RichTextBox richTextBoxInfoGenres;
         private System.Windows.Forms.RichTextBox richTextBoxInfoPlot;
         private System.Windows.Forms.RichTextBox richTextBoxInfoActors;
