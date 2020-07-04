@@ -10,6 +10,7 @@ namespace Project_Movie
     {
         private int userID;
         public String username;
+        public String USername { get; set; }
 
         public Logic()
         {

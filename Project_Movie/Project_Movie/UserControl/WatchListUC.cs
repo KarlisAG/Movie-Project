@@ -26,6 +26,7 @@ namespace Project_Movie
         {
             AddToWL addToWL = new AddToWL();
             addToWL.ShowDialog();
+            Update(sender, e);
         }
 
         private void buttonDeleteFromWL_Click(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.Username;
+            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.USername;
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)
@@ -138,7 +139,7 @@ namespace Project_Movie
             //aiziet uz movie infu
             //form.buttonInfo_Click(sender, e);
 
-            //addtoWL strada
+            //addtoWL strada//ieliek visur tukšu ja pat kkas ir iekšā
             //fix get-set
             //userinfoUC uztaisit
 

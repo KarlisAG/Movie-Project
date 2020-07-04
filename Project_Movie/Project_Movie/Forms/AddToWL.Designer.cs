@@ -220,6 +220,7 @@
             this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.labelTitle);
             this.Name = "AddToWL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddToWL";
             this.ResumeLayout(false);
             this.PerformLayout();

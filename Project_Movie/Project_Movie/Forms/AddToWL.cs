@@ -25,12 +25,12 @@ namespace Project_Movie.Forms
             {
                 AddToWLError aError = new AddToWLError();
                 aError.ShowDialog();
+                this.Hide();
+                
             }
             else
             {
                 AddAnyway();
-                //AddToWL add = new AddToWL();
-                //add.Hide();
                 this.Hide();
             }
         }
@@ -38,7 +38,6 @@ namespace Project_Movie.Forms
         public void AddAnyway()
         {
             db.AddMovie(textBoxTitle.Text, textBoxType.Text, textBoxYear.Text, textBoxLength.Text, textBoxRating.Text, textBoxRated.Text, textBoxGenre.Text, textBoxImdbID.Text);
-            
         }
     }
 }

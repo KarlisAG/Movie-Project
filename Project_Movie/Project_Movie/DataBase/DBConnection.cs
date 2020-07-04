@@ -80,7 +80,7 @@ namespace Project_Movie
 
                     Logic l = new Logic();
                     
-                    cmd.Parameters.AddWithValue("@userID", 4);
+                    cmd.Parameters.AddWithValue("@userID", 1);
                     cmd.ExecuteNonQuery();
 
                     return false;
@@ -128,8 +128,9 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movieImdbID = @movieParam;";
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE movieImdbID = @movieParam AND userID = @userID;";//USER ID!!!!
                 myCommand.Parameters.AddWithValue("@movieParam", ImdbID);
+                myCommand.Parameters.AddWithValue("@userID", 1);
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
 

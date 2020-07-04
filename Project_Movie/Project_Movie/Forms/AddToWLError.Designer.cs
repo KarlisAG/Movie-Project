@@ -71,6 +71,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonYes);
             this.Name = "AddToWLError";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddToWLError";
             this.ResumeLayout(false);
             this.PerformLayout();

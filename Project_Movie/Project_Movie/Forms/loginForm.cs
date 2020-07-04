@@ -63,6 +63,7 @@ namespace Project_Movie.Forms
                 if(db.Login(textBoxUsername.Text, textBoxPassword.Text))
                 {
                     FormApp main = new FormApp();
+                    l.USername = "AAA";
                     //l.setUsername(/*textBoxUsername.Text*/"AAA");
                     //l.username = /*textBoxUsername.Text*/"AAA";
                     l.Username = textBoxUsername.Text;
