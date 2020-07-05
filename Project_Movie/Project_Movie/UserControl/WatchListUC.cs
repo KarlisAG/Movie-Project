@@ -58,7 +58,6 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            richTextBoxError.Text = DBConnection.userID.ToString();
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)
@@ -134,15 +133,17 @@ namespace Project_Movie
             SearchUC search = new SearchUC();
             search.GetData(url);
 
-            
+            //pie double click atvert movie info tiesi par to filmu
             //form.ToMovieInfo();
             //aiziet uz movie infu
             //form.buttonInfo_Click(sender, e);
 
             //addtoWL strada//ieliek visur tukšu ja pat kkas ir iekšā
-            //fix get-set
             //userinfoUC uztaisit
-
+            //norm tabulas asc/desc
+            //saprast vai jaunas instances man nevar neko sapist - palasit par static
+            //noformatet visu skaisti
+            //uztaisit mysql serveri publisku(???)
         }
     }
 }
