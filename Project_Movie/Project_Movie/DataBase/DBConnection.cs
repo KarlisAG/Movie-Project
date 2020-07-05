@@ -4,6 +4,8 @@ using System.Data;
 using System.Runtime.CompilerServices;
 using System.Text;
 using MySql.Data.MySqlClient;
+using Project_Movie.Forms;
+using Renci.SshNet.Security.Cryptography;
 
 namespace Project_Movie
 {
@@ -16,9 +18,15 @@ namespace Project_Movie
         private string user;
         private string password;
         private string port;
-        private string connectionString;
+        private static string connectionString;
         private string sslM;
         Logic l = new Logic();
+
+        public String message;
+        public static int userID { get; set; }
+        public String ussername;
+
+        loginForm loginForm;
 
         public DBConnection()
         {
@@ -35,12 +43,38 @@ namespace Project_Movie
             connection = new MySqlConnection(connectionString);
         }
 
+        public DBConnection(loginForm loginForm) 
+        {
+            server = "127.0.0.1";
+            database = "movies";
+            user = "root";
+            password = "Students!Programme";
+            port = "3306";
+            sslM = "Required";
+
+            connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; " +
+                "SslMode={5}", server, port, user, password, database, sslM);
+
+            connection = new MySqlConnection(connectionString);
+            this.loginForm = loginForm;
+        }
+
         public DataTable GetMovies()
         {
-            String stm = "SELECT * FROM watchList WHERE userID = " + 1 + ";";//userID!!!
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+            //String stm = "SELECT * FROM watchList WHERE userID = " + l.usserID + ";";//userID!!!
+            connection = new MySqlConnection(connectionString);
+            connection.Open();
 
-            dataAdapter.SelectCommand = new MySqlCommand(stm, connection);
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = connection;
+
+            cmd.CommandText = $"SELECT * FROM watchList WHERE userID = @userID;";
+            cmd.Parameters.AddWithValue("@userID", userID);
+            cmd.ExecuteNonQuery();
+
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+
+            //dataAdapter.SelectCommand = new MySqlCommand(cmd, connection);
 
             DataTable table = new DataTable();
             dataAdapter.Fill(table);
@@ -80,7 +114,7 @@ namespace Project_Movie
 
                     Logic l = new Logic();
                     
-                    cmd.Parameters.AddWithValue("@userID", 1);
+                    cmd.Parameters.AddWithValue("@userID", userID);//userID
                     cmd.ExecuteNonQuery();
 
                     return false;
@@ -105,8 +139,9 @@ namespace Project_Movie
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = connection;
 
-                cmd.CommandText = $"DELETE FROM watchList WHERE movieTitle = @movieTitle;";
+                cmd.CommandText = $"DELETE FROM watchList WHERE movieTitle = @movieTitle AND userID = @userID;";
                 cmd.Parameters.AddWithValue("@movieTitle", title);
+                cmd.Parameters.AddWithValue("@userID", userID);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -128,9 +163,9 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movieImdbID = @movieParam AND userID = @userID;";//USER ID!!!!
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE movieImdbID = @movieParam AND userID = @userID;";
                 myCommand.Parameters.AddWithValue("@movieParam", ImdbID);
-                myCommand.Parameters.AddWithValue("@userID", 1);
+                myCommand.Parameters.AddWithValue("@userID", userID);
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
 
@@ -162,7 +197,7 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam AND userID = " + 1 + ";";//userID!!!
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE movie{parameter} LIKE @movieParam AND userID = " + userID + ";";
                 myCommand.Parameters.AddWithValue("@movieParam", "%" + text + "%");
                 myReader = myCommand.ExecuteReader();
                 table.Load(myReader);
@@ -199,8 +234,6 @@ namespace Project_Movie
                 cmd.Parameters.AddWithValue("@userCountry", userCountry);
 
                 cmd.ExecuteNonQuery();
-
-
             }
             finally
             {
@@ -243,10 +276,10 @@ namespace Project_Movie
             }
         }
 
-        public void setUserID()
+        public static void setUserID()
         {
             MySqlConnection connection = null;
-            MySqlDataReader myReader;
+            //MySqlDataReader myReader;
             try
             {
                 connection = new MySqlConnection(connectionString);
@@ -256,17 +289,26 @@ namespace Project_Movie
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
                 myCommand.CommandText = $"SELECT * FROM users WHERE login = @login;";
-                myCommand.Parameters.AddWithValue("@login", l.Username);
-                myReader = myCommand.ExecuteReader();
-                table.Load(myReader);
-                foreach (DataRow row in table.Rows)
+                myCommand.Parameters.AddWithValue("@login", loginForm.username);
+                var dr = myCommand.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    l.setuserID(row.Field<int>(0));
+                    dr.Read();
+                    userID = dr.GetInt32(0);
                 }
+                dr.Close();
                 
+                //myReader = myCommand.ExecuteReader();
+                //table.Load(myReader);
+                //foreach (DataRow row in table.Rows)
+                //{
+                //    userID = row.Field<int>(0);
+                //}
+                //return userID;
             }
             finally
             {
+                
                 if (connection != null)
                     connection.Close();
             }

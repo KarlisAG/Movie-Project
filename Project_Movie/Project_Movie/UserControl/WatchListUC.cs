@@ -14,7 +14,7 @@ namespace Project_Movie
 {
     public partial class WatchListUC : UserControl
     {
-        DBConnection db = new DBConnection();
+        DBConnection db = new DBConnection();//izveidoju jaunu instanci, tapec neradas ista userid vertiba
         bool asc = true;
         Logic l = new Logic();
         public WatchListUC()
@@ -58,7 +58,7 @@ namespace Project_Movie
 
         private void Update(object sender, EventArgs e)
         {
-            richTextBoxError.Text = /*l.getuserID().ToString() + *//*l.getUsername()*/l.USername;
+            richTextBoxError.Text = DBConnection.userID.ToString();
             listView1.Items.Clear();
             int y = 0;
             foreach (DataRow row in db.GetMovies().Rows)

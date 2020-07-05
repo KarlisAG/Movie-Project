@@ -65,7 +65,7 @@ namespace Project_Movie.Forms
                     l.setUsername(textBoxUsername.Text);
                     loginForm lForm = new loginForm();
                     lForm.Hide();
-                    FormApp fApp = new FormApp();
+                    FormApp fApp = new FormApp(lForm);
                     fApp.Show();
                     labelError.Visible = false;
                 }

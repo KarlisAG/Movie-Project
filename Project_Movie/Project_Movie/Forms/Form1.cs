@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using Project_Movie.Forms;
 
@@ -8,10 +9,14 @@ namespace Project_Movie
     public partial class FormApp : Form
     {
         Point lastPoint;
-        DBConnection db = new DBConnection();
-        public FormApp()
+        DBConnection db;
+        loginForm login;
+        public String ussername;
+        Logic l = new Logic();
+        public FormApp(loginForm login)
         {
             InitializeComponent();
+            this.login = login;
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -39,7 +44,7 @@ namespace Project_Movie
         public void buttonInfo_Click(object sender, EventArgs e)
         {
             buttonSlider.Visible = true;
-            buttonSlider.Location = buttonInfo.Location;
+            buttonSlider.Location = buttonMovieInfo.Location;
             infoUC1.Visible = true;
             searchUC1.Visible = false;
             watchListUC1.Visible = false;
@@ -48,7 +53,7 @@ namespace Project_Movie
         private void buttonUser_Click(object sender, EventArgs e)
         {
             buttonSlider.Visible = true;
-            buttonSlider.Location = buttonUser.Location;
+            buttonSlider.Location = buttonUserInfo.Location;
         }
         private void FormApp_MouseDown(object sender, MouseEventArgs e)
         {
@@ -64,27 +69,10 @@ namespace Project_Movie
             }
         }
 
-        private void searchUC1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormApp_Load(object sender, EventArgs e)
-        {
-            db.setUserID();
-        }
-
         private void pictureBoxLogout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            loginForm login = new loginForm();
             login.Show();
-        }
-
-        public void ToMovieInfo()
-        {
-            watchListUC1.Visible = false;
-            infoUC1.Visible = true;
         }
     }
 }

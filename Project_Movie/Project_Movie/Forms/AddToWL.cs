@@ -37,6 +37,7 @@ namespace Project_Movie.Forms
 
         public void AddAnyway()
         {
+
             db.AddMovie(textBoxTitle.Text, textBoxType.Text, textBoxYear.Text, textBoxLength.Text, textBoxRating.Text, textBoxRated.Text, textBoxGenre.Text, textBoxImdbID.Text);
         }
     }

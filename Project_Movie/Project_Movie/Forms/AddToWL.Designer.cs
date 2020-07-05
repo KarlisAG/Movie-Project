@@ -63,6 +63,7 @@
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(100, 20);
             this.textBoxTitle.TabIndex = 1;
+            this.textBoxTitle.Text = " ";
             // 
             // textBoxType
             // 

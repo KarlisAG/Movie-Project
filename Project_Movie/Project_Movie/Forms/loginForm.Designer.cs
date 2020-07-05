@@ -44,7 +44,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(281, 148);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(241, 28);
-            this.buttonLogin.TabIndex = 0;
+            this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -66,7 +66,7 @@
             this.labelLogin.Location = new System.Drawing.Point(276, 9);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(208, 28);
-            this.labelLogin.TabIndex = 5;
+            this.labelLogin.TabIndex = 8;
             this.labelLogin.Text = "Please Login First";
             // 
             // labelPassword
@@ -87,7 +87,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(241, 27);
-            this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.TabIndex = 0;
             this.textBoxPassword.Text = "admin123";
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
             // 
@@ -98,7 +98,7 @@
             this.textBoxUsername.Location = new System.Drawing.Point(281, 71);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(241, 27);
-            this.textBoxUsername.TabIndex = 8;
+            this.textBoxUsername.TabIndex = 1;
             this.textBoxUsername.Text = "admin";
             this.textBoxUsername.Click += new System.EventHandler(this.textBox1_Click);
             // 
@@ -119,7 +119,7 @@
             this.buttonRegister.Location = new System.Drawing.Point(281, 182);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(241, 28);
-            this.buttonRegister.TabIndex = 10;
+            this.buttonRegister.TabIndex = 4;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
@@ -154,8 +154,8 @@
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }

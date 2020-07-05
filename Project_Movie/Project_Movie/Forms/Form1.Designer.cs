@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelJustProjectInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonUser = new System.Windows.Forms.Button();
-            this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonUserInfo = new System.Windows.Forms.Button();
+            this.buttonMovieInfo = new System.Windows.Forms.Button();
             this.buttonWatchList = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,12 +47,11 @@
             this.watchListUC1 = new Project_Movie.WatchListUC();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
-            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,17 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
+            // 
+            // pictureBoxLogout
+            // 
+            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
+            this.pictureBoxLogout.Location = new System.Drawing.Point(887, 3);
+            this.pictureBoxLogout.Name = "pictureBoxLogout";
+            this.pictureBoxLogout.Size = new System.Drawing.Size(48, 33);
+            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogout.TabIndex = 6;
+            this.pictureBoxLogout.TabStop = false;
+            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
             // 
             // buttonExit
             // 
@@ -123,8 +134,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonUser);
-            this.panel2.Controls.Add(this.buttonInfo);
+            this.panel2.Controls.Add(this.buttonUserInfo);
+            this.panel2.Controls.Add(this.buttonMovieInfo);
             this.panel2.Controls.Add(this.buttonWatchList);
             this.panel2.Controls.Add(this.buttonSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -133,25 +144,25 @@
             this.panel2.Size = new System.Drawing.Size(127, 466);
             this.panel2.TabIndex = 1;
             // 
-            // buttonUser
+            // buttonUserInfo
             // 
-            this.buttonUser.Location = new System.Drawing.Point(0, 300);
-            this.buttonUser.Name = "buttonUser";
-            this.buttonUser.Size = new System.Drawing.Size(127, 67);
-            this.buttonUser.TabIndex = 3;
-            this.buttonUser.Text = "User Info";
-            this.buttonUser.UseVisualStyleBackColor = true;
-            this.buttonUser.Click += new System.EventHandler(this.buttonUser_Click);
+            this.buttonUserInfo.Location = new System.Drawing.Point(0, 300);
+            this.buttonUserInfo.Name = "buttonUserInfo";
+            this.buttonUserInfo.Size = new System.Drawing.Size(127, 67);
+            this.buttonUserInfo.TabIndex = 3;
+            this.buttonUserInfo.Text = "User Info";
+            this.buttonUserInfo.UseVisualStyleBackColor = true;
+            this.buttonUserInfo.Click += new System.EventHandler(this.buttonUser_Click);
             // 
-            // buttonInfo
+            // buttonMovieInfo
             // 
-            this.buttonInfo.Location = new System.Drawing.Point(0, 200);
-            this.buttonInfo.Name = "buttonInfo";
-            this.buttonInfo.Size = new System.Drawing.Size(127, 67);
-            this.buttonInfo.TabIndex = 4;
-            this.buttonInfo.Text = "Movie Info";
-            this.buttonInfo.UseVisualStyleBackColor = true;
-            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            this.buttonMovieInfo.Location = new System.Drawing.Point(0, 200);
+            this.buttonMovieInfo.Name = "buttonMovieInfo";
+            this.buttonMovieInfo.Size = new System.Drawing.Size(127, 67);
+            this.buttonMovieInfo.TabIndex = 4;
+            this.buttonMovieInfo.Text = "Movie Info";
+            this.buttonMovieInfo.UseVisualStyleBackColor = true;
+            this.buttonMovieInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // buttonWatchList
             // 
@@ -223,17 +234,6 @@
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
-            // pictureBoxLogout
-            // 
-            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
-            this.pictureBoxLogout.Location = new System.Drawing.Point(887, 3);
-            this.pictureBoxLogout.Name = "pictureBoxLogout";
-            this.pictureBoxLogout.Size = new System.Drawing.Size(48, 33);
-            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogout.TabIndex = 6;
-            this.pictureBoxLogout.TabStop = false;
-            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
-            // 
             // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -249,15 +249,14 @@
             this.Name = "FormApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormApp_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,8 +267,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonUser;
-        private System.Windows.Forms.Button buttonInfo;
+        private System.Windows.Forms.Button buttonUserInfo;
+        private System.Windows.Forms.Button buttonMovieInfo;
         private System.Windows.Forms.Button buttonWatchList;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panel3;

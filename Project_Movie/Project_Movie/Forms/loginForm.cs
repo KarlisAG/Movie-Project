@@ -14,11 +14,13 @@ namespace Project_Movie.Forms
     public partial class loginForm : Form
     {
         Point lastPoint;
-        DBConnection db = new DBConnection();
-        Logic l = new Logic();
+        public static String username { get; set; }
+        DBConnection db;
+
         public loginForm()
         {
             InitializeComponent();
+            db = new DBConnection(this);
         }
 
         private void textBoxPassword_Click(object sender, EventArgs e)
@@ -49,6 +51,7 @@ namespace Project_Movie.Forms
         {
             RegisterForm rForm = new RegisterForm();
             rForm.ShowDialog();
+            this.Hide();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -62,12 +65,10 @@ namespace Project_Movie.Forms
             {
                 if(db.Login(textBoxUsername.Text, textBoxPassword.Text))
                 {
-                    FormApp main = new FormApp();
-                    l.USername = "AAA";
-                    //l.setUsername(/*textBoxUsername.Text*/"AAA");
-                    //l.username = /*textBoxUsername.Text*/"AAA";
-                    l.Username = textBoxUsername.Text;
-                    main.Show();
+                    username = textBoxUsername.Text;
+                    DBConnection.setUserID();
+                    FormApp form = new FormApp(this);
+                    form.Show();
                     this.Hide();
                     labelError.Visible = false;
                 }
