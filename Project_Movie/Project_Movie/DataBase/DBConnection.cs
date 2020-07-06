@@ -20,11 +20,8 @@ namespace Project_Movie
         private string port;
         private static string connectionString;
         private string sslM;
-        Logic l = new Logic();
 
-        public String message;
         public static int userID { get; set; }
-        public String ussername;
 
         loginForm loginForm;
 
@@ -111,8 +108,6 @@ namespace Project_Movie
                     cmd.Parameters.AddWithValue("@movieGenre", genre);
 
                     cmd.Parameters.AddWithValue("@movieImdbID", ImdbID);
-
-                    Logic l = new Logic();
                     
                     cmd.Parameters.AddWithValue("@userID", userID);//userID
                     cmd.ExecuteNonQuery();
@@ -125,6 +120,41 @@ namespace Project_Movie
                     if (connection != null)
                         connection.Close();
                 }
+            }
+        }
+        //saisinat so -> vietas kur ir add movie, tur medz but if, vnk uztaisit pirms ta if ar movie fitler un ja tas ir true, tad taisa add movie nevis sis padod bool!!!!
+        public void AddMovieAnyway(String title, String type, String year, String length, String rating, String rated, String genre, String ImdbID) 
+        {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO watchList (movieTitle, movieType, movieYear, movieLength, movieRating, movieRated, movieGenre, userID, movieImdbID) " +
+                                  "VALUES(@movieTitle, @movieType, @movieYear, @movieLength, @movieRating, @movieRated, @movieGenre, @userID, @movieImdbID)";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@movieTitle", title);
+                cmd.Parameters.AddWithValue("@movieType", type);
+                cmd.Parameters.AddWithValue("@movieYear", year);
+                cmd.Parameters.AddWithValue("@movieLength", length);
+                cmd.Parameters.AddWithValue("@movieRating", rating);
+                cmd.Parameters.AddWithValue("@movieRated", rated);
+                cmd.Parameters.AddWithValue("@movieGenre", genre);
+
+                cmd.Parameters.AddWithValue("@movieImdbID", ImdbID);
+
+                cmd.Parameters.AddWithValue("@userID", userID);//userID
+                cmd.ExecuteNonQuery();
+
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
             }
         }
 
@@ -163,7 +193,7 @@ namespace Project_Movie
                 MySqlCommand myCommand = new MySqlCommand();
                 myCommand.Connection = connection;
                 DataTable table = new DataTable();
-                myCommand.CommandText = $"SELECT * FROM watchList WHERE movieImdbID = @movieParam AND userID = @userID;";
+                myCommand.CommandText = $"SELECT * FROM watchList WHERE userID = @userID AND movieImdbID = @movieParam;";
                 myCommand.Parameters.AddWithValue("@movieParam", ImdbID);
                 myCommand.Parameters.AddWithValue("@userID", userID);
                 myReader = myCommand.ExecuteReader();

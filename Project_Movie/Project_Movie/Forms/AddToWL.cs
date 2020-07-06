@@ -17,16 +17,16 @@ namespace Project_Movie.Forms
         public AddToWL()
         {
             InitializeComponent();
+            this.AcceptButton = buttonAdd;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (textBoxTitle.Text.Length < 1 || textBoxType.Text.Length < 1 || textBoxYear.Text.Length < 1 || textBoxLength.Text.Length < 1 || textBoxRating.Text.Length < 1|| textBoxRated.Text.Length < 1 || textBoxGenre.Text.Length < 1 || textBoxImdbID.Text.Length < 1)
+            if (textBoxTitle.Text == "-" || textBoxType.Text == "-" || textBoxYear.Text == "-" || textBoxLength.Text == "-" || textBoxRating.Text == "-" || textBoxRated.Text == "-" || textBoxGenre.Text == "-" || textBoxImdbID.Text == "-")
             {
-                AddToWLError aError = new AddToWLError();
+                AddToWLError aError = new AddToWLError(this);
                 aError.ShowDialog();
                 this.Hide();
-                
             }
             else
             {
@@ -37,8 +37,7 @@ namespace Project_Movie.Forms
 
         public void AddAnyway()
         {
-
-            db.AddMovie(textBoxTitle.Text, textBoxType.Text, textBoxYear.Text, textBoxLength.Text, textBoxRating.Text, textBoxRated.Text, textBoxGenre.Text, textBoxImdbID.Text);
+            db.AddMovieAnyway(textBoxTitle.Text, textBoxType.Text, textBoxYear.Text, textBoxLength.Text, textBoxRating.Text, textBoxRated.Text, textBoxGenre.Text, textBoxImdbID.Text);
         }
     }
 }

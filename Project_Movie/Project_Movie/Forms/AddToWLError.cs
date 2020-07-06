@@ -13,14 +13,15 @@ namespace Project_Movie.Forms
 {
     public partial class AddToWLError : Form
     {
-        public AddToWLError()
+        AddToWL addToWL;
+        public AddToWLError(AddToWL addToWL)
         {
             InitializeComponent();
+            this.addToWL = addToWL;
         }
 
         private void buttonYes_Click(object sender, EventArgs e)
         {
-            AddToWL addToWL = new AddToWL();
             addToWL.AddAnyway();
             this.Hide();
         }

@@ -63,7 +63,7 @@
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(100, 20);
             this.textBoxTitle.TabIndex = 1;
-            this.textBoxTitle.Text = " ";
+            this.textBoxTitle.Text = "-";
             // 
             // textBoxType
             // 
@@ -71,6 +71,7 @@
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(100, 20);
             this.textBoxType.TabIndex = 2;
+            this.textBoxType.Text = "-";
             // 
             // labelType
             // 
@@ -87,6 +88,7 @@
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(100, 20);
             this.textBoxYear.TabIndex = 3;
+            this.textBoxYear.Text = "-";
             // 
             // labelYear
             // 
@@ -103,6 +105,7 @@
             this.textBoxLength.Name = "textBoxLength";
             this.textBoxLength.Size = new System.Drawing.Size(100, 20);
             this.textBoxLength.TabIndex = 4;
+            this.textBoxLength.Text = "-";
             // 
             // labelLength
             // 
@@ -119,6 +122,7 @@
             this.textBoxRating.Name = "textBoxRating";
             this.textBoxRating.Size = new System.Drawing.Size(100, 20);
             this.textBoxRating.TabIndex = 5;
+            this.textBoxRating.Text = "-";
             // 
             // labelRating
             // 
@@ -135,6 +139,7 @@
             this.textBoxRated.Name = "textBoxRated";
             this.textBoxRated.Size = new System.Drawing.Size(100, 20);
             this.textBoxRated.TabIndex = 6;
+            this.textBoxRated.Text = "-";
             // 
             // labelRated
             // 
@@ -171,6 +176,7 @@
             this.textBoxGenre.Name = "textBoxGenre";
             this.textBoxGenre.Size = new System.Drawing.Size(100, 20);
             this.textBoxGenre.TabIndex = 7;
+            this.textBoxGenre.Text = "-";
             // 
             // labelGenre
             // 
@@ -187,6 +193,7 @@
             this.textBoxImdbID.Name = "textBoxImdbID";
             this.textBoxImdbID.Size = new System.Drawing.Size(100, 20);
             this.textBoxImdbID.TabIndex = 8;
+            this.textBoxImdbID.Text = "-";
             // 
             // labelImdbID
             // 

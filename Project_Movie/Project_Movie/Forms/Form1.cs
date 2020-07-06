@@ -74,7 +74,6 @@ namespace Project_Movie
         {
             this.Hide();
             login.Show();
-            
         }
 
         private void FormApp_Activated(object sender, EventArgs e)

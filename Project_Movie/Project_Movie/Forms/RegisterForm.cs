@@ -20,6 +20,7 @@ namespace Project_Movie.Forms
         {
             InitializeComponent();
             this.lForm = lForm;
+            this.AcceptButton = buttonRegister;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -64,6 +65,7 @@ namespace Project_Movie.Forms
                 {
                     db.RegisterUser(textBoxUsername.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxAge.Text, comboBoxSex.Text, textBoxCountry.Text);
                     this.Hide();
+                    
                     loginForm.username = textBoxUsername.Text;
                     FormApp fApp = new FormApp(lForm);
                     fApp.Show();
@@ -71,6 +73,7 @@ namespace Project_Movie.Forms
                     //db.setUserID();
                     fApp.Activate();
                     lForm.ClearBoxes();
+                    lForm.Hide();
                 }
             }
             else

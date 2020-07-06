@@ -138,8 +138,7 @@ namespace Project_Movie
             //aiziet uz movie infu
             //form.buttonInfo_Click(sender, e);
 
-            //addtoWL strada//ieliek visur tukšu ja pat kkas ir iekšā
-            //izdomat ka filtru labak taisit, ja nav imdbID
+            //izdomat ka filtru labak taisit, ja nav imdbID ????
             //userinfoUC uztaisit
             //norm tabulas asc/desc
             //noformatet visu skaisti

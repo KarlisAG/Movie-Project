@@ -17,10 +17,12 @@ namespace Project_Movie.Forms
         public static String username { get; set; }
         DBConnection db;
 
+
         public loginForm()
         {
             InitializeComponent();
             db = new DBConnection(this);
+            this.AcceptButton = buttonLogin;
         }
 
         private void textBoxPassword_Click(object sender, EventArgs e)
@@ -51,7 +53,6 @@ namespace Project_Movie.Forms
         {
             RegisterForm rForm = new RegisterForm(this);
             rForm.ShowDialog();
-            this.Hide();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
