@@ -276,7 +276,7 @@ namespace Project_Movie
             }
         }
 
-        public static void setUserID()
+        public /*static*/ void setUserID()
         {
             MySqlConnection connection = null;
             //MySqlDataReader myReader;

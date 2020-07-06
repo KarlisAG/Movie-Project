@@ -55,9 +55,9 @@
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelUsername.Location = new System.Drawing.Point(57, 34);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(74, 16);
+            this.labelUsername.Size = new System.Drawing.Size(79, 16);
             this.labelUsername.TabIndex = 0;
-            this.labelUsername.Text = "Username:";
+            this.labelUsername.Text = "Username *";
             // 
             // textBoxUsername
             // 
@@ -72,7 +72,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.TabIndex = 2;
             // 
             // labelPassword
             // 
@@ -80,9 +80,9 @@
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelPassword.Location = new System.Drawing.Point(60, 60);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(71, 16);
+            this.labelPassword.Size = new System.Drawing.Size(76, 16);
             this.labelPassword.TabIndex = 2;
-            this.labelPassword.Text = "Password:";
+            this.labelPassword.Text = "Password *";
             // 
             // textBoxPasswordConfirm
             // 
@@ -90,7 +90,7 @@
             this.textBoxPasswordConfirm.Name = "textBoxPasswordConfirm";
             this.textBoxPasswordConfirm.PasswordChar = '*';
             this.textBoxPasswordConfirm.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPasswordConfirm.TabIndex = 5;
+            this.textBoxPasswordConfirm.TabIndex = 3;
             // 
             // labelPasswordConfirm
             // 
@@ -98,16 +98,18 @@
             this.labelPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.labelPasswordConfirm.Location = new System.Drawing.Point(12, 86);
             this.labelPasswordConfirm.Name = "labelPasswordConfirm";
-            this.labelPasswordConfirm.Size = new System.Drawing.Size(119, 16);
+            this.labelPasswordConfirm.Size = new System.Drawing.Size(124, 16);
             this.labelPasswordConfirm.TabIndex = 4;
-            this.labelPasswordConfirm.Text = "Confirm Password:";
+            this.labelPasswordConfirm.Text = "Confirm Password *";
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(332, 34);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
-            this.textBoxName.TabIndex = 7;
+            this.textBoxName.TabIndex = 4;
+            this.textBoxName.Text = "-";
+            this.textBoxName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxName_MouseClick);
             // 
             // labelName
             // 
@@ -124,7 +126,9 @@
             this.textBoxSurname.Location = new System.Drawing.Point(332, 60);
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSurname.TabIndex = 9;
+            this.textBoxSurname.TabIndex = 5;
+            this.textBoxSurname.Text = "-";
+            this.textBoxSurname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxSurname_MouseClick);
             // 
             // labelSurname
             // 
@@ -141,7 +145,9 @@
             this.textBoxAge.Location = new System.Drawing.Point(332, 86);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAge.TabIndex = 11;
+            this.textBoxAge.TabIndex = 6;
+            this.textBoxAge.Text = "-";
+            this.textBoxAge.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxAge_MouseClick);
             // 
             // labelAge
             // 
@@ -168,7 +174,7 @@
             this.buttonRegister.Location = new System.Drawing.Point(137, 110);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(100, 23);
-            this.buttonRegister.TabIndex = 14;
+            this.buttonRegister.TabIndex = 9;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
@@ -178,7 +184,9 @@
             this.textBoxCountry.Location = new System.Drawing.Point(332, 138);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCountry.TabIndex = 16;
+            this.textBoxCountry.TabIndex = 8;
+            this.textBoxCountry.Text = "-";
+            this.textBoxCountry.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxCountry_MouseClick);
             // 
             // labelCountry
             // 
@@ -199,7 +207,8 @@
             this.comboBoxSex.Location = new System.Drawing.Point(332, 113);
             this.comboBoxSex.Name = "comboBoxSex";
             this.comboBoxSex.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxSex.TabIndex = 17;
+            this.comboBoxSex.TabIndex = 7;
+            this.comboBoxSex.Text = "-";
             // 
             // labelRequired
             // 

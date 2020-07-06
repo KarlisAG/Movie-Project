@@ -17,6 +17,7 @@ namespace Project_Movie
         {
             InitializeComponent();
             this.login = login;
+            db = new DBConnection(login);
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -73,6 +74,12 @@ namespace Project_Movie
         {
             this.Hide();
             login.Show();
+            
+        }
+
+        private void FormApp_Activated(object sender, EventArgs e)
+        {
+            db.setUserID();
         }
     }
 }

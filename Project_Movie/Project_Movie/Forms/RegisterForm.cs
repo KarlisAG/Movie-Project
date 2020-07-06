@@ -15,9 +15,11 @@ namespace Project_Movie.Forms
     {
         DBConnection db = new DBConnection();
         Logic l = new Logic();
-        public RegisterForm()
+        loginForm lForm;
+        public RegisterForm(loginForm lForm)
         {
             InitializeComponent();
+            this.lForm = lForm;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Project_Movie.Forms
                 if (textBoxAge.Text.Length >= 1)
                 {
                     bool isNumber = Int32.TryParse(textBoxAge.Text, out int result);
-                    if (isNumber)
+                    if (isNumber || textBoxAge.Text == "-")
                     {
                         Register();
                     }
@@ -62,12 +64,13 @@ namespace Project_Movie.Forms
                 {
                     db.RegisterUser(textBoxUsername.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxAge.Text, comboBoxSex.Text, textBoxCountry.Text);
                     this.Hide();
-                    l.setUsername(textBoxUsername.Text);
-                    loginForm lForm = new loginForm();
-                    lForm.Hide();
+                    loginForm.username = textBoxUsername.Text;
                     FormApp fApp = new FormApp(lForm);
                     fApp.Show();
                     labelError.Visible = false;
+                    //db.setUserID();
+                    fApp.Activate();
+                    lForm.ClearBoxes();
                 }
             }
             else
@@ -77,6 +80,26 @@ namespace Project_Movie.Forms
                 textBoxPassword.Clear();
                 textBoxPasswordConfirm.Clear();
             }
+        }
+
+        private void textBoxName_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxName.Clear();
+        }
+
+        private void textBoxSurname_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxSurname.Clear();
+        }
+
+        private void textBoxAge_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxAge.Clear();
+        }
+
+        private void textBoxCountry_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxCountry.Clear();
         }
     }
 }

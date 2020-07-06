@@ -249,6 +249,7 @@
             this.Name = "FormApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.FormApp_Activated);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);

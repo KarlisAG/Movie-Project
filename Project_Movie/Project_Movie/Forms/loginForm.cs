@@ -49,7 +49,7 @@ namespace Project_Movie.Forms
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            RegisterForm rForm = new RegisterForm();
+            RegisterForm rForm = new RegisterForm(this);
             rForm.ShowDialog();
             this.Hide();
         }
@@ -66,11 +66,15 @@ namespace Project_Movie.Forms
                 if(db.Login(textBoxUsername.Text, textBoxPassword.Text))
                 {
                     username = textBoxUsername.Text;
-                    DBConnection.setUserID();
+                    //db.setUserID();
+                    //DBConnection.setUserID();
                     FormApp form = new FormApp(this);
                     form.Show();
+                    form.Activate();
                     this.Hide();
                     labelError.Visible = false;
+
+                    ClearBoxes();
                 }
                 else
                 {
@@ -78,7 +82,12 @@ namespace Project_Movie.Forms
                     labelError.Text = "This user does not exist! Consider creating a new one by pressing Register button!";
                 }
             }
-            
+        }
+
+        public void ClearBoxes()
+        {
+            textBoxUsername.Clear();
+            textBoxPassword.Clear();
         }
     }
 }

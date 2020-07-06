@@ -70,7 +70,7 @@
             this.textBoxType.Location = new System.Drawing.Point(106, 61);
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(100, 20);
-            this.textBoxType.TabIndex = 3;
+            this.textBoxType.TabIndex = 2;
             // 
             // labelType
             // 
@@ -86,7 +86,7 @@
             this.textBoxYear.Location = new System.Drawing.Point(106, 87);
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(100, 20);
-            this.textBoxYear.TabIndex = 5;
+            this.textBoxYear.TabIndex = 3;
             // 
             // labelYear
             // 
@@ -102,7 +102,7 @@
             this.textBoxLength.Location = new System.Drawing.Point(106, 113);
             this.textBoxLength.Name = "textBoxLength";
             this.textBoxLength.Size = new System.Drawing.Size(100, 20);
-            this.textBoxLength.TabIndex = 7;
+            this.textBoxLength.TabIndex = 4;
             // 
             // labelLength
             // 
@@ -118,7 +118,7 @@
             this.textBoxRating.Location = new System.Drawing.Point(255, 35);
             this.textBoxRating.Name = "textBoxRating";
             this.textBoxRating.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRating.TabIndex = 9;
+            this.textBoxRating.TabIndex = 5;
             // 
             // labelRating
             // 
@@ -134,7 +134,7 @@
             this.textBoxRated.Location = new System.Drawing.Point(255, 61);
             this.textBoxRated.Name = "textBoxRated";
             this.textBoxRated.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRated.TabIndex = 11;
+            this.textBoxRated.TabIndex = 6;
             // 
             // labelRated
             // 
@@ -160,7 +160,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(178, 139);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 13;
+            this.buttonAdd.TabIndex = 9;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -170,7 +170,7 @@
             this.textBoxGenre.Location = new System.Drawing.Point(255, 87);
             this.textBoxGenre.Name = "textBoxGenre";
             this.textBoxGenre.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGenre.TabIndex = 15;
+            this.textBoxGenre.TabIndex = 7;
             // 
             // labelGenre
             // 
@@ -186,7 +186,7 @@
             this.textBoxImdbID.Location = new System.Drawing.Point(255, 115);
             this.textBoxImdbID.Name = "textBoxImdbID";
             this.textBoxImdbID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxImdbID.TabIndex = 17;
+            this.textBoxImdbID.TabIndex = 8;
             // 
             // labelImdbID
             // 

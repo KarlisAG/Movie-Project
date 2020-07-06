@@ -104,7 +104,7 @@ namespace Project_Movie
         private void SortColumn(object sender, ColumnClickEventArgs e)
         {
             
-            if (asc)
+            if (!asc)
             {
                 listView1.Sorting = SortOrder.Descending;//sataisit sorting norm
                 asc = !asc;
@@ -139,11 +139,12 @@ namespace Project_Movie
             //form.buttonInfo_Click(sender, e);
 
             //addtoWL strada//ieliek visur tukšu ja pat kkas ir iekšā
+            //izdomat ka filtru labak taisit, ja nav imdbID
             //userinfoUC uztaisit
             //norm tabulas asc/desc
-            //saprast vai jaunas instances man nevar neko sapist - palasit par static
             //noformatet visu skaisti
             //uztaisit mysql serveri publisku(???)
+            //satirit kodu
         }
     }
 }
