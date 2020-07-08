@@ -54,7 +54,7 @@ namespace Project_Movie
             }
         }
 
-        private void Update(object sender, EventArgs e)
+        private void Update(object sender, EventArgs e)//after filter it might bug and subitems might not show, dont know why, havent found solution; to get list back you jave to either switch UC or just logout, login nad it will be good
         {
             listView1.Items.Clear();
             int y = 0;
@@ -100,7 +100,7 @@ namespace Project_Movie
         }
 
         private ColumnHeader SortingColumn = null;
-        private void SortColumn(object sender, ColumnClickEventArgs e)
+        private void SortColumn(object sender, ColumnClickEventArgs e)//doesnt properly sort properly length, no idea how to change, tried with String.Remove, but the Compare() never is used..?
         {
             // Get the new sorting column.
             ColumnHeader new_sorting_column = listView1.Columns[e.Column];
@@ -171,6 +171,8 @@ namespace Project_Movie
             String url = defaultLink + searchID;
             SearchUC search = new SearchUC();
             search.GetData(url);
+            FormApp.ToInfo();
+            
             
 
             //pie double click atvert movie info tiesi par to filmu
@@ -178,9 +180,7 @@ namespace Project_Movie
             //aiziet uz movie infu
             //form.buttonInfo_Click(sender, e);
 
-            //izdomat ka filtru labak taisit, ja nav imdbID ????
             //userinfoUC uztaisit
-            //norm tabulas asc/desc
             //noformatet visu skaisti
             //uztaisit mysql serveri publisku(???)
             //satirit kodu

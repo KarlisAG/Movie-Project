@@ -115,9 +115,9 @@ namespace Project_Movie
                     y++;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                labelInfoTitle.Text = ex.Message;
+                
             }
         }
     }

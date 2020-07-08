@@ -50,9 +50,17 @@ namespace Project_Movie
 
             // Compare them.
             int result;
-            double double_x, double_y;
-            if (double.TryParse(string_x, out double_x) &&
-                double.TryParse(string_y, out double_y))
+            int double_x, double_y;
+            if(string_x.EndsWith(" min"))
+            {
+                string_x = string_x.Remove(string_x.Length - 4);
+            }
+            else if (string_y.EndsWith(" min"))
+            {
+                string_y = string_y.Remove(string_y.Length - 4);
+            }
+
+            if (int.TryParse(string_x, out double_x) && int.TryParse(string_y, out double_y))
             {
                 // Treat as a number.
                 result = double_x.CompareTo(double_y);

@@ -154,6 +154,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Title",
             "Type",
             "Year",
             "Rating",

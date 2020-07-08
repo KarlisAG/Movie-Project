@@ -255,5 +255,11 @@ namespace Project_Movie
                 labelErrorMessage.Visible = false;
             }
         }
+
+        private void textBoxTitle_TextChanged(object sender, EventArgs e)
+        {
+            labelSearchStatus.Visible = false;
+            labelErrorMessage.Visible = false;
+        }
     }
 }

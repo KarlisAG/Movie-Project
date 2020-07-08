@@ -117,6 +117,7 @@
             this.textBoxTitle.Size = new System.Drawing.Size(121, 20);
             this.textBoxTitle.TabIndex = 15;
             this.textBoxTitle.Visible = false;
+            this.textBoxTitle.TextChanged += new System.EventHandler(this.textBoxTitle_TextChanged);
             // 
             // buttonAdvanced
             // 
@@ -287,7 +288,7 @@
             this.labelErrorMessage.AutoSize = true;
             this.labelErrorMessage.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErrorMessage.ForeColor = System.Drawing.Color.Red;
-            this.labelErrorMessage.Location = new System.Drawing.Point(291, 38);
+            this.labelErrorMessage.Location = new System.Drawing.Point(288, 28);
             this.labelErrorMessage.Name = "labelErrorMessage";
             this.labelErrorMessage.Size = new System.Drawing.Size(0, 19);
             this.labelErrorMessage.TabIndex = 32;
@@ -344,7 +345,6 @@
             this.Controls.Add(this.buttonSearch);
             this.Name = "SearchUC";
             this.Size = new System.Drawing.Size(843, 456);
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

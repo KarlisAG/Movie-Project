@@ -79,5 +79,14 @@ namespace Project_Movie
         {
             db.setUserID();
         }
+
+        public static void ToInfo()
+        {
+            buttonSlider.Visible = true;
+            buttonSlider.Location = buttonMovieInfo.Location;
+            infoUC1.Visible = true;
+            searchUC1.Visible = false;
+            watchListUC1.Visible = false;
+        }
     }
 }
