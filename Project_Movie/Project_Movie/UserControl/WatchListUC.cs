@@ -14,9 +14,7 @@ namespace Project_Movie
 {
     public partial class WatchListUC : UserControl
     {
-        DBConnection db = new DBConnection();//izveidoju jaunu instanci, tapec neradas ista userid vertiba
-        bool asc = true;
-        Logic l = new Logic();
+        DBConnection db = new DBConnection();
         public WatchListUC()
         {
             InitializeComponent();
@@ -101,20 +99,61 @@ namespace Project_Movie
             }
         }
 
+        private ColumnHeader SortingColumn = null;
         private void SortColumn(object sender, ColumnClickEventArgs e)
         {
-            
-            if (!asc)
+            // Get the new sorting column.
+            ColumnHeader new_sorting_column = listView1.Columns[e.Column];
+
+            // Figure out the new sorting order.
+            System.Windows.Forms.SortOrder sort_order;
+            if (SortingColumn == null)
             {
-                listView1.Sorting = SortOrder.Descending;//sataisit sorting norm
-                asc = !asc;
+                // New column. Sort ascending.
+                sort_order = SortOrder.Ascending;
             }
             else
             {
-                listView1.Sorting = SortOrder.Ascending;
-                asc = !asc;
+                // See if this is the same column.
+                if (new_sorting_column == SortingColumn)
+                {
+                    // Same column. Switch the sort order.
+                    if (SortingColumn.Text.StartsWith("> "))
+                    {
+                        sort_order = SortOrder.Descending;
+                    }
+                    else
+                    {
+                        sort_order = SortOrder.Ascending;
+                    }
+                }
+                else
+                {
+                    // New column. Sort ascending.
+                    sort_order = SortOrder.Ascending;
+                }
+
+                // Remove the old sort indicator.
+                SortingColumn.Text = SortingColumn.Text.Substring(2);
             }
-            
+
+            // Display the new sort order.
+            SortingColumn = new_sorting_column;
+            if (sort_order == SortOrder.Ascending)
+            {
+                SortingColumn.Text = "> " + SortingColumn.Text;
+            }
+            else
+            {
+                SortingColumn.Text = "< " + SortingColumn.Text;
+            }
+
+            // Create a comparer.
+            listView1.ListViewItemSorter =
+                new ListViewComparer(e.Column, sort_order);
+
+            // Sort.
+            listView1.Sort();
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -132,6 +171,7 @@ namespace Project_Movie
             String url = defaultLink + searchID;
             SearchUC search = new SearchUC();
             search.GetData(url);
+            
 
             //pie double click atvert movie info tiesi par to filmu
             //form.ToMovieInfo();

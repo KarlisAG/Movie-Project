@@ -183,7 +183,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBase\DBConnection.cs" />
+    <Compile Include="Model\DBConnection.cs" />
     <Compile Include="Forms\AddToWL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,8 +202,8 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\MovieData.cs" />
-    <Compile Include="DataBase\Ratings.cs" />
+    <Compile Include="Model\MovieData.cs" />
+    <Compile Include="Model\Ratings.cs" />
     <Compile Include="Forms\loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,7 +216,7 @@
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic.cs" />
+    <Compile Include="Model\ListViewComparer.cs" />
     <Compile Include="UserControl\MovieInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

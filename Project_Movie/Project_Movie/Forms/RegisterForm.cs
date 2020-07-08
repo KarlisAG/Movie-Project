@@ -14,7 +14,6 @@ namespace Project_Movie.Forms
     public partial class RegisterForm : Form
     {
         DBConnection db = new DBConnection();
-        Logic l = new Logic();
         loginForm lForm;
         public RegisterForm(loginForm lForm)
         {

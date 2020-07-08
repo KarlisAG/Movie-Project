@@ -12,7 +12,6 @@ namespace Project_Movie
         DBConnection db;
         loginForm login;
         public String ussername;
-        Logic l = new Logic();
         public FormApp(loginForm login)
         {
             InitializeComponent();
