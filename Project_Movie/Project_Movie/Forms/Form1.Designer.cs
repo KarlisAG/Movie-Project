@@ -250,6 +250,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.FormApp_Activated);
+            this.Load += new System.EventHandler(this.FormApp_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);
@@ -269,7 +270,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonUserInfo;
-        private System.Windows.Forms.Button buttonMovieInfo;
         private System.Windows.Forms.Button buttonWatchList;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panel3;
@@ -281,6 +281,7 @@
         private InfoUC infoUC1;
         private WatchListUC watchListUC1;
         private System.Windows.Forms.PictureBox pictureBoxLogout;
+        public System.Windows.Forms.Button buttonMovieInfo;
     }
 }
 

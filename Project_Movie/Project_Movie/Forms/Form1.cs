@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
@@ -12,6 +13,16 @@ namespace Project_Movie
         DBConnection db;
         loginForm login;
         public String ussername;
+
+        static FormApp _obj;
+
+        public static FormApp Instance
+        {
+            get
+            {
+                return _obj;
+            }
+        }
         public FormApp(loginForm login)
         {
             InitializeComponent();
@@ -80,13 +91,15 @@ namespace Project_Movie
             db.setUserID();
         }
 
-        public static void ToInfo()
+        public void ToInfo(object sender, EventArgs e)
         {
-            buttonSlider.Visible = true;
-            buttonSlider.Location = buttonMovieInfo.Location;
-            infoUC1.Visible = true;
-            searchUC1.Visible = false;
-            watchListUC1.Visible = false;
+            buttonInfo_Click(sender, e);
+        }
+
+        private void FormApp_Load(object sender, EventArgs e)
+        {
+            _obj = this;
+
         }
     }
 }

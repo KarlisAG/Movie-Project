@@ -165,20 +165,13 @@ namespace Project_Movie
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
-            //String selectedImdbID = listView1.Items[Convert.ToInt32(listView1.SelectedIndices(0))].SubItems[7].Text;
             String defaultLink = "http://www.omdbapi.com/?apikey=9401f56d";
             String searchID = "&" + "&i=" + listView1.FocusedItem.SubItems[7].Text;
             String url = defaultLink + searchID;
             SearchUC search = new SearchUC();
             search.GetData(url);
-            FormApp.ToInfo();
-            
-            
 
-            //pie double click atvert movie info tiesi par to filmu
-            //form.ToMovieInfo();
-            //aiziet uz movie infu
-            //form.buttonInfo_Click(sender, e);
+            FormApp.Instance.buttonInfo_Click(sender, e);//ka tas strada?????
 
             //userinfoUC uztaisit
             //noformatet visu skaisti
