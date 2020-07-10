@@ -183,6 +183,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfirmPassword.Designer.cs">
+      <DependentUpon>ConfirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DBConnection.cs" />
     <Compile Include="Forms\AddToWL.cs">
       <SubType>Form</SubType>
@@ -237,11 +243,20 @@
     <Compile Include="UserControl\WatchListUC.Designer.cs">
       <DependentUpon>WatchListUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AddToWL.resx">
       <DependentUpon>AddToWL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddToWLError.resx">
       <DependentUpon>AddToWLError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfirmPassword.resx">
+      <DependentUpon>ConfirmPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -270,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\WatchListUC.resx">
       <DependentUpon>WatchListUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

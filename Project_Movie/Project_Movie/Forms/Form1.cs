@@ -41,6 +41,7 @@ namespace Project_Movie
             searchUC1.Visible = true;
             infoUC1.Visible = false;
             watchListUC1.Visible = false;
+            userInfo.Visible = false;
         }
 
         private void buttonWatchList_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace Project_Movie
             watchListUC1.Visible = true;
             searchUC1.Visible = false;
             infoUC1.Visible = false;
+            userInfo.Visible = false;
         }
 
         public void buttonInfo_Click(object sender, EventArgs e)
@@ -59,12 +61,17 @@ namespace Project_Movie
             infoUC1.Visible = true;
             searchUC1.Visible = false;
             watchListUC1.Visible = false;
+            userInfo.Visible = false;
         }
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
             buttonSlider.Visible = true;
             buttonSlider.Location = buttonUserInfo.Location;
+            userInfo.Visible = true;
+            infoUC1.Visible = false;
+            searchUC1.Visible = false;
+            watchListUC1.Visible = false;
         }
         private void FormApp_MouseDown(object sender, MouseEventArgs e)
         {

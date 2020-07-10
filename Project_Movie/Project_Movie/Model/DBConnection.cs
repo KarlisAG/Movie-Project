@@ -58,25 +58,32 @@ namespace Project_Movie
 
         public DataTable GetMovies()
         {
-            //String stm = "SELECT * FROM watchList WHERE userID = " + l.usserID + ";";//userID!!!
-            connection = new MySqlConnection(connectionString);
-            connection.Open();
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = connection;
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
 
-            cmd.CommandText = $"SELECT * FROM watchList WHERE userID = @userID;";
-            cmd.Parameters.AddWithValue("@userID", userID);
-            cmd.ExecuteNonQuery();
+                cmd.CommandText = $"SELECT * FROM watchList WHERE userID = @userID;";
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
 
-            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
 
-            //dataAdapter.SelectCommand = new MySqlCommand(cmd, connection);
+                DataTable table = new DataTable();
+                dataAdapter.Fill(table);
 
-            DataTable table = new DataTable();
-            dataAdapter.Fill(table);
-            return table;
-
+                return table;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+            
         }
 
         public bool AddMovie(String title, String type, String year, String length, String rating, String rated, String genre, String ImdbID)
@@ -306,10 +313,9 @@ namespace Project_Movie
             }
         }
 
-        public /*static*/ void setUserID()
+        public void setUserID()
         {
             MySqlConnection connection = null;
-            //MySqlDataReader myReader;
             try
             {
                 connection = new MySqlConnection(connectionString);
@@ -369,6 +375,119 @@ namespace Project_Movie
                 {
                     return false;
                 }
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public DataTable GetUserData()
+        {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+
+                cmd.CommandText = $"SELECT * FROM users WHERE userID = @userID;";
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+
+                DataTable table = new DataTable();
+                dataAdapter.Fill(table);
+                return table;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void EditInfo(String login, String userName, String userSurname, String userAge, String userSex, String userCountry)
+        {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+
+                cmd.CommandText = $"UPDATE users SET login = @login, userName = @userName, userSurname = @userSurname, userAge = @userAge, userSex = @userSex, userCountry = @userCountry WHERE userID = @userID;";
+                cmd.Parameters.AddWithValue("@login", login);
+                cmd.Parameters.AddWithValue("@userName", userName);
+                cmd.Parameters.AddWithValue("@userSurname", userSurname);
+                cmd.Parameters.AddWithValue("@userAge", userAge);
+                cmd.Parameters.AddWithValue("@userSex", userSex);
+                cmd.Parameters.AddWithValue("@userCountry", userCountry);
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public bool CheckOldPassword(String oldPassword)
+        {
+            MySqlConnection connection = null;
+            MySqlDataReader myReader;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand myCommand = new MySqlCommand();
+                myCommand.Connection = connection;
+                DataTable table = new DataTable();
+                myCommand.CommandText = $"SELECT * FROM users WHERE userID = @userID AND password = @password;";
+                myCommand.Parameters.AddWithValue("@userID", userID);
+                myCommand.Parameters.AddWithValue("@password", oldPassword);
+                myReader = myCommand.ExecuteReader();
+                table.Load(myReader);
+
+                if (table.Rows.Count >= 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        public void EditPassword(String newPassword)
+        {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+
+                cmd.CommandText = $"UPDATE users SET password = @password WHERE userID = @userID;";
+                cmd.Parameters.AddWithValue("@password", newPassword);
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
             }
             finally
             {

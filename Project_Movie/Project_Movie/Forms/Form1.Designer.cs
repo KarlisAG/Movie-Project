@@ -47,6 +47,7 @@
             this.watchListUC1 = new Project_Movie.WatchListUC();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
+            this.userInfo = new Project_Movie.UserInfo();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -234,11 +235,21 @@
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
             // 
+            // userInfo
+            // 
+            this.userInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userInfo.Location = new System.Drawing.Point(2708, 36);
+            this.userInfo.Name = "userInfo";
+            this.userInfo.Size = new System.Drawing.Size(0, 466);
+            this.userInfo.TabIndex = 6;
+            this.userInfo.Visible = false;
+            // 
             // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(993, 502);
+            this.Controls.Add(this.userInfo);
             this.Controls.Add(this.watchListUC1);
             this.Controls.Add(this.infoUC1);
             this.Controls.Add(this.searchUC1);
@@ -282,6 +293,7 @@
         private WatchListUC watchListUC1;
         private System.Windows.Forms.PictureBox pictureBoxLogout;
         public System.Windows.Forms.Button buttonMovieInfo;
+        private UserInfo userInfo;
     }
 }
 
