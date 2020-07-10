@@ -50,6 +50,8 @@
             this.textBoxOldPass = new System.Windows.Forms.TextBox();
             this.textBoxNewPass = new System.Windows.Forms.TextBox();
             this.textBoxNewPass2 = new System.Windows.Forms.TextBox();
+            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBoxSurname
@@ -261,7 +263,7 @@
             this.richTextBoxError.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxError.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
             this.richTextBoxError.ForeColor = System.Drawing.Color.Red;
-            this.richTextBoxError.Location = new System.Drawing.Point(35, 22);
+            this.richTextBoxError.Location = new System.Drawing.Point(35, 41);
             this.richTextBoxError.Name = "richTextBoxError";
             this.richTextBoxError.ReadOnly = true;
             this.richTextBoxError.Size = new System.Drawing.Size(784, 21);
@@ -298,10 +300,36 @@
             this.textBoxNewPass2.TabIndex = 76;
             this.textBoxNewPass2.Visible = false;
             // 
+            // richTextBoxInfo
+            // 
+            this.richTextBoxInfo.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxInfo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfo.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxInfo.Location = new System.Drawing.Point(35, 14);
+            this.richTextBoxInfo.Name = "richTextBoxInfo";
+            this.richTextBoxInfo.ReadOnly = true;
+            this.richTextBoxInfo.Size = new System.Drawing.Size(784, 21);
+            this.richTextBoxInfo.TabIndex = 77;
+            this.richTextBoxInfo.Text = "";
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(227, 393);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(121, 23);
+            this.buttonDelete.TabIndex = 78;
+            this.buttonDelete.Text = "Delete Profile";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // UserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.textBoxNewPass2);
             this.Controls.Add(this.textBoxNewPass);
             this.Controls.Add(this.textBoxOldPass);
@@ -356,5 +384,7 @@
         private System.Windows.Forms.TextBox textBoxOldPass;
         private System.Windows.Forms.TextBox textBoxNewPass;
         private System.Windows.Forms.TextBox textBoxNewPass2;
+        private System.Windows.Forms.RichTextBox richTextBoxInfo;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

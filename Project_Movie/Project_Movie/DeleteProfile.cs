@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Project_Movie
 {
-    public partial class ConfirmPassword : Form
+    public partial class DeleteProfile : Form
     {
         UserInfo userInfo;
-        public ConfirmPassword(UserInfo userInfo)
+        public DeleteProfile(UserInfo userInfo)
         {
             InitializeComponent();
             this.userInfo = userInfo;
@@ -22,7 +22,7 @@ namespace Project_Movie
 
         private void buttonYes_Click(object sender, EventArgs e)
         {
-            userInfo.EditProfile();
+            userInfo.DeleteProfile();
             this.Hide();
         }
 

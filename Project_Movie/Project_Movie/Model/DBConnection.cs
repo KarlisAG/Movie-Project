@@ -495,5 +495,27 @@ namespace Project_Movie
                     connection.Close();
             }
         }
+
+        public void DeleteProfile()
+        {
+            MySqlConnection connection = null;
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = connection;
+
+                cmd.CommandText = $"DELETE FROM users WHERE userID = @userID;";
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
     }
 }

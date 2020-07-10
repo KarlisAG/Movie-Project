@@ -90,5 +90,10 @@ namespace Project_Movie.Forms
             textBoxUsername.Clear();
             textBoxPassword.Clear();
         }
+
+        private void loginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

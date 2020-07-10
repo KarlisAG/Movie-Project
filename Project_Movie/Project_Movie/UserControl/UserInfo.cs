@@ -26,6 +26,7 @@ namespace Project_Movie
             {
                 db.EditInfo(richTextBoxUsername.Text, richTextBoxName.Text, richTextBoxSurname.Text, richTextBoxAge.Text, richTextBoxSex.Text, richTextBoxCountry.Text);
                 richTextBoxError.Clear();
+                richTextBoxInfo.Text = "Your profile info has been edited!";
             }
             else
             {
@@ -35,7 +36,7 @@ namespace Project_Movie
 
         private void buttonShowMore_Click(object sender, EventArgs e)
         {
-            if (labelUsername.Visible)
+            if (labelOldPass.Visible)
             {
                 buttonShowMore.Text = "Show More";
             }
@@ -61,21 +62,33 @@ namespace Project_Movie
             {
                 if (textBoxNewPass.Text == textBoxNewPass2.Text)
                 {
-                    ConfirmPassword confirmPassword = new ConfirmPassword(this);
-                    confirmPassword.ShowDialog();
-                    richTextBoxError.Clear();
-                    PasswordClear();
+                    if (textBoxNewPass.Text == textBoxOldPass.Text)
+                    {
+                        richTextBoxError.Text = "Your new password cannot be the same as the new one!";
+                        richTextBoxInfo.Clear();
+                        PasswordClear();
+                    }
+                    else
+                    {
+                        ConfirmPassword confirmPassword = new ConfirmPassword(this);
+                        confirmPassword.ShowDialog();
+                        richTextBoxError.Clear();
+                        PasswordClear();
+                        richTextBoxInfo.Text = "Your password has been changed!";
+                    }
                 }
                 else
                 {
                     richTextBoxError.Text = "Your new password doesn't match in both fields!";
                     PasswordClear();
+                    richTextBoxInfo.Clear();
                 }
             }
             else
             {
                 richTextBoxError.Text = "Your old password doesn't match your current one!";
                 PasswordClear();
+                richTextBoxInfo.Clear();
             }
             
         }
@@ -84,13 +97,13 @@ namespace Project_Movie
         {
             foreach (DataRow row in db.GetUserData().Rows)
             {
-                richTextBoxUsername.Text =  row.Field<String>(2);
-                OldPassword = row.Field<String>(3);
-                richTextBoxName.Text = row.Field<String>(4);
-                richTextBoxSurname.Text = row.Field<String>(5);
-                richTextBoxAge.Text = row.Field<String>(6);
-                richTextBoxSex.Text = row.Field<String>(7);
-                richTextBoxCountry.Text = row.Field<String>(8);
+                richTextBoxUsername.Text =  row.Field<String>(1);
+                OldPassword = row.Field<String>(2);
+                richTextBoxName.Text = row.Field<String>(3);
+                richTextBoxSurname.Text = row.Field<String>(4);
+                richTextBoxAge.Text = row.Field<String>(5);
+                richTextBoxSex.Text = row.Field<String>(6);
+                richTextBoxCountry.Text = row.Field<String>(7);
             }
         }
         private void PasswordClear()
@@ -103,6 +116,24 @@ namespace Project_Movie
         public void EditProfile()
         {
             db.EditPassword(textBoxNewPass.Text);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            DeleteProfile delete = new DeleteProfile(this);
+            delete.ShowDialog();
+        }
+
+        public void DeleteProfile()
+        {
+            db.DeleteProfile();
+            this.Hide();
+            loginForm lForm = new loginForm();
+            lForm.Show();
+            FormApp formApp = (FormApp)this.FindForm();
+            formApp.Close();
+            formApp.Dispose();
+            //((FormApp)this.TopLevelControl).Close();
         }
     }
 }
