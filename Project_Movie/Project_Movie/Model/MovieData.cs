@@ -10,7 +10,6 @@ namespace Project_Movie
     {
         public String Response;
         public String error;
-
         public String Title;
         public String Year;
         public String Metascore;
@@ -27,7 +26,6 @@ namespace Project_Movie
         public String ImdbRating;
         public String ImdbVotes;
         public String Poster;
-
         public List<Ratings> Ratings;
 
         public MovieData(String Response, String error, String Title, String Year, String Metascore, String Genre, String Actors, String Type, String Country, String Production, String Rated, String Runtime, String Writer, String Plot, String ImdbID, String ImdbRating, String ImdbVotes, String Poster, List<Ratings> Ratings)
@@ -52,6 +50,5 @@ namespace Project_Movie
             this.Poster = Poster;
             this.Ratings = Ratings;
         }
-
     }
 }

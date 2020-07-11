@@ -21,7 +21,7 @@ namespace Project_Movie.Forms
         public loginForm()
         {
             InitializeComponent();
-            db = new DBConnection(this);
+            db = new DBConnection();
             this.AcceptButton = buttonLogin;
         }
 
@@ -67,14 +67,11 @@ namespace Project_Movie.Forms
                 if(db.Login(textBoxUsername.Text, textBoxPassword.Text))
                 {
                     username = textBoxUsername.Text;
-                    //db.setUserID();
-                    //DBConnection.setUserID();
-                    FormApp form = new FormApp(this);
+                    FormApp form = new FormApp();
                     form.Show();
                     form.Activate();
                     this.Hide();
                     labelError.Visible = false;
-
                     ClearBoxes();
                 }
                 else

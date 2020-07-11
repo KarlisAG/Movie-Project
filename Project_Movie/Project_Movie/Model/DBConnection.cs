@@ -23,8 +23,6 @@ namespace Project_Movie
 
         public static int userID { get; set; }
 
-        loginForm loginForm;
-
         public DBConnection()
         {
             server = "127.0.0.1";
@@ -38,22 +36,6 @@ namespace Project_Movie
                 "SslMode={5}", server, port, user, password, database, sslM);
 
             connection = new MySqlConnection(connectionString);
-        }
-
-        public DBConnection(loginForm loginForm) 
-        {
-            server = "127.0.0.1";
-            database = "movies";
-            user = "root";
-            password = "Students!Programme";
-            port = "3306";
-            sslM = "Required";
-
-            connectionString = String.Format("server={0};port={1};user id={2}; password={3}; database={4}; " +
-                "SslMode={5}", server, port, user, password, database, sslM);
-
-            connection = new MySqlConnection(connectionString);
-            this.loginForm = loginForm;
         }
 
         public DataTable GetMovies()

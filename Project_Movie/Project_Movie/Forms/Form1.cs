@@ -11,23 +11,22 @@ namespace Project_Movie
     {
         Point lastPoint;
         DBConnection db;
-        loginForm login;
+        loginForm login = new loginForm();
         public String ussername;
 
-        static FormApp _obj;
+        private static FormApp _obj;
 
         public static FormApp Instance
-        {
-            get
-            {
-                return _obj;
+        { 
+            get 
+            { 
+                return _obj; 
             }
         }
-        public FormApp(loginForm login)
+        public FormApp()
         {
             InitializeComponent();
-            this.login = login;
-            db = new DBConnection(login);
+            db = new DBConnection();
         }
         private void buttonExit_Click(object sender, EventArgs e)
         {
@@ -98,15 +97,9 @@ namespace Project_Movie
             db.setUserID();
         }
 
-        public void ToInfo(object sender, EventArgs e)
-        {
-            buttonInfo_Click(sender, e);
-        }
-
         private void FormApp_Load(object sender, EventArgs e)
         {
             _obj = this;
-
         }
     }
 }

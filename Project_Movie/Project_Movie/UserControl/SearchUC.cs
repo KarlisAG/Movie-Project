@@ -47,12 +47,10 @@ namespace Project_Movie
             String searchPlot = String.Empty;
             String searchType = String.Empty;
             char and = '&';
-
             searchYear = textBoxYear.Text;
+
             if (searchYear != String.Empty)
-            {
                 searchYear = and + "&y=" + textBoxYear.Text;
-            }
 
             if (comboBoxType.Text == "Series")
             {
@@ -61,27 +59,21 @@ namespace Project_Movie
             }
 
             if (comboBoxPlot.Text == "Full")
-            {
                 searchPlot = and + "&plot=full";
-            }
 
             if (labelTitle.Visible == true)
             {
                 String title = "&t=" + textBoxTitle.Text;
                 String[] arrTitle = title.Split(' ');
                 String newSearchTitle = String.Join("%20", arrTitle);
-                    
                 String searchTitle = and + newSearchTitle;
-
                 String url = defaultLink + searchTitle + searchSeason + searchEpisode + searchYear + searchPlot;
-                    
                 GetData(url);
             }
             else if (labelImdbID.Visible == true)
             {
                 String searchID = and + "&i=" + textBoxTitle.Text;
                 String url = defaultLink + searchID + searchPlot;
-
                 GetData(url);
             }
         }
@@ -90,9 +82,7 @@ namespace Project_Movie
         {
             textBoxTitle.Clear();
             comboBoxPlot.Text = "";
-
             ClearAdvancedTextBoxes();
-
             labelErrorMessage.Visible = false;
             labelSearchStatus.Visible = false;
         }
@@ -114,18 +104,12 @@ namespace Project_Movie
                 comboBoxPlot.Visible = true;
                 buttonSearch.Visible = true;
                 buttonClear.Visible = true;
-
                 basicVisible = true;
             }
-
             if (type == "Title")
-            {
                 buttonAdvanced.Visible = true;
-            }
             else if (type == "ID")
-            {
                 buttonAdvanced.Visible = false;
-            }
         }
 
         private void AdvancedVisibilityChange()
@@ -141,13 +125,9 @@ namespace Project_Movie
             advancedVisible = !advancedVisible;
 
             if (advancedVisible == false)
-            {
                 buttonAdvanced.Text = "Show Advanced Search";
-            }
             else
-            {
                 buttonAdvanced.Text = "Close Advanced Search";
-            }
 
             labelSeason.Visible = false;
             textBoxSeason.Visible = false;
@@ -164,22 +144,20 @@ namespace Project_Movie
             if (yearParse != true && textBoxYear.Text.Length >= 1)
             {
                 labelNumberError.Visible = true;
-                labelNumberError.Text = "You need to enter a number in the Year textbox";
+                labelNumberError.Text = "You need to enter a number in the Year textbox!";
             }
             else if (seasonParse != true && textBoxSeason.Text.Length >= 1)
             {
                 labelNumberError.Visible = true;
-                labelNumberError.Text = "You need to enter a number in the Season textbox";
+                labelNumberError.Text = "You need to enter a number in the Season textbox!";
             }
             else if (episodeParse != true && textBoxEpisode.Text.Length >= 1)
             {
                 labelNumberError.Visible = true;
-                labelNumberError.Text = "You need to enter a number in the Episode textbox";
+                labelNumberError.Text = "You need to enter a number in the Episode textbox!";
             }
             else
-            {
                 labelNumberError.Visible = false;
-            }
         }
         private void TypeChanged(object sender, EventArgs e)
         {
@@ -205,17 +183,13 @@ namespace Project_Movie
         {
             WebClient client = new WebClient();
             String response = client.DownloadString(url);
-
             md = JsonConvert.DeserializeObject<MovieData>(response);
             if (md.Response == "True")
             {
                 labelErrorMessage.Visible = false;
                 labelSearchStatus.Visible = true;
-
                 labelSearchStatus.Text = "Search successful! You can view its information in Movie Info tab!";
-
                 buttonAddToWL.Visible = true;
-                
 
                 StreamWriter sw = new StreamWriter("CurrentMovie.json");
                 sw.Write(response);

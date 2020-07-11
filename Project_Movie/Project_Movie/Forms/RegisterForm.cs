@@ -35,19 +35,14 @@ namespace Project_Movie.Forms
                 {
                     bool isNumber = Int32.TryParse(textBoxAge.Text, out int result);
                     if (isNumber || textBoxAge.Text == "-")
-                    {
                         Register();
-                    }
                     else
                     {
                         labelError.Visible = true;
                         labelError.Text = "You need to enter a number in Age!";
                     }
                 }
-                else
-                {
-                    Register();
-                }
+                else Register();
             }
         }
 
@@ -64,12 +59,10 @@ namespace Project_Movie.Forms
                 {
                     db.RegisterUser(textBoxUsername.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxAge.Text, comboBoxSex.Text, textBoxCountry.Text);
                     this.Hide();
-                    
                     loginForm.username = textBoxUsername.Text;
-                    FormApp fApp = new FormApp(lForm);
+                    FormApp fApp = new FormApp();
                     fApp.Show();
                     labelError.Visible = false;
-                    //db.setUserID();
                     fApp.Activate();
                     lForm.ClearBoxes();
                     lForm.Hide();

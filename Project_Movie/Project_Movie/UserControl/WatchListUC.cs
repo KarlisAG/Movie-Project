@@ -45,13 +45,9 @@ namespace Project_Movie
             buttonFilterAction.Visible = !buttonFilterAction.Visible;
 
             if (labelJustParamater.Visible)
-            {
                 buttonDefaultFilter.Text = "Close Filter";
-            }
             else
-            {
                 buttonDefaultFilter.Text = "Open Filter";
-            }
         }
 
         private void Update(object sender, EventArgs e)//after filter it might bug and subitems might not show, dont know why, havent found solution; to get list back you jave to either switch UC or just logout, login nad it will be good
@@ -75,16 +71,12 @@ namespace Project_Movie
         private void buttonFilterAction_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "")
-            {
                 richTextBoxError.Text = "You need to select a parameter in the drop down box!";
-            }
             else 
             { 
-                String filterParameter = comboBox1.Text;
-                String filter = textBoxFilter.Text;
                 listView1.Items.Clear();
                 int y = 0;
-                foreach(DataRow row in db.FilterMovie(filterParameter, filter).Rows)
+                foreach(DataRow row in db.FilterMovie(comboBox1.Text, textBoxFilter.Text).Rows)
                 {
                     listView1.Items.Add(row.Field<String>(0));
                     listView1.Items[y].SubItems.Add(row.Field<String>(1));
@@ -100,7 +92,7 @@ namespace Project_Movie
         }
 
         private ColumnHeader SortingColumn = null;
-        private void SortColumn(object sender, ColumnClickEventArgs e)//doesnt properly sort properly length, no idea how to change, tried with String.Remove, but the Compare() never is used..?
+        private void SortColumn(object sender, ColumnClickEventArgs e)//doesnt properly sort length, no idea how to change, tried with String.Remove, but the Compare() never is used..?
         {
             // Get the new sorting column.
             ColumnHeader new_sorting_column = listView1.Columns[e.Column];
@@ -108,10 +100,8 @@ namespace Project_Movie
             // Figure out the new sorting order.
             System.Windows.Forms.SortOrder sort_order;
             if (SortingColumn == null)
-            {
                 // New column. Sort ascending.
                 sort_order = SortOrder.Ascending;
-            }
             else
             {
                 // See if this is the same column.
@@ -119,19 +109,13 @@ namespace Project_Movie
                 {
                     // Same column. Switch the sort order.
                     if (SortingColumn.Text.StartsWith("> "))
-                    {
                         sort_order = SortOrder.Descending;
-                    }
                     else
-                    {
                         sort_order = SortOrder.Ascending;
-                    }
                 }
                 else
-                {
                     // New column. Sort ascending.
                     sort_order = SortOrder.Ascending;
-                }
 
                 // Remove the old sort indicator.
                 SortingColumn.Text = SortingColumn.Text.Substring(2);
@@ -140,17 +124,12 @@ namespace Project_Movie
             // Display the new sort order.
             SortingColumn = new_sorting_column;
             if (sort_order == SortOrder.Ascending)
-            {
                 SortingColumn.Text = "> " + SortingColumn.Text;
-            }
             else
-            {
                 SortingColumn.Text = "< " + SortingColumn.Text;
-            }
 
             // Create a comparer.
-            listView1.ListViewItemSorter =
-                new ListViewComparer(e.Column, sort_order);
+            listView1.ListViewItemSorter = new ListViewComparer(e.Column, sort_order);
 
             // Sort.
             listView1.Sort();
@@ -170,12 +149,7 @@ namespace Project_Movie
             String url = defaultLink + searchID;
             SearchUC search = new SearchUC();
             search.GetData(url);
-
-            FormApp.Instance.buttonInfo_Click(sender, e);//ka tas strada?????
-
-            //noformatet visu skaisti
-            //uztaisit mysql serveri publisku(???)
-            //satirit kodu
+            FormApp.Instance.buttonInfo_Click(sender, e);
         }
     }
 }
