@@ -171,22 +171,30 @@
             // 
             // buttonExtraIMDBInfo
             // 
+            this.buttonExtraIMDBInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonExtraIMDBInfo.FlatAppearance.BorderSize = 0;
+            this.buttonExtraIMDBInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExtraIMDBInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonExtraIMDBInfo.Location = new System.Drawing.Point(332, 285);
             this.buttonExtraIMDBInfo.Name = "buttonExtraIMDBInfo";
             this.buttonExtraIMDBInfo.Size = new System.Drawing.Size(106, 23);
             this.buttonExtraIMDBInfo.TabIndex = 20;
             this.buttonExtraIMDBInfo.Text = "More Imdb Info";
-            this.buttonExtraIMDBInfo.UseVisualStyleBackColor = true;
+            this.buttonExtraIMDBInfo.UseVisualStyleBackColor = false;
             this.buttonExtraIMDBInfo.Click += new System.EventHandler(this.buttonExtraIMDBInfo_Click);
             // 
             // buttonExtraRatings
             // 
+            this.buttonExtraRatings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonExtraRatings.FlatAppearance.BorderSize = 0;
+            this.buttonExtraRatings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExtraRatings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonExtraRatings.Location = new System.Drawing.Point(734, 285);
             this.buttonExtraRatings.Name = "buttonExtraRatings";
             this.buttonExtraRatings.Size = new System.Drawing.Size(106, 23);
             this.buttonExtraRatings.TabIndex = 21;
             this.buttonExtraRatings.Text = "More Ratings";
-            this.buttonExtraRatings.UseVisualStyleBackColor = true;
+            this.buttonExtraRatings.UseVisualStyleBackColor = false;
             this.buttonExtraRatings.Click += new System.EventHandler(this.buttonExtraRatings_Click);
             // 
             // labelJustIMDB_ID
@@ -234,11 +242,12 @@
             // 
             // listViewRatings
             // 
-            this.listViewRatings.BackColor = System.Drawing.Color.Cornsilk;
+            this.listViewRatings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewRatings.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewRatings.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Source,
             this.Value});
+            this.listViewRatings.ForeColor = System.Drawing.SystemColors.Info;
             this.listViewRatings.HideSelection = false;
             this.listViewRatings.Location = new System.Drawing.Point(549, 314);
             this.listViewRatings.Name = "listViewRatings";
@@ -293,20 +302,25 @@
             // 
             // buttonSaveToWatchlist
             // 
-            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(607, 285);
+            this.buttonSaveToWatchlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonSaveToWatchlist.FlatAppearance.BorderSize = 0;
+            this.buttonSaveToWatchlist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveToWatchlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonSaveToWatchlist.Location = new System.Drawing.Point(592, 284);
             this.buttonSaveToWatchlist.Name = "buttonSaveToWatchlist";
-            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(121, 23);
+            this.buttonSaveToWatchlist.Size = new System.Drawing.Size(136, 23);
             this.buttonSaveToWatchlist.TabIndex = 40;
             this.buttonSaveToWatchlist.Text = "Save To Watch List";
-            this.buttonSaveToWatchlist.UseVisualStyleBackColor = true;
+            this.buttonSaveToWatchlist.UseVisualStyleBackColor = false;
             this.buttonSaveToWatchlist.Click += new System.EventHandler(this.buttonSaveToWatchlist_Click);
             // 
             // richTextBoxInfoGenres
             // 
-            this.richTextBoxInfoGenres.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoGenres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoGenres.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoGenres.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoGenres.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoGenres.Location = new System.Drawing.Point(329, 149);
             this.richTextBoxInfoGenres.Name = "richTextBoxInfoGenres";
             this.richTextBoxInfoGenres.ReadOnly = true;
@@ -316,10 +330,11 @@
             // 
             // richTextBoxInfoPlot
             // 
-            this.richTextBoxInfoPlot.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoPlot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoPlot.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoPlot.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoPlot.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoPlot.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoPlot.Location = new System.Drawing.Point(54, 285);
             this.richTextBoxInfoPlot.Name = "richTextBoxInfoPlot";
             this.richTextBoxInfoPlot.ReadOnly = true;
@@ -329,10 +344,11 @@
             // 
             // richTextBoxInfoActors
             // 
-            this.richTextBoxInfoActors.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoActors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoActors.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoActors.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoActors.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoActors.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoActors.Location = new System.Drawing.Point(329, 193);
             this.richTextBoxInfoActors.Name = "richTextBoxInfoActors";
             this.richTextBoxInfoActors.ReadOnly = true;
@@ -342,10 +358,11 @@
             // 
             // richTextBoxInfoType
             // 
-            this.richTextBoxInfoType.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoType.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoType.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoType.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoType.Location = new System.Drawing.Point(329, 237);
             this.richTextBoxInfoType.Name = "richTextBoxInfoType";
             this.richTextBoxInfoType.ReadOnly = true;
@@ -355,10 +372,11 @@
             // 
             // richTextBoxInfoMetascore
             // 
-            this.richTextBoxInfoMetascore.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoMetascore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoMetascore.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoMetascore.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoMetascore.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoMetascore.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoMetascore.Location = new System.Drawing.Point(329, 105);
             this.richTextBoxInfoMetascore.Name = "richTextBoxInfoMetascore";
             this.richTextBoxInfoMetascore.ReadOnly = true;
@@ -368,10 +386,11 @@
             // 
             // richTextBoxInfoYear
             // 
-            this.richTextBoxInfoYear.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoYear.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoYear.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoYear.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoYear.Location = new System.Drawing.Point(329, 61);
             this.richTextBoxInfoYear.Name = "richTextBoxInfoYear";
             this.richTextBoxInfoYear.ReadOnly = true;
@@ -381,10 +400,11 @@
             // 
             // richTextBoxInfoRated
             // 
-            this.richTextBoxInfoRated.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoRated.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoRated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoRated.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoRated.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoRated.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoRated.Location = new System.Drawing.Point(641, 237);
             this.richTextBoxInfoRated.Name = "richTextBoxInfoRated";
             this.richTextBoxInfoRated.ReadOnly = true;
@@ -394,10 +414,11 @@
             // 
             // richTextBoxInfoWriter
             // 
-            this.richTextBoxInfoWriter.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoWriter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoWriter.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoWriter.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoWriter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoWriter.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoWriter.Location = new System.Drawing.Point(641, 193);
             this.richTextBoxInfoWriter.Name = "richTextBoxInfoWriter";
             this.richTextBoxInfoWriter.ReadOnly = true;
@@ -407,10 +428,11 @@
             // 
             // richTextBoxInfoProduction
             // 
-            this.richTextBoxInfoProduction.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoProduction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoProduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoProduction.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoProduction.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoProduction.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoProduction.Location = new System.Drawing.Point(641, 149);
             this.richTextBoxInfoProduction.Name = "richTextBoxInfoProduction";
             this.richTextBoxInfoProduction.ReadOnly = true;
@@ -420,10 +442,11 @@
             // 
             // richTextBoxInfoCountry
             // 
-            this.richTextBoxInfoCountry.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoCountry.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoCountry.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoCountry.Location = new System.Drawing.Point(641, 105);
             this.richTextBoxInfoCountry.Name = "richTextBoxInfoCountry";
             this.richTextBoxInfoCountry.ReadOnly = true;
@@ -433,10 +456,11 @@
             // 
             // richTextBoxInfoRuntime
             // 
-            this.richTextBoxInfoRuntime.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoRuntime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoRuntime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoRuntime.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoRuntime.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoRuntime.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoRuntime.Location = new System.Drawing.Point(641, 61);
             this.richTextBoxInfoRuntime.Name = "richTextBoxInfoRuntime";
             this.richTextBoxInfoRuntime.ReadOnly = true;
@@ -446,10 +470,11 @@
             // 
             // richTextBoxInfoImdbID
             // 
-            this.richTextBoxInfoImdbID.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoImdbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoImdbID.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoImdbID.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbID.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoImdbID.Location = new System.Drawing.Point(449, 310);
             this.richTextBoxInfoImdbID.Name = "richTextBoxInfoImdbID";
             this.richTextBoxInfoImdbID.ReadOnly = true;
@@ -460,10 +485,11 @@
             // 
             // richTextBoxInfoImdbRating
             // 
-            this.richTextBoxInfoImdbRating.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoImdbRating.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoImdbRating.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoImdbRating.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbRating.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoImdbRating.Location = new System.Drawing.Point(449, 337);
             this.richTextBoxInfoImdbRating.Name = "richTextBoxInfoImdbRating";
             this.richTextBoxInfoImdbRating.ReadOnly = true;
@@ -474,10 +500,11 @@
             // 
             // richTextBoxInfoImdbVotes
             // 
-            this.richTextBoxInfoImdbVotes.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfoImdbVotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.richTextBoxInfoImdbVotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfoImdbVotes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfoImdbVotes.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.richTextBoxInfoImdbVotes.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBoxInfoImdbVotes.Location = new System.Drawing.Point(449, 368);
             this.richTextBoxInfoImdbVotes.Name = "richTextBoxInfoImdbVotes";
             this.richTextBoxInfoImdbVotes.ReadOnly = true;
@@ -519,7 +546,7 @@
             // InfoUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelJustLinkToImdb);
             this.Controls.Add(this.richTextBoxInfoImdbVotes);
@@ -557,6 +584,7 @@
             this.Controls.Add(this.labelJustMetascore);
             this.Controls.Add(this.labelJustYear);
             this.Controls.Add(this.labelInfoTitle);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "InfoUC";
             this.Size = new System.Drawing.Size(843, 456);
             this.VisibleChanged += new System.EventHandler(this.Update);

@@ -267,7 +267,7 @@
             // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(993, 502);
             this.Controls.Add(this.userInfo);
             this.Controls.Add(this.watchListUC1);

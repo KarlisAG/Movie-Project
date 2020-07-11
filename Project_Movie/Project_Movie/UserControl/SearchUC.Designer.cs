@@ -56,24 +56,30 @@
             // 
             // buttonSearchByID
             // 
-            this.buttonSearchByID.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonSearchByID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonSearchByID.FlatAppearance.BorderSize = 0;
+            this.buttonSearchByID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSearchByID.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchByID.Location = new System.Drawing.Point(148, 60);
             this.buttonSearchByID.Name = "buttonSearchByID";
             this.buttonSearchByID.Size = new System.Drawing.Size(94, 23);
             this.buttonSearchByID.TabIndex = 14;
             this.buttonSearchByID.Text = "Imdb ID";
-            this.buttonSearchByID.UseVisualStyleBackColor = true;
+            this.buttonSearchByID.UseVisualStyleBackColor = false;
             this.buttonSearchByID.Click += new System.EventHandler(this.buttonSearchByID_Click);
             // 
             // buttonSearchByTitle
             // 
-            this.buttonSearchByTitle.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonSearchByTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonSearchByTitle.FlatAppearance.BorderSize = 0;
+            this.buttonSearchByTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSearchByTitle.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchByTitle.Location = new System.Drawing.Point(53, 60);
             this.buttonSearchByTitle.Name = "buttonSearchByTitle";
             this.buttonSearchByTitle.Size = new System.Drawing.Size(89, 23);
             this.buttonSearchByTitle.TabIndex = 13;
             this.buttonSearchByTitle.Text = "Title";
-            this.buttonSearchByTitle.UseVisualStyleBackColor = true;
+            this.buttonSearchByTitle.UseVisualStyleBackColor = false;
             this.buttonSearchByTitle.Click += new System.EventHandler(this.buttonSearchByTitle_Click);
             // 
             // labelSearchBy
@@ -88,25 +94,29 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
-            this.buttonClear.Location = new System.Drawing.Point(604, 109);
+            this.buttonClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Location = new System.Drawing.Point(624, 109);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(139, 23);
+            this.buttonClear.Size = new System.Drawing.Size(150, 23);
             this.buttonClear.TabIndex = 11;
             this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Visible = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.Location = new System.Drawing.Point(459, 108);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(139, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(159, 23);
             this.buttonSearch.TabIndex = 10;
             this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Visible = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
@@ -121,13 +131,15 @@
             // 
             // buttonAdvanced
             // 
-            this.buttonAdvanced.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonAdvanced.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonAdvanced.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAdvanced.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdvanced.Location = new System.Drawing.Point(148, 154);
             this.buttonAdvanced.Name = "buttonAdvanced";
-            this.buttonAdvanced.Size = new System.Drawing.Size(175, 25);
+            this.buttonAdvanced.Size = new System.Drawing.Size(199, 25);
             this.buttonAdvanced.TabIndex = 16;
             this.buttonAdvanced.Text = "Show Advanced Search";
-            this.buttonAdvanced.UseVisualStyleBackColor = true;
+            this.buttonAdvanced.UseVisualStyleBackColor = false;
             this.buttonAdvanced.Visible = false;
             this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
             // 
@@ -305,13 +317,16 @@
             // 
             // buttonAddToWL
             // 
-            this.buttonAddToWL.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F);
+            this.buttonAddToWL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonAddToWL.FlatAppearance.BorderSize = 0;
+            this.buttonAddToWL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddToWL.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddToWL.Location = new System.Drawing.Point(459, 137);
             this.buttonAddToWL.Name = "buttonAddToWL";
-            this.buttonAddToWL.Size = new System.Drawing.Size(139, 23);
+            this.buttonAddToWL.Size = new System.Drawing.Size(159, 23);
             this.buttonAddToWL.TabIndex = 34;
             this.buttonAddToWL.Text = "Add To Watch List";
-            this.buttonAddToWL.UseVisualStyleBackColor = true;
+            this.buttonAddToWL.UseVisualStyleBackColor = false;
             this.buttonAddToWL.Visible = false;
             this.buttonAddToWL.Click += new System.EventHandler(this.buttonAddToWL_Click);
             // 
@@ -319,6 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.buttonAddToWL);
             this.Controls.Add(this.labelNumberError);
             this.Controls.Add(this.labelErrorMessage);
@@ -343,6 +359,7 @@
             this.Controls.Add(this.labelSearchBy);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonSearch);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "SearchUC";
             this.Size = new System.Drawing.Size(843, 456);
             this.ResumeLayout(false);

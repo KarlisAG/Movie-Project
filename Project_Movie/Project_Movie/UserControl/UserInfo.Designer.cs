@@ -227,38 +227,47 @@
             // 
             // buttonEdit
             // 
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonEdit.Location = new System.Drawing.Point(227, 364);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(121, 23);
             this.buttonEdit.TabIndex = 70;
             this.buttonEdit.Text = "Edit Profile";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonChangePW
             // 
+            this.buttonChangePW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonChangePW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonChangePW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonChangePW.Location = new System.Drawing.Point(497, 197);
             this.buttonChangePW.Name = "buttonChangePW";
             this.buttonChangePW.Size = new System.Drawing.Size(121, 23);
             this.buttonChangePW.TabIndex = 71;
             this.buttonChangePW.Text = "Change Password";
-            this.buttonChangePW.UseVisualStyleBackColor = true;
+            this.buttonChangePW.UseVisualStyleBackColor = false;
             this.buttonChangePW.Visible = false;
             this.buttonChangePW.Click += new System.EventHandler(this.buttonChangePW_Click);
             // 
             // buttonShowMore
             // 
+            this.buttonShowMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonShowMore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonShowMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonShowMore.Location = new System.Drawing.Point(374, 68);
             this.buttonShowMore.Name = "buttonShowMore";
             this.buttonShowMore.Size = new System.Drawing.Size(121, 23);
             this.buttonShowMore.TabIndex = 72;
             this.buttonShowMore.Text = "Show More";
-            this.buttonShowMore.UseVisualStyleBackColor = true;
+            this.buttonShowMore.UseVisualStyleBackColor = false;
             this.buttonShowMore.Click += new System.EventHandler(this.buttonShowMore_Click);
             // 
             // richTextBoxError
             // 
-            this.richTextBoxError.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.richTextBoxError.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxError.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxError.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
@@ -302,7 +311,7 @@
             // 
             // richTextBoxInfo
             // 
-            this.richTextBoxInfo.BackColor = System.Drawing.Color.Cornsilk;
+            this.richTextBoxInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.richTextBoxInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxInfo.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.richTextBoxInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
@@ -316,18 +325,22 @@
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonDelete.Location = new System.Drawing.Point(227, 393);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(121, 23);
             this.buttonDelete.TabIndex = 78;
             this.buttonDelete.Text = "Delete Profile";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // UserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.richTextBoxInfo);
             this.Controls.Add(this.textBoxNewPass2);

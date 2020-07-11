@@ -50,6 +50,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Title,
             this.Type,
@@ -59,6 +60,7 @@
             this.Rated,
             this.Genre,
             this.ImdbID});
+            this.listView1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 30);
@@ -112,40 +114,50 @@
             // 
             // buttonAddMoreToWL
             // 
+            this.buttonAddMoreToWL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonAddMoreToWL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAddMoreToWL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonAddMoreToWL.Location = new System.Drawing.Point(3, 419);
             this.buttonAddMoreToWL.Name = "buttonAddMoreToWL";
             this.buttonAddMoreToWL.Size = new System.Drawing.Size(75, 23);
             this.buttonAddMoreToWL.TabIndex = 1;
             this.buttonAddMoreToWL.Text = "Add More To Watch List";
-            this.buttonAddMoreToWL.UseVisualStyleBackColor = true;
+            this.buttonAddMoreToWL.UseVisualStyleBackColor = false;
             this.buttonAddMoreToWL.Click += new System.EventHandler(this.buttonAddMoreToWL_Click);
             // 
             // buttonDeleteFromWL
             // 
-            this.buttonDeleteFromWL.Location = new System.Drawing.Point(165, 419);
+            this.buttonDeleteFromWL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonDeleteFromWL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDeleteFromWL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonDeleteFromWL.Location = new System.Drawing.Point(177, 419);
             this.buttonDeleteFromWL.Name = "buttonDeleteFromWL";
             this.buttonDeleteFromWL.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteFromWL.TabIndex = 2;
             this.buttonDeleteFromWL.Text = "Delete";
-            this.buttonDeleteFromWL.UseVisualStyleBackColor = true;
+            this.buttonDeleteFromWL.UseVisualStyleBackColor = false;
             this.buttonDeleteFromWL.Click += new System.EventHandler(this.buttonDeleteFromWL_Click);
             // 
             // buttonDefaultFilter
             // 
-            this.buttonDefaultFilter.Location = new System.Drawing.Point(246, 419);
+            this.buttonDefaultFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonDefaultFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDefaultFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonDefaultFilter.Location = new System.Drawing.Point(258, 419);
             this.buttonDefaultFilter.Name = "buttonDefaultFilter";
-            this.buttonDefaultFilter.Size = new System.Drawing.Size(75, 23);
+            this.buttonDefaultFilter.Size = new System.Drawing.Size(88, 23);
             this.buttonDefaultFilter.TabIndex = 3;
             this.buttonDefaultFilter.Text = "Open Filter";
-            this.buttonDefaultFilter.UseVisualStyleBackColor = true;
+            this.buttonDefaultFilter.UseVisualStyleBackColor = false;
             this.buttonDefaultFilter.Click += new System.EventHandler(this.buttonDefaultFilter_Click);
             // 
             // labelJustParamater
             // 
             this.labelJustParamater.AutoSize = true;
-            this.labelJustParamater.Location = new System.Drawing.Point(327, 419);
+            this.labelJustParamater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelJustParamater.Location = new System.Drawing.Point(352, 419);
             this.labelJustParamater.Name = "labelJustParamater";
-            this.labelJustParamater.Size = new System.Drawing.Size(58, 13);
+            this.labelJustParamater.Size = new System.Drawing.Size(78, 15);
             this.labelJustParamater.TabIndex = 4;
             this.labelJustParamater.Text = "Paramater:";
             this.labelJustParamater.Visible = false;
@@ -160,7 +172,7 @@
             "Rating",
             "Rated",
             "Genre"});
-            this.comboBox1.Location = new System.Drawing.Point(390, 419);
+            this.comboBox1.Location = new System.Drawing.Point(436, 419);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 5;
@@ -168,7 +180,7 @@
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(471, 419);
+            this.textBoxFilter.Location = new System.Drawing.Point(517, 419);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(75, 20);
             this.textBoxFilter.TabIndex = 6;
@@ -176,18 +188,21 @@
             // 
             // buttonFilterAction
             // 
-            this.buttonFilterAction.Location = new System.Drawing.Point(552, 419);
+            this.buttonFilterAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonFilterAction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonFilterAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonFilterAction.Location = new System.Drawing.Point(598, 419);
             this.buttonFilterAction.Name = "buttonFilterAction";
             this.buttonFilterAction.Size = new System.Drawing.Size(75, 23);
             this.buttonFilterAction.TabIndex = 7;
             this.buttonFilterAction.Text = "Filter";
-            this.buttonFilterAction.UseVisualStyleBackColor = true;
+            this.buttonFilterAction.UseVisualStyleBackColor = false;
             this.buttonFilterAction.Visible = false;
             this.buttonFilterAction.Click += new System.EventHandler(this.buttonFilterAction_Click);
             // 
             // richTextBoxError
             // 
-            this.richTextBoxError.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.richTextBoxError.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxError.Location = new System.Drawing.Point(3, 3);
             this.richTextBoxError.Name = "richTextBoxError";
@@ -197,18 +212,22 @@
             // 
             // buttonRefresh
             // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.buttonRefresh.Location = new System.Drawing.Point(84, 419);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
+            this.buttonRefresh.Size = new System.Drawing.Size(87, 23);
             this.buttonRefresh.TabIndex = 9;
             this.buttonRefresh.Text = "Refresh List";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // WatchListUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.richTextBoxError);
             this.Controls.Add(this.buttonFilterAction);
