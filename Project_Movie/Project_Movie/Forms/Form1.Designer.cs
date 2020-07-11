@@ -29,39 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.labelJustProjectInfo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSlider = new System.Windows.Forms.Button();
             this.buttonUserInfo = new System.Windows.Forms.Button();
             this.buttonMovieInfo = new System.Windows.Forms.Button();
             this.buttonWatchList = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonSlider = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
+            this.userInfo = new Project_Movie.UserInfo();
             this.watchListUC1 = new Project_Movie.WatchListUC();
             this.infoUC1 = new Project_Movie.InfoUC();
             this.searchUC1 = new Project_Movie.SearchUC();
-            this.userInfo = new Project_Movie.UserInfo();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.pictureBoxLogout);
-            this.panel1.Controls.Add(this.buttonExit);
-            this.panel1.Controls.Add(this.labelJustProjectInfo);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBoxLogout);
+            this.panel1.Controls.Add(this.labelJustProjectInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -69,34 +66,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
-            // 
-            // pictureBoxLogout
-            // 
-            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
-            this.pictureBoxLogout.Location = new System.Drawing.Point(887, 3);
-            this.pictureBoxLogout.Name = "pictureBoxLogout";
-            this.pictureBoxLogout.Size = new System.Drawing.Size(48, 33);
-            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogout.TabIndex = 6;
-            this.pictureBoxLogout.TabStop = false;
-            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExit.Location = new System.Drawing.Point(941, 0);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(40, 34);
-            this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "X";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // labelJustProjectInfo
             // 
@@ -109,18 +78,6 @@
             this.labelJustProjectInfo.Text = "Your Personal Movie Watch List Application";
             this.labelJustProjectInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
             this.labelJustProjectInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             // 
             // imageList1
             // 
@@ -135,6 +92,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.buttonUserInfo);
             this.panel2.Controls.Add(this.buttonMovieInfo);
             this.panel2.Controls.Add(this.buttonWatchList);
@@ -145,48 +103,9 @@
             this.panel2.Size = new System.Drawing.Size(127, 466);
             this.panel2.TabIndex = 1;
             // 
-            // buttonUserInfo
-            // 
-            this.buttonUserInfo.Location = new System.Drawing.Point(0, 300);
-            this.buttonUserInfo.Name = "buttonUserInfo";
-            this.buttonUserInfo.Size = new System.Drawing.Size(127, 67);
-            this.buttonUserInfo.TabIndex = 3;
-            this.buttonUserInfo.Text = "User Info";
-            this.buttonUserInfo.UseVisualStyleBackColor = true;
-            this.buttonUserInfo.Click += new System.EventHandler(this.buttonUser_Click);
-            // 
-            // buttonMovieInfo
-            // 
-            this.buttonMovieInfo.Location = new System.Drawing.Point(0, 200);
-            this.buttonMovieInfo.Name = "buttonMovieInfo";
-            this.buttonMovieInfo.Size = new System.Drawing.Size(127, 67);
-            this.buttonMovieInfo.TabIndex = 4;
-            this.buttonMovieInfo.Text = "Movie Info";
-            this.buttonMovieInfo.UseVisualStyleBackColor = true;
-            this.buttonMovieInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            // 
-            // buttonWatchList
-            // 
-            this.buttonWatchList.Location = new System.Drawing.Point(0, 100);
-            this.buttonWatchList.Name = "buttonWatchList";
-            this.buttonWatchList.Size = new System.Drawing.Size(127, 67);
-            this.buttonWatchList.TabIndex = 3;
-            this.buttonWatchList.Text = "My Watch List";
-            this.buttonWatchList.UseVisualStyleBackColor = true;
-            this.buttonWatchList.Click += new System.EventHandler(this.buttonWatchList_Click);
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(127, 67);
-            this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.buttonSlider);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(127, 36);
@@ -196,8 +115,9 @@
             // 
             // buttonSlider
             // 
-            this.buttonSlider.BackColor = System.Drawing.Color.Goldenrod;
+            this.buttonSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.buttonSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSlider.FlatAppearance.BorderSize = 0;
             this.buttonSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSlider.ForeColor = System.Drawing.Color.White;
             this.buttonSlider.Location = new System.Drawing.Point(0, 0);
@@ -207,47 +127,147 @@
             this.buttonSlider.UseVisualStyleBackColor = false;
             this.buttonSlider.Visible = false;
             // 
+            // buttonUserInfo
+            // 
+            this.buttonUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.buttonUserInfo.FlatAppearance.BorderSize = 0;
+            this.buttonUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonUserInfo.Image = global::Project_Movie.Properties.Resources.userInfo_real_;
+            this.buttonUserInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUserInfo.Location = new System.Drawing.Point(0, 300);
+            this.buttonUserInfo.Name = "buttonUserInfo";
+            this.buttonUserInfo.Size = new System.Drawing.Size(127, 67);
+            this.buttonUserInfo.TabIndex = 3;
+            this.buttonUserInfo.Text = "User Info";
+            this.buttonUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUserInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonUserInfo.UseVisualStyleBackColor = false;
+            this.buttonUserInfo.Click += new System.EventHandler(this.buttonUser_Click);
+            // 
+            // buttonMovieInfo
+            // 
+            this.buttonMovieInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.buttonMovieInfo.FlatAppearance.BorderSize = 0;
+            this.buttonMovieInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMovieInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonMovieInfo.Image = global::Project_Movie.Properties.Resources.movieInfo_real_;
+            this.buttonMovieInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMovieInfo.Location = new System.Drawing.Point(0, 200);
+            this.buttonMovieInfo.Name = "buttonMovieInfo";
+            this.buttonMovieInfo.Size = new System.Drawing.Size(127, 67);
+            this.buttonMovieInfo.TabIndex = 4;
+            this.buttonMovieInfo.Text = "Movie Info";
+            this.buttonMovieInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonMovieInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonMovieInfo.UseVisualStyleBackColor = false;
+            this.buttonMovieInfo.Click += new System.EventHandler(this.buttonInfo_Click);
+            // 
+            // buttonWatchList
+            // 
+            this.buttonWatchList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.buttonWatchList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonWatchList.FlatAppearance.BorderSize = 0;
+            this.buttonWatchList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWatchList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonWatchList.ForeColor = System.Drawing.Color.Black;
+            this.buttonWatchList.Image = global::Project_Movie.Properties.Resources.watchList_real_;
+            this.buttonWatchList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonWatchList.Location = new System.Drawing.Point(0, 100);
+            this.buttonWatchList.Name = "buttonWatchList";
+            this.buttonWatchList.Size = new System.Drawing.Size(127, 67);
+            this.buttonWatchList.TabIndex = 3;
+            this.buttonWatchList.Text = "My Watch List";
+            this.buttonWatchList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonWatchList.UseVisualStyleBackColor = false;
+            this.buttonWatchList.Click += new System.EventHandler(this.buttonWatchList_Click);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(90)))));
+            this.buttonSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonSearch.FlatAppearance.BorderSize = 0;
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.Black;
+            this.buttonSearch.Image = global::Project_Movie.Properties.Resources.Search_real_;
+            this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(127, 67);
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project_Movie.Properties.Resources.quit_real_;
+            this.pictureBox1.Location = new System.Drawing.Point(941, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // pictureBoxLogout
+            // 
+            this.pictureBoxLogout.Image = global::Project_Movie.Properties.Resources.Logout_real_;
+            this.pictureBoxLogout.Location = new System.Drawing.Point(885, 0);
+            this.pictureBoxLogout.Name = "pictureBoxLogout";
+            this.pictureBoxLogout.Size = new System.Drawing.Size(50, 36);
+            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxLogout.TabIndex = 7;
+            this.pictureBoxLogout.TabStop = false;
+            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
+            // 
+            // userInfo
+            // 
+            this.userInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.userInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userInfo.Location = new System.Drawing.Point(137, 36);
+            this.userInfo.Name = "userInfo";
+            this.userInfo.Size = new System.Drawing.Size(856, 466);
+            this.userInfo.TabIndex = 6;
+            this.userInfo.Visible = false;
+            // 
             // watchListUC1
             // 
-            this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.watchListUC1.Location = new System.Drawing.Point(1851, 36);
+            this.watchListUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.watchListUC1.Location = new System.Drawing.Point(137, 36);
             this.watchListUC1.Name = "watchListUC1";
-            this.watchListUC1.Size = new System.Drawing.Size(857, 466);
+            this.watchListUC1.Size = new System.Drawing.Size(856, 466);
             this.watchListUC1.TabIndex = 5;
             this.watchListUC1.Visible = false;
             // 
             // infoUC1
             // 
-            this.infoUC1.BackColor = System.Drawing.Color.Cornsilk;
-            this.infoUC1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.infoUC1.Location = new System.Drawing.Point(994, 36);
+            this.infoUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.infoUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoUC1.Location = new System.Drawing.Point(137, 36);
             this.infoUC1.Name = "infoUC1";
-            this.infoUC1.Size = new System.Drawing.Size(857, 466);
+            this.infoUC1.Size = new System.Drawing.Size(856, 466);
             this.infoUC1.TabIndex = 4;
             this.infoUC1.Visible = false;
             // 
             // searchUC1
             // 
-            this.searchUC1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.searchUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.searchUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchUC1.Location = new System.Drawing.Point(137, 36);
             this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(857, 466);
+            this.searchUC1.Size = new System.Drawing.Size(856, 466);
             this.searchUC1.TabIndex = 3;
             this.searchUC1.Visible = false;
-            // 
-            // userInfo
-            // 
-            this.userInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userInfo.Location = new System.Drawing.Point(2708, 36);
-            this.userInfo.Name = "userInfo";
-            this.userInfo.Size = new System.Drawing.Size(0, 466);
-            this.userInfo.TabIndex = 6;
-            this.userInfo.Visible = false;
             // 
             // FormApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(993, 502);
             this.Controls.Add(this.userInfo);
             this.Controls.Add(this.watchListUC1);
@@ -266,10 +286,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormApp_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,14 +306,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonSlider;
         private System.Windows.Forms.Label labelJustProjectInfo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonExit;
         private SearchUC searchUC1;
         private InfoUC infoUC1;
         private WatchListUC watchListUC1;
-        private System.Windows.Forms.PictureBox pictureBoxLogout;
         public System.Windows.Forms.Button buttonMovieInfo;
         private UserInfo userInfo;
+        private System.Windows.Forms.PictureBox pictureBoxLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

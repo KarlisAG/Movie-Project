@@ -183,10 +183,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeleteProfile.cs">
+    <Compile Include="Forms\DeleteProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteProfile.Designer.cs">
+    <Compile Include="Forms\DeleteProfile.Designer.cs">
       <DependentUpon>DeleteProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ConfirmPassword.cs">
@@ -255,7 +255,7 @@
     <Compile Include="UserControl\UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DeleteProfile.resx">
+    <EmbeddedResource Include="Forms\DeleteProfile.resx">
       <DependentUpon>DeleteProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddToWL.resx">
@@ -317,6 +317,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Search%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\watchList%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\movieInfo%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\userInfo%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Logout%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\quit%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\login%28real%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

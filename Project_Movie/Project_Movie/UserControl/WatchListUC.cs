@@ -173,7 +173,6 @@ namespace Project_Movie
 
             FormApp.Instance.buttonInfo_Click(sender, e);//ka tas strada?????
 
-            //userinfoUC uztaisit
             //noformatet visu skaisti
             //uztaisit mysql serveri publisku(???)
             //satirit kodu
