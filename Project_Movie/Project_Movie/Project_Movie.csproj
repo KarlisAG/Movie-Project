@@ -183,6 +183,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionError.Designer.cs">
+      <DependentUpon>ConnectionError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeleteProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     <Compile Include="UserControl\UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConnectionError.resx">
+      <DependentUpon>ConnectionError.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeleteProfile.resx">
       <DependentUpon>DeleteProfile.cs</DependentUpon>
     </EmbeddedResource>
