@@ -37,27 +37,18 @@ namespace Project_Movie
             richTextBoxInfoImdbVotes.Visible = !richTextBoxInfoImdbVotes.Visible;
 
             if (labelJustIMDB_ID.Visible == true)
-            {
                 buttonExtraIMDBInfo.Text = "Less Imdb Info";
-            }
             else
-            {
                 buttonExtraIMDBInfo.Text = "More Imdb Info";
-            }
-            
         }
 
         private void buttonExtraRatings_Click(object sender, EventArgs e)
         {
             listViewRatings.Visible = !listViewRatings.Visible;
             if (listViewRatings.Visible == true)
-            {
                 buttonExtraRatings.Text = "Less Ratings";
-            }
             else
-            {
                 buttonExtraRatings.Text = "More Ratings";
-            }
             
         }
 
@@ -69,15 +60,12 @@ namespace Project_Movie
                 labelError.Text = "This movie/series is already saved in your watch list!";
             }
             else
-            {
                 labelError.Visible = false;
-            }
         }
 
         private void Update(object sender, EventArgs e)
         {
             labelError.Visible = false;
-            //labelError.Text = 
             try
             {
                 MovieData md = JsonConvert.DeserializeObject<MovieData>(File.ReadAllText("CurrentMovie.json"));
@@ -87,7 +75,6 @@ namespace Project_Movie
                 string[] temp = md.Year.Split(seperators, StringSplitOptions.RemoveEmptyEntries);
                 richTextBoxInfoYear.Text = String.Join("-", temp);
                 richTextBoxInfoCountry.Text = md.Country;
-
                 richTextBoxInfoGenres.Text = md.Genre;
                 richTextBoxInfoRated.Text = md.Rated;
                 richTextBoxInfoActors.Text = md.Actors;
@@ -115,10 +102,7 @@ namespace Project_Movie
                     y++;
                 }
             }
-            catch
-            {
-                
-            }
+            catch { }
         }
     }
 }

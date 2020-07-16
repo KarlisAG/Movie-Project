@@ -204,6 +204,8 @@
             // 
             this.richTextBoxError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.richTextBoxError.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.richTextBoxError.ForeColor = System.Drawing.Color.Red;
             this.richTextBoxError.Location = new System.Drawing.Point(3, 3);
             this.richTextBoxError.Name = "richTextBoxError";
             this.richTextBoxError.Size = new System.Drawing.Size(756, 21);

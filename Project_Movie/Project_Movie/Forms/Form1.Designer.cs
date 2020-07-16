@@ -36,16 +36,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonSlider = new System.Windows.Forms.Button();
+            this.userInfo = new Project_Movie.UserInfo();
+            this.watchListUC1 = new Project_Movie.WatchListUC();
+            this.infoUC1 = new Project_Movie.InfoUC();
+            this.searchUC1 = new Project_Movie.SearchUC();
             this.buttonUserInfo = new System.Windows.Forms.Button();
             this.buttonMovieInfo = new System.Windows.Forms.Button();
             this.buttonWatchList = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
-            this.userInfo = new Project_Movie.UserInfo();
-            this.watchListUC1 = new Project_Movie.WatchListUC();
-            this.infoUC1 = new Project_Movie.InfoUC();
-            this.searchUC1 = new Project_Movie.SearchUC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -126,6 +126,48 @@
             this.buttonSlider.TabIndex = 0;
             this.buttonSlider.UseVisualStyleBackColor = false;
             this.buttonSlider.Visible = false;
+            // 
+            // userInfo
+            // 
+            this.userInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.userInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userInfo.Location = new System.Drawing.Point(137, 36);
+            this.userInfo.Name = "userInfo";
+            this.userInfo.Size = new System.Drawing.Size(856, 466);
+            this.userInfo.TabIndex = 6;
+            this.userInfo.Visible = false;
+            // 
+            // watchListUC1
+            // 
+            this.watchListUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.watchListUC1.Location = new System.Drawing.Point(137, 36);
+            this.watchListUC1.Name = "watchListUC1";
+            this.watchListUC1.Size = new System.Drawing.Size(856, 466);
+            this.watchListUC1.TabIndex = 5;
+            this.watchListUC1.Visible = false;
+            // 
+            // infoUC1
+            // 
+            this.infoUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.infoUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoUC1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.infoUC1.Location = new System.Drawing.Point(137, 36);
+            this.infoUC1.Name = "infoUC1";
+            this.infoUC1.Size = new System.Drawing.Size(856, 466);
+            this.infoUC1.TabIndex = 4;
+            this.infoUC1.Visible = false;
+            // 
+            // searchUC1
+            // 
+            this.searchUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.searchUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchUC1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.searchUC1.Location = new System.Drawing.Point(137, 36);
+            this.searchUC1.Name = "searchUC1";
+            this.searchUC1.Size = new System.Drawing.Size(856, 466);
+            this.searchUC1.TabIndex = 3;
+            this.searchUC1.Visible = false;
             // 
             // buttonUserInfo
             // 
@@ -215,54 +257,14 @@
             // 
             // pictureBoxLogout
             // 
-            this.pictureBoxLogout.Image = global::Project_Movie.Properties.Resources.Logout_real_;
+            this.pictureBoxLogout.Image = global::Project_Movie.Properties.Resources.logout2_real_;
             this.pictureBoxLogout.Location = new System.Drawing.Point(885, 0);
             this.pictureBoxLogout.Name = "pictureBoxLogout";
-            this.pictureBoxLogout.Size = new System.Drawing.Size(50, 36);
-            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxLogout.Size = new System.Drawing.Size(38, 36);
+            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogout.TabIndex = 7;
             this.pictureBoxLogout.TabStop = false;
             this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
-            // 
-            // userInfo
-            // 
-            this.userInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.userInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userInfo.Location = new System.Drawing.Point(137, 36);
-            this.userInfo.Name = "userInfo";
-            this.userInfo.Size = new System.Drawing.Size(856, 466);
-            this.userInfo.TabIndex = 6;
-            this.userInfo.Visible = false;
-            // 
-            // watchListUC1
-            // 
-            this.watchListUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.watchListUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.watchListUC1.Location = new System.Drawing.Point(137, 36);
-            this.watchListUC1.Name = "watchListUC1";
-            this.watchListUC1.Size = new System.Drawing.Size(856, 466);
-            this.watchListUC1.TabIndex = 5;
-            this.watchListUC1.Visible = false;
-            // 
-            // infoUC1
-            // 
-            this.infoUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.infoUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.infoUC1.Location = new System.Drawing.Point(137, 36);
-            this.infoUC1.Name = "infoUC1";
-            this.infoUC1.Size = new System.Drawing.Size(856, 466);
-            this.infoUC1.TabIndex = 4;
-            this.infoUC1.Visible = false;
-            // 
-            // searchUC1
-            // 
-            this.searchUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.searchUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchUC1.Location = new System.Drawing.Point(137, 36);
-            this.searchUC1.Name = "searchUC1";
-            this.searchUC1.Size = new System.Drawing.Size(856, 466);
-            this.searchUC1.TabIndex = 3;
-            this.searchUC1.Visible = false;
             // 
             // FormApp
             // 

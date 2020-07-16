@@ -29,21 +29,16 @@ namespace Project_Movie
                 richTextBoxInfo.Text = "Your profile info has been edited!";
             }
             else
-            {
                 richTextBoxError.Text = "Age field must be filled with a number!";
-            }
         }
 
         private void buttonShowMore_Click(object sender, EventArgs e)
         {
             if (labelOldPass.Visible)
-            {
                 buttonShowMore.Text = "Show More";
-            }
             else
-            {
                 buttonShowMore.Text = "Show Less";
-            }
+
             buttonChangePW.Visible = !buttonChangePW.Visible;
 
             labelOldPass.Visible = !labelOldPass.Visible;
@@ -90,7 +85,6 @@ namespace Project_Movie
                 PasswordClear();
                 richTextBoxInfo.Clear();
             }
-            
         }
 
         private void UserInfo_VisibleChanged(object sender, EventArgs e)
@@ -133,7 +127,6 @@ namespace Project_Movie
             FormApp formApp = (FormApp)this.FindForm();
             formApp.Close();
             formApp.Dispose();
-            //((FormApp)this.TopLevelControl).Close();
         }
     }
 }

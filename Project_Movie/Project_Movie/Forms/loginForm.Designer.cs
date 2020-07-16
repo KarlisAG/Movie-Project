@@ -83,7 +83,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(241, 27);
             this.textBoxPassword.TabIndex = 2;
-            this.textBoxPassword.Text = "admin123";
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
             // 
             // textBoxUsername
@@ -96,7 +95,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(241, 27);
             this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.Text = "admin";
             this.textBoxUsername.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // labelError

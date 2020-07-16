@@ -183,6 +183,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ConnectionError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConnectionError.Designer.cs">
+      <DependentUpon>ConnectionError.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeleteProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     <Compile Include="UserControl\UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\ConnectionError.resx">
+      <DependentUpon>ConnectionError.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeleteProfile.resx">
       <DependentUpon>DeleteProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +347,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\login%28real%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\logout2%28real%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
