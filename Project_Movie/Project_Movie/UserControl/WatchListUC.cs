@@ -72,8 +72,8 @@ namespace Project_Movie
         {
             if (comboBox1.Text == "")
                 richTextBoxError.Text = "You need to select a parameter in the drop down box!";
-            else 
-            { 
+            else if (comboBox1.Text == "Title" || comboBox1.Text == "Type" || comboBox1.Text == "Year" || comboBox1.Text == "Rating" || comboBox1.Text == "Rated" || comboBox1.Text == "Genre")
+            {
                 listView1.Items.Clear();
                 int y = 0;
                 foreach(DataRow row in db.FilterMovie(comboBox1.Text, textBoxFilter.Text).Rows)
@@ -88,6 +88,11 @@ namespace Project_Movie
                     listView1.Items[y].SubItems.Add(row.Field<String>(7));
                     y++;
                 }
+                richTextBoxError.Clear();
+            }
+            else
+            {
+                richTextBoxError.Text = "You need to select the correct filter parameter!";
             }
         }
 

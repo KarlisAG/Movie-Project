@@ -93,6 +93,16 @@ namespace Project_Movie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout2_real_ {
+            get {
+                object obj = ResourceManager.GetObject("logout2(real)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap movieInfo_real_ {
             get {
                 object obj = ResourceManager.GetObject("movieInfo(real)", resourceCulture);
